@@ -4240,7 +4240,7 @@ MonoBehaviour:
   PlayerMovementSpeed: 2.5
   Player: {fileID: 233937313}
   rotationSpeed: 100
-  TargetPosition: {fileID: 0}
+  TargetPosition: {fileID: 233937317}
 --- !u!54 &233937319
 Rigidbody:
   m_ObjectHideFlags: 0
