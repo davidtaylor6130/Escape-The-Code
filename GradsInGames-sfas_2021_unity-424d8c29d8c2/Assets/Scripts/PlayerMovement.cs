@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Player;
     public float rotationSpeed = 100.0f;
     public Transform TargetPosition;
+    public CinemachineVirtualCamera VirtualCameraControl;
 
     private Vector3 rotation;
     private Rigidbody rb;
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         Jump();
         Look();
+        Zoom();
     }
 
     void Move()
@@ -61,6 +64,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 rotationInput = new Vector3(0.0f , ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
         rotation += rotationInput;
         TargetPosition.eulerAngles = rotation;
+    }
+
+    void Zoom()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") != 0.0f)
+        {
+            float lf_distance = VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance += Input.GetAxis("Mouse ScrollWheel");
+            VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance = Mathf.Clamp(lf_distance, 1, 4);
+        }
     }
 
     //- Query Functions -//
