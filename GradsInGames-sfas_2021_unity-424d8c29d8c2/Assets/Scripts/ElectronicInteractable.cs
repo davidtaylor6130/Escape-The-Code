@@ -53,7 +53,7 @@ public class ElectronicInteractable : MonoBehaviour
             {
                 Player.transform.position = Vector3.Lerp(StartPosition, CurrentPositionHolder, timer);
             }
-            else if (Currentpoint == JumpPoints.Length - 1 && Vector3.Distance(Player.transform.position, JumpPoint.position) < 1)
+            else if (Currentpoint == JumpPoints.Length - 1 && Vector3.Distance(Player.transform.position, JumpPoint.position) < 2f)
             {
                 StartLerp = false;
                 Player.GetComponent<Rigidbody>().isKinematic = false;
@@ -66,9 +66,11 @@ public class ElectronicInteractable : MonoBehaviour
             else if (Currentpoint < JumpPoints.Length - 1)
             {
                 Currentpoint++;
-                CurrentPositionHolder = JumpPoints[Currentpoint];  
+                CurrentPositionHolder = JumpPoints[Currentpoint];
             }
         }
+        else
+            Player.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     void BezierCalcuations(bool exiting)
