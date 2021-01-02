@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameStates GameState;
+
     public float PlayerMovementSpeed = 1.0f;
     public GameObject Player;
     public float rotationSpeed = 100.0f;
@@ -25,10 +27,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Jump();
-        Look();
-        Zoom();
+        Debug.Log(GameState.IsPlayerActive);
+        if (GameState.IsPlayerActive)
+        {
+            Move();
+            Jump();
+            Look();
+            Zoom();
+        }
     }
 
     void Move()
