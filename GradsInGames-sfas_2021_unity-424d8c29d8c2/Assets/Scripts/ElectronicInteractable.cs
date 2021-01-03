@@ -120,6 +120,7 @@ public class ElectronicInteractable : MonoBehaviour
             TakeControlGuiPrompt.SetActive(false);
             //- Camera Zoom on the Interactable Object -//
             GameState.SetNewActiveCamera(VMCam);
+            Player.transform.position = JumpPoint.position;
         }
         else if (!Entering)
         {
@@ -135,10 +136,11 @@ public class ElectronicInteractable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("StillRunning Outer");
         if (other.gameObject.name == Player.name)
         {
-
-            if (Input.GetKeyDown(KeyCode.E) && isControllingObject == false)
+            Debug.Log("Still running");
+            if (Input.GetButtonDown("Possess") && isControllingObject == false)
             {
                 //- Save Players Entry point -//
                 PlayersPreviousPosition = Player.transform.position;
@@ -150,7 +152,7 @@ public class ElectronicInteractable : MonoBehaviour
                 //- calculate player jump -//
                 BezierCalcuations(false);
             }
-            else if (Input.GetKeyDown(KeyCode.E) && isControllingObject == true)
+            else if (Input.GetButtonDown("Possess") && isControllingObject == true)
             {
                 //- calculate player jump -//
                 BezierCalcuations(true);

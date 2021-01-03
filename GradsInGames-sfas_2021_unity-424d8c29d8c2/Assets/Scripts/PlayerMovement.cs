@@ -67,9 +67,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Look()
     {
-        Vector3 rotationInput = new Vector3(0.0f , ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
+        Vector3 rotationInput = new Vector3(((Input.GetAxis("Mouse Y") * rotationSpeed) * Time.deltaTime), ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
         rotation += rotationInput;
+
+        //rotation.x = Mathf.Clamp(rotation.x, 100.0f, 80.0f);
+
         TargetPosition.eulerAngles = rotation;
+        //Player.transform.eulerAngles = rotation;
     }
 
     void Zoom()
