@@ -22,7 +22,7 @@ public class CustomLerp : MonoBehaviour
 
 
     // Update is called once per frame
-    void LerpUpdate()
+    public void LerpUpdate()
     {
         if (m_isLerpActive)
         {
@@ -43,7 +43,7 @@ public class CustomLerp : MonoBehaviour
         }
     }
 
-    void StartLerp(Vector3 a_positionOne, Vector3 a_positionTwo, float af_curveHeight)
+    public void StartLerp(Vector3 a_positionOne, Vector3 a_positionTwo, float af_curveHeight)
     {
         m_isLerpActive = true;
         //- calculate inbetween point and increase hight by set amount -//
@@ -58,6 +58,11 @@ public class CustomLerp : MonoBehaviour
     }
 
     public bool IsLerpCompleated()
+    {
+        return m_isLerpActive;
+    }
+
+    public bool IsLerpRunning()
     {
         return m_isLerpActive;
     }

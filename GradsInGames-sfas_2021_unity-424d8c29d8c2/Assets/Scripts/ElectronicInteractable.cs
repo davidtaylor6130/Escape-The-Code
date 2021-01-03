@@ -22,88 +22,36 @@ public class ElectronicInteractable : MonoBehaviour
     public ParticleSystem SparkParticleEffect;
     
     [Header("Jump Bezier Curve")]
-    public int CurveSamplePoints;
-    public float TravelSpeed = 1.0f;
     public float JumpHeight = 10.0f;
-    public LineRenderer lr;
-    public Vector3[] JumpPoints;
-    private bool StartLerp;
-    private float timer;
-    private Vector3 CurrentPositionHolder;
-    private Vector3 StartPosition;
-    private int Currentpoint;
+    public CustomLerp lerp;
     private bool Entering;
+    
 
     [Header("Sound")]
     public AudioSource SparkSoundEffect;
 
-    // Start is called before the first frame update
     void Start()
     {
+                
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (StartLerp)
+        lerp.LerpUpdate();
+        if (lerp.IsLerpCompleated())
         {
-            timer += Time.deltaTime * TravelSpeed;
-            if (Player.transform.position != CurrentPositionHolder)
-            {
-                Player.transform.position = Vector3.Lerp(StartPosition, CurrentPositionHolder, timer);
-            }
-            else if (Currentpoint == JumpPoints.Length - 1 && Vector3.Distance(Player.transform.position, JumpPoint.position) < 2f)
-            {
-                StartLerp = false;
-                Player.GetComponent<Rigidbody>().isKinematic = false;
-                if (Entering)
-                {
-                    EnteringExitingEffects();
-                    Entering = false;
-                }
-            }
-            else if (Currentpoint < JumpPoints.Length - 1)
-            {
-                Currentpoint++;
-                CurrentPositionHolder = JumpPoints[Currentpoint];
-            }
-        }
-        else
             Player.GetComponent<Rigidbody>().isKinematic = false;
-    }
-
-    void BezierCalcuations(bool exiting)
-    {
-        StartLerp = true;
-        if (exiting)
-        {
-            //- calculate inbetween point and increase hight by set amount -//
-            Vector3 Point2 = new Vector3(((Player.transform.position.x + JumpPoint.position.x) / 2), (((Player.transform.position.y + JumpPoint.position.y) / 2) + JumpHeight), ((Player.transform.position.z + JumpPoint.position.z) / 2));
-            //- calculate Bezier Curve with 3 points and save the amount of sample points to lerp character with -//
-            JumpPoints = GetQuadraticCurvePointsArray(JumpPoint.position, Point2, PlayersPreviousPosition);
-            
-            EnteringExitingEffects();
-            Debug.Log("Exting Effects Played");
+            if (Entering)
+            {
+                EnteringExitingEffects();
+                Entering = false;
+            }
         }
         else
         {
-            //- calculate inbetween point and increase hight by set amount -//
-            Vector3 Point2 = new Vector3(((Player.transform.position.x + JumpPoint.position.x) / 2), (((Player.transform.position.y + JumpPoint.position.y) / 2) + JumpHeight), ((Player.transform.position.z + JumpPoint.position.z) / 2));
-            //- calculate Bezier Curve with 3 points and save the amount of sample points to lerp character with -//
-            JumpPoints = GetQuadraticCurvePointsArray(Player.transform.position, Point2, JumpPoint.position);
-            Entering = true;
+            Player.GetComponent<Rigidbody>().isKinematic = false;
         }
-
-        //- Resetting Lerp Variables -//
-        Currentpoint = 0;
-        timer = 0;
-        StartPosition = Player.transform.position;
-        CurrentPositionHolder = JumpPoints[Currentpoint];
-        
-        lr.positionCount = JumpPoints.Length;
-        lr.SetPositions(JumpPoints);
-
-        Player.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     void EnteringExitingEffects()
@@ -145,14 +93,22 @@ public class ElectronicInteractable : MonoBehaviour
                 //- Stop Player Movement -//
                 GameState.IsPlayerActive = false;
                 isControllingObject = true;
+                Entering = true;
+                
+                //- turns off Player Gravity -//
+                Player.GetComponent<Rigidbody>().isKinematic = true;
 
                 //- calculate player jump -//
-                BezierCalcuations(false);
+                lerp.StartLerp(PlayersPreviousPosition, JumpPoint.position, JumpHeight);
             }
             else if (Input.GetButtonDown("Possess") && isControllingObject == true)
             {
+                //- Turns off Player Gravity -//
+                Player.GetComponent<Rigidbody>().isKinematic = true;
+                //- Play Effects -//
+                EnteringExitingEffects();
                 //- calculate player jump -//
-                BezierCalcuations(true);
+                lerp.StartLerp(JumpPoint.position, PlayersPreviousPosition, JumpHeight);
             }
         }
     }
@@ -167,31 +123,5 @@ public class ElectronicInteractable : MonoBehaviour
     {
         if (other.gameObject.name == Player.name)
             TakeControlGuiPrompt.SetActive(false);
-    }
-
-    private Vector3[] GetQuadraticCurvePointsArray(Vector3 a_point0, Vector3 a_point1, Vector3 a_point2)
-    {
-
-        Vector3[] curvePositions = new Vector3[CurveSamplePoints + 2];
-        curvePositions[0] = a_point0;
-        curvePositions[CurveSamplePoints + 1] = a_point2;
-
-        for (int i = 2; i < CurveSamplePoints + 2; i++)
-        {
-            float t = i / (float)CurveSamplePoints;
-            curvePositions[i - 1] = CalculateQuadraticBezierPoint(t, a_point0, a_point1, a_point2);
-        }
-        return curvePositions;
-    }
-
-    private Vector3 CalculateQuadraticBezierPoint(float t, Vector3 a_point0, Vector3 a_point1, Vector3 a_point2)
-    {
-        float u = 1 - t;
-        float tt = t * t;
-        float uu = u * u;
-        Vector3 CalculatedPoint = uu * a_point0;
-        CalculatedPoint += 2 * u * t * a_point1;
-        CalculatedPoint += tt * a_point2;
-        return CalculatedPoint;
     }
 }
