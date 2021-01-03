@@ -14,7 +14,7 @@ public class ElectronicInteractable : MonoBehaviour
     public Vector3 PlayersPreviousPosition;
 
     [Header("Object Information")]
-    public bool isControllingObject;
+    public bool isControllingObject = false;
     public CinemachineVirtualCamera VMCam;
 
     [Header("Graphic Elements")]
@@ -99,7 +99,7 @@ public class ElectronicInteractable : MonoBehaviour
                 Player.GetComponent<Rigidbody>().isKinematic = true;
 
                 //- calculate player jump -//
-                lerp.StartLerp(PlayersPreviousPosition, JumpPoint.position, JumpHeight);
+                lerp.StartLerp(Player.transform.position, JumpPoint.position, JumpHeight);
             }
             else if (Input.GetButtonDown("Possess") && isControllingObject == true)
             {

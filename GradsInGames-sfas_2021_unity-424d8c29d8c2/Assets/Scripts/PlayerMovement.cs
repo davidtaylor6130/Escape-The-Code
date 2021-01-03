@@ -5,21 +5,29 @@ using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameStates GameState;
+    [Header("Game State")]
+    [Tooltip("Game State Controller")]                  public GameStates GameState;
 
-    public float PlayerMovementSpeed = 1.0f;
-    public GameObject Player;
-    public float rotationSpeed = 100.0f;
-    public Transform TargetPosition;
-    public CinemachineVirtualCamera VirtualCameraControl;
+    [Header("Universal Player Movement Data")]
+    [Tooltip("Setting Player Object Refrance")]         public GameObject Player;
+    [SerializeField] [Tooltip("Mouse Rotation Input")]  private Vector3 rotation;
+    [SerializeField] [Tooltip("RigidBody Refrance")]    private Rigidbody rb;
+    [SerializeField] [Tooltip("Distance to ground")]    private float CenterToGround;
 
-    private Vector3 rotation;
-    private Rigidbody rb;
-    private float CenterToGround;
+    [Header("Normal Player Movement")]
+    [Tooltip("Cinemachine Virtual Camera Ref")]         public CinemachineVirtualCamera VirtualCameraControl;
+    [Tooltip("Camera Follow and Look Point")]           public Transform TargetPosition;
+    [Tooltip("How Fast The Player Moves")]              public float PlayerMovementSpeed = 1.0f;
+    [Tooltip("Mouse Sensitivity")]                      public float rotationSpeed = 100.0f;
+
+    [Header("Data Over Power (D.O.P) Movement")]
+    [Tooltip("Cinimachine D.O.P virtual camera")]       public CinemachineVirtualCamera DOPVertualCamera;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        //- Get Refrances and Get/Calculate Data -//
         rb = GetComponent<Rigidbody>();
         CenterToGround = GetComponent<SphereCollider>().bounds.extents.y;
 

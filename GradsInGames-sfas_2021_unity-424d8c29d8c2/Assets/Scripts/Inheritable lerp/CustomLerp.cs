@@ -17,6 +17,7 @@ public class CustomLerp : MonoBehaviour
     [SerializeField] [Tooltip("Storing the calculated Points")]                     private Vector3[] m_nodesToTravel;
     [SerializeField] [Tooltip("Storing the calculated Points")]                     private Vector3 m_nextnodeToTravel;
     [SerializeField] [Tooltip("If The Lerp Is Active")]                             private bool m_isLerpActive;
+    [SerializeField] [Tooltip("If The Lerp Is Active")]                             private bool m_lerpIsFinished;
     [SerializeField] [Tooltip("Stores Current Progress")]                           private int m_currentPoint;
     [SerializeField] [Tooltip("Time Since Start Lerp was called")]                  private float m_timer;
 
@@ -34,6 +35,7 @@ public class CustomLerp : MonoBehaviour
             else if (m_currentPoint == m_nodesToTravel.Length - 1 && Vector3.Distance(m_Character.transform.position, m_nodesToTravel[m_nodesToTravel.Length - 1]) < 2f)
             {
                 m_isLerpActive = false;
+                m_lerpIsFinished = true;
             }
             else if (m_currentPoint < m_nodesToTravel.Length - 1)
             {
@@ -45,6 +47,7 @@ public class CustomLerp : MonoBehaviour
 
     public void StartLerp(Vector3 a_positionOne, Vector3 a_positionTwo, float af_curveHeight)
     {
+        m_lerpIsFinished = false;
         m_isLerpActive = true;
         //- calculate inbetween point and increase hight by set amount -//
         Vector3 Point2 = new Vector3(((a_positionOne.x + a_positionTwo.x) / 2), (((a_positionOne.y + a_positionTwo.y) / 2) + af_curveHeight), ((a_positionOne.z + a_positionTwo.z) / 2));
@@ -59,7 +62,7 @@ public class CustomLerp : MonoBehaviour
 
     public bool IsLerpCompleated()
     {
-        return m_isLerpActive;
+        return m_lerpIsFinished;
     }
 
     public bool IsLerpRunning()
