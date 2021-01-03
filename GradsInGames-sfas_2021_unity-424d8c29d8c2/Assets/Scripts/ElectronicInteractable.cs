@@ -40,7 +40,6 @@ public class ElectronicInteractable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -136,10 +135,8 @@ public class ElectronicInteractable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("StillRunning Outer");
         if (other.gameObject.name == Player.name)
         {
-            Debug.Log("Still running");
             if (Input.GetButtonDown("Possess") && isControllingObject == false)
             {
                 //- Save Players Entry point -//

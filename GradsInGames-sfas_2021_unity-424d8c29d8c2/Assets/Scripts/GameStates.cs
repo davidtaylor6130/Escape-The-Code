@@ -21,8 +21,8 @@ public class GameStates : MonoBehaviour
         }
 
         //- First Camera is the Player Camera -//
-        VMCams[0].enabled = true;
-        CurrentActive = VMCams[0];
+        VMCams[1].enabled = true;
+        CurrentActive = VMCams[1];
     }
 
     // Update is called once per frame

@@ -70,7 +70,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    private void DisplayBeat(int id)
+    public void DisplayBeat(int id)
     {
         BeatData data = _data.GetBeatById(id);
         StartCoroutine(DoDisplay(data));

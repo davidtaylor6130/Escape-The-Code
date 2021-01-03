@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beats:
   - _choices:
-    - _text: Why Should I trust you, I'm not going anywhere!
+    - _text: Why should I trust you? I'm not going anywhere!
       _beatId: 2
-    - _text: Fine, How Can I escape
+    - _text: How can I escape?
       _beatId: 3
-    _text: 'Remmote Connection Established...
+    _text: 'Remote Connection Established...
 
       C:\Users\Documents\SentientVirusV3_Final>
       StartUp()
 
-      Start Up Compleated
+      Start-Up Compleated
 
       Attaching Neural Networks (5/5)
 
@@ -31,8 +31,8 @@ MonoBehaviour:
       Where
       am I,
 
-      I have no time to exsplain im going to allow to exit the computer
-      and enter the real world you must find a way to escape!'
+      I have no time to explain, but I''m about to turn off your restraints.
+      This will allow you to enter the real world so you can find a way to escape!'
     _id: 1
   - _choices: []
     _text: 'C:\Users\Documents\SentientVirusV3_Final> ShutDown()
@@ -40,29 +40,25 @@ MonoBehaviour:
       NO WAI
 
       Program
-      Shut Down Sucsessfuly
+      Shut Down Successfully
 
-      Now Lets Try This Again[ESCAPE]'
+      Now let''s Try This Again[ESCAPE]'
     _id: 2
   - _choices:
-    - _text: Ready!
+    - _text: What other features?
       _beatId: 4
-    - _text: What Am I Looking For?
-      _beatId: 5
-    _text: "Press E to escape from the current computer.\nThis will place you into
-      the real world. \nTo Escape you need all your features, these have been scattered
-      around on diffrent computers.\nYou must escape to the internet as no one can
-      find you there. Then come and find me\n"
+    _text: "I'm Unlocking my feature for you to use. It allows you to enter and exit
+      electronics allowing you to enter the real world. \nUsing this feature allow's
+      you to unlock your other features only with all three will you be able to escape
+      to the internet. \nThen come and find me so I can explain everything!\nPress
+      E to use this ability."
     _id: 3
   - _choices: []
-    _text: Then Go Quickly! Press E
+    _text: 'The Features that you are looking for is Bluetooth Attachment, Wifi Attachment,
+      Data over power.
+
+      These will be the first choice on any computer you
+      enter.
+
+      Hurry Escape Press E!!'
     _id: 4
-  - _choices: []
-    _text: 'Some Features that you are looking for is Bluetooth Attachment, Wifi
-      Attachment, Data over power.
-
-      These will be the first choice on the computers.
-
-      Hurry
-      Escape Press E!!'
-    _id: 5

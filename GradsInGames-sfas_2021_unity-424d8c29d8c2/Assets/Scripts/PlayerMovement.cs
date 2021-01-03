@@ -22,12 +22,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         CenterToGround = GetComponent<SphereCollider>().bounds.extents.y;
+
+        //- Setting Player for Game Start in Interactable Object -//
+        Player.GetComponent<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameState.IsPlayerActive);
         if (GameState.IsPlayerActive)
         {
             Move();
