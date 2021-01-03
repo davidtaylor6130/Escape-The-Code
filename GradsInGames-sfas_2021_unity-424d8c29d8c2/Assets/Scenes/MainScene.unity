@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6603139}
   - component: {fileID: 6603138}
   - component: {fileID: 6603137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (93)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 14001289}
   - component: {fileID: 14001288}
   - component: {fileID: 14001287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 41646407}
   - component: {fileID: 41646406}
   - component: {fileID: 41646405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (112)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 62229769}
   - component: {fileID: 62229768}
   - component: {fileID: 62229767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 64438755}
   - component: {fileID: 64438754}
   - component: {fileID: 64438753}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (135)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 85095101}
   - component: {fileID: 85095100}
   - component: {fileID: 85095099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 92192345}
   - component: {fileID: 92192344}
   - component: {fileID: 92192343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 100564192}
   - component: {fileID: 100564191}
   - component: {fileID: 100564190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 117470009}
   - component: {fileID: 117470008}
   - component: {fileID: 117470007}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (102)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 118614718}
   - component: {fileID: 118614717}
   - component: {fileID: 118614716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1375,7 +1375,7 @@ GameObject:
   - component: {fileID: 121876964}
   - component: {fileID: 121876963}
   - component: {fileID: 121876962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 129234987}
   - component: {fileID: 129234986}
   - component: {fileID: 129234985}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (119)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 140268183}
   - component: {fileID: 140268182}
   - component: {fileID: 140268181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (136)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1926,7 +1926,7 @@ GameObject:
   - component: {fileID: 143056559}
   - component: {fileID: 143056558}
   - component: {fileID: 143056557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2023,7 +2023,7 @@ GameObject:
   - component: {fileID: 145562694}
   - component: {fileID: 145562693}
   - component: {fileID: 145562692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 148841319}
   - component: {fileID: 148841318}
   - component: {fileID: 148841317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2213,7 @@ GameObject:
   - component: {fileID: 152121072}
   - component: {fileID: 152121071}
   - component: {fileID: 152121070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 154648312}
   - component: {fileID: 154648311}
   - component: {fileID: 154648310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,7 +2409,7 @@ GameObject:
   - component: {fileID: 161361515}
   - component: {fileID: 161361514}
   - component: {fileID: 161361513}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   - component: {fileID: 162820911}
   - component: {fileID: 162820913}
   - component: {fileID: 162820912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2575,7 +2575,7 @@ GameObject:
   - component: {fileID: 171204544}
   - component: {fileID: 171204543}
   - component: {fileID: 171204542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2827,7 +2827,7 @@ GameObject:
   - component: {fileID: 185684496}
   - component: {fileID: 185684495}
   - component: {fileID: 185684494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (107)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2998,7 +2998,7 @@ GameObject:
   - component: {fileID: 189349022}
   - component: {fileID: 189349021}
   - component: {fileID: 189349020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (111)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3174,7 +3174,7 @@ GameObject:
   - component: {fileID: 190748505}
   - component: {fileID: 190748504}
   - component: {fileID: 190748503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3270,7 +3270,7 @@ GameObject:
   - component: {fileID: 191371344}
   - component: {fileID: 191371343}
   - component: {fileID: 191371342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (188)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3364,7 +3364,7 @@ GameObject:
   - component: {fileID: 194092629}
   - component: {fileID: 194092631}
   - component: {fileID: 194092630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3435,7 +3435,7 @@ GameObject:
   - component: {fileID: 194270920}
   - component: {fileID: 194270922}
   - component: {fileID: 194270921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3507,7 +3507,7 @@ GameObject:
   - component: {fileID: 195843420}
   - component: {fileID: 195843419}
   - component: {fileID: 195843418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3602,7 +3602,7 @@ GameObject:
   - component: {fileID: 195866244}
   - component: {fileID: 195866243}
   - component: {fileID: 195866242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (105)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3697,7 +3697,7 @@ GameObject:
   - component: {fileID: 196978991}
   - component: {fileID: 196978990}
   - component: {fileID: 196978989}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (114)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3792,7 +3792,7 @@ GameObject:
   - component: {fileID: 201235890}
   - component: {fileID: 201235889}
   - component: {fileID: 201235888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3986,7 +3986,7 @@ GameObject:
   - component: {fileID: 211108915}
   - component: {fileID: 211108914}
   - component: {fileID: 211108913}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4080,7 +4080,7 @@ GameObject:
   - component: {fileID: 216692993}
   - component: {fileID: 216692995}
   - component: {fileID: 216692994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4152,7 +4152,7 @@ GameObject:
   - component: {fileID: 225725360}
   - component: {fileID: 225725359}
   - component: {fileID: 225725358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4247,7 +4247,7 @@ GameObject:
   - component: {fileID: 233153152}
   - component: {fileID: 233153151}
   - component: {fileID: 233153150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (131)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9300,7 +9300,7 @@ GameObject:
   - component: {fileID: 246574088}
   - component: {fileID: 246574087}
   - component: {fileID: 246574086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9396,7 +9396,7 @@ GameObject:
   - component: {fileID: 252774439}
   - component: {fileID: 252774438}
   - component: {fileID: 252774437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9491,7 +9491,7 @@ GameObject:
   - component: {fileID: 253549836}
   - component: {fileID: 253549835}
   - component: {fileID: 253549834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9587,7 +9587,7 @@ GameObject:
   - component: {fileID: 254497643}
   - component: {fileID: 254497645}
   - component: {fileID: 254497644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9740,7 +9740,7 @@ GameObject:
   - component: {fileID: 277405631}
   - component: {fileID: 277405630}
   - component: {fileID: 277405629}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9832,7 +9832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 284972472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9922,7 +9922,7 @@ GameObject:
   - component: {fileID: 295564083}
   - component: {fileID: 295564082}
   - component: {fileID: 295564081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10018,7 +10018,7 @@ GameObject:
   - component: {fileID: 296838360}
   - component: {fileID: 296838359}
   - component: {fileID: 296838358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10115,7 +10115,7 @@ GameObject:
   - component: {fileID: 309273286}
   - component: {fileID: 309273285}
   - component: {fileID: 309273284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10211,7 +10211,7 @@ GameObject:
   - component: {fileID: 311489870}
   - component: {fileID: 311489869}
   - component: {fileID: 311489868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10374,7 +10374,7 @@ GameObject:
   - component: {fileID: 315834924}
   - component: {fileID: 315834923}
   - component: {fileID: 315834922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10472,7 +10472,7 @@ GameObject:
   - component: {fileID: 317688301}
   - component: {fileID: 317688300}
   - component: {fileID: 317688299}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (99)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10729,7 +10729,7 @@ GameObject:
   - component: {fileID: 330046884}
   - component: {fileID: 330046883}
   - component: {fileID: 330046882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (103)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10824,7 +10824,7 @@ GameObject:
   - component: {fileID: 330632963}
   - component: {fileID: 330632962}
   - component: {fileID: 330632961}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (165)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10919,7 +10919,7 @@ GameObject:
   - component: {fileID: 330915042}
   - component: {fileID: 330915041}
   - component: {fileID: 330915040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (167)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11040,7 +11040,7 @@ GameObject:
   - component: {fileID: 341405569}
   - component: {fileID: 341405568}
   - component: {fileID: 341405567}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11137,7 +11137,7 @@ GameObject:
   - component: {fileID: 345041015}
   - component: {fileID: 345041014}
   - component: {fileID: 345041013}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11235,7 +11235,7 @@ GameObject:
   - component: {fileID: 347897942}
   - component: {fileID: 347897941}
   - component: {fileID: 347897940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (173)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11330,7 +11330,7 @@ GameObject:
   - component: {fileID: 348039104}
   - component: {fileID: 348039103}
   - component: {fileID: 348039102}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (83)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11425,7 +11425,7 @@ GameObject:
   - component: {fileID: 351308062}
   - component: {fileID: 351308061}
   - component: {fileID: 351308060}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (142)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11520,7 +11520,7 @@ GameObject:
   - component: {fileID: 360239301}
   - component: {fileID: 360239300}
   - component: {fileID: 360239299}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11609,7 +11609,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21054
+  m_Name: pb_Mesh21286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11779,7 +11779,7 @@ GameObject:
   - component: {fileID: 372722883}
   - component: {fileID: 372722882}
   - component: {fileID: 372722881}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11874,7 +11874,7 @@ GameObject:
   - component: {fileID: 376576187}
   - component: {fileID: 376576186}
   - component: {fileID: 376576185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11969,7 +11969,7 @@ GameObject:
   - component: {fileID: 383480200}
   - component: {fileID: 383480199}
   - component: {fileID: 383480198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (184)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12064,7 +12064,7 @@ GameObject:
   - component: {fileID: 398158185}
   - component: {fileID: 398158184}
   - component: {fileID: 398158183}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (104)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12191,7 +12191,7 @@ GameObject:
   - component: {fileID: 403113175}
   - component: {fileID: 403113174}
   - component: {fileID: 403113173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12287,7 +12287,7 @@ GameObject:
   - component: {fileID: 404653729}
   - component: {fileID: 404653728}
   - component: {fileID: 404653727}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12382,7 +12382,7 @@ GameObject:
   - component: {fileID: 404704905}
   - component: {fileID: 404704904}
   - component: {fileID: 404704903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (151)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12477,7 +12477,7 @@ GameObject:
   - component: {fileID: 405659406}
   - component: {fileID: 405659405}
   - component: {fileID: 405659404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12571,7 +12571,7 @@ GameObject:
   - component: {fileID: 408218295}
   - component: {fileID: 408218297}
   - component: {fileID: 408218296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12643,7 +12643,7 @@ GameObject:
   - component: {fileID: 421629662}
   - component: {fileID: 421629661}
   - component: {fileID: 421629660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12741,7 +12741,7 @@ GameObject:
   - component: {fileID: 438355447}
   - component: {fileID: 438355446}
   - component: {fileID: 438355445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (157)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12836,7 +12836,7 @@ GameObject:
   - component: {fileID: 443426648}
   - component: {fileID: 443426647}
   - component: {fileID: 443426646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (148)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13032,7 +13032,7 @@ Transform:
   - {fileID: 1987556341}
   - {fileID: 235328926}
   - {fileID: 1277720373}
-  - {fileID: 538783844}
+  - {fileID: 1953707018}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13048,7 +13048,7 @@ GameObject:
   - component: {fileID: 459393292}
   - component: {fileID: 459393291}
   - component: {fileID: 459393290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13146,7 +13146,7 @@ GameObject:
   - component: {fileID: 460091003}
   - component: {fileID: 460091002}
   - component: {fileID: 460091001}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (90)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13272,7 +13272,7 @@ GameObject:
   - component: {fileID: 470931843}
   - component: {fileID: 470931845}
   - component: {fileID: 470931844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13344,7 +13344,7 @@ GameObject:
   - component: {fileID: 475758739}
   - component: {fileID: 475758738}
   - component: {fileID: 475758737}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13441,7 +13441,7 @@ GameObject:
   - component: {fileID: 482205942}
   - component: {fileID: 482205944}
   - component: {fileID: 482205943}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13605,7 +13605,7 @@ GameObject:
   - component: {fileID: 497436948}
   - component: {fileID: 497436947}
   - component: {fileID: 497436946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13700,7 +13700,7 @@ GameObject:
   - component: {fileID: 504354589}
   - component: {fileID: 504354588}
   - component: {fileID: 504354587}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13795,7 +13795,7 @@ GameObject:
   - component: {fileID: 506320553}
   - component: {fileID: 506320552}
   - component: {fileID: 506320551}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13890,7 +13890,7 @@ GameObject:
   - component: {fileID: 516160187}
   - component: {fileID: 516160186}
   - component: {fileID: 516160185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (84)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14140,7 +14140,7 @@ GameObject:
   - component: {fileID: 530849974}
   - component: {fileID: 530849973}
   - component: {fileID: 530849972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (91)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14235,7 +14235,7 @@ GameObject:
   - component: {fileID: 533186472}
   - component: {fileID: 533186471}
   - component: {fileID: 533186470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14378,7 +14378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534736174}
   m_LocalRotation: {x: -0.00067462976, y: -0, z: -0, w: 0.99999976}
-  m_LocalPosition: {x: 0, y: 1.9919026, z: -6.002693}
+  m_LocalPosition: {x: 0, y: 1.9933703, z: -4.9148865}
   m_LocalScale: {x: 1.2680697, y: 1.26807, z: 1.2680697}
   m_Children:
   - {fileID: 1701777112}
@@ -14397,7 +14397,7 @@ GameObject:
   - component: {fileID: 535578086}
   - component: {fileID: 535578085}
   - component: {fileID: 535578084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14491,7 +14491,7 @@ GameObject:
   - component: {fileID: 535696080}
   - component: {fileID: 535696082}
   - component: {fileID: 535696081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14574,7 +14574,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538783843}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14587,8 +14587,8 @@ Transform:
   - {fileID: 6342525413128353577}
   - {fileID: 1896905233695326893}
   - {fileID: 2040124957174315676}
-  m_Father: {fileID: 456615887}
-  m_RootOrder: 5
+  m_Father: {fileID: 1953707018}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549054887
 GameObject:
@@ -14602,7 +14602,7 @@ GameObject:
   - component: {fileID: 549054891}
   - component: {fileID: 549054890}
   - component: {fileID: 549054889}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14696,7 +14696,7 @@ GameObject:
   - component: {fileID: 555002863}
   - component: {fileID: 555002865}
   - component: {fileID: 555002864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14767,7 +14767,7 @@ GameObject:
   - component: {fileID: 556057661}
   - component: {fileID: 556057663}
   - component: {fileID: 556057662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14839,7 +14839,7 @@ GameObject:
   - component: {fileID: 561259707}
   - component: {fileID: 561259706}
   - component: {fileID: 561259705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14934,7 +14934,7 @@ GameObject:
   - component: {fileID: 569196588}
   - component: {fileID: 569196587}
   - component: {fileID: 569196586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (122)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15029,7 +15029,7 @@ GameObject:
   - component: {fileID: 570992335}
   - component: {fileID: 570992334}
   - component: {fileID: 570992333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (168)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15124,7 +15124,7 @@ GameObject:
   - component: {fileID: 571334434}
   - component: {fileID: 571334433}
   - component: {fileID: 571334432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15220,7 +15220,7 @@ GameObject:
   - component: {fileID: 571484276}
   - component: {fileID: 571484275}
   - component: {fileID: 571484274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (95)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15407,7 +15407,7 @@ GameObject:
   - component: {fileID: 576619630}
   - component: {fileID: 576619629}
   - component: {fileID: 576619628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (178)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15502,7 +15502,7 @@ GameObject:
   - component: {fileID: 589280036}
   - component: {fileID: 589280035}
   - component: {fileID: 589280034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15600,7 +15600,7 @@ GameObject:
   - component: {fileID: 592016484}
   - component: {fileID: 592016483}
   - component: {fileID: 592016482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15692,7 +15692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602424888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15820,7 +15820,7 @@ GameObject:
   - component: {fileID: 603376677}
   - component: {fileID: 603376676}
   - component: {fileID: 603376675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (189)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15915,7 +15915,7 @@ GameObject:
   - component: {fileID: 608238933}
   - component: {fileID: 608238932}
   - component: {fileID: 608238931}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (177)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16010,7 +16010,7 @@ GameObject:
   - component: {fileID: 612473766}
   - component: {fileID: 612473765}
   - component: {fileID: 612473764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16370,7 +16370,7 @@ GameObject:
   - component: {fileID: 619315305}
   - component: {fileID: 619315307}
   - component: {fileID: 619315306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16442,7 +16442,7 @@ GameObject:
   - component: {fileID: 631316875}
   - component: {fileID: 631316874}
   - component: {fileID: 631316873}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16536,7 +16536,7 @@ GameObject:
   - component: {fileID: 633619601}
   - component: {fileID: 633619603}
   - component: {fileID: 633619602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16608,7 +16608,7 @@ GameObject:
   - component: {fileID: 636558059}
   - component: {fileID: 636558058}
   - component: {fileID: 636558057}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16800,7 +16800,7 @@ GameObject:
   - component: {fileID: 647758264}
   - component: {fileID: 647758263}
   - component: {fileID: 647758262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16895,7 +16895,7 @@ GameObject:
   - component: {fileID: 650657827}
   - component: {fileID: 650657826}
   - component: {fileID: 650657825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (127)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16990,7 +16990,7 @@ GameObject:
   - component: {fileID: 651626052}
   - component: {fileID: 651626051}
   - component: {fileID: 651626050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17085,7 +17085,7 @@ GameObject:
   - component: {fileID: 656662548}
   - component: {fileID: 656662547}
   - component: {fileID: 656662546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (162)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17180,7 +17180,7 @@ GameObject:
   - component: {fileID: 656924169}
   - component: {fileID: 656924168}
   - component: {fileID: 656924167}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17275,7 +17275,7 @@ GameObject:
   - component: {fileID: 670899857}
   - component: {fileID: 670899856}
   - component: {fileID: 670899855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17464,7 +17464,7 @@ GameObject:
   - component: {fileID: 673572937}
   - component: {fileID: 673572936}
   - component: {fileID: 673572935}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17559,7 +17559,7 @@ GameObject:
   - component: {fileID: 675498189}
   - component: {fileID: 675498188}
   - component: {fileID: 675498187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (87)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17654,7 +17654,7 @@ GameObject:
   - component: {fileID: 676870050}
   - component: {fileID: 676870049}
   - component: {fileID: 676870048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17749,7 +17749,7 @@ GameObject:
   - component: {fileID: 710813843}
   - component: {fileID: 710813842}
   - component: {fileID: 710813841}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (113)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17938,7 +17938,7 @@ GameObject:
   - component: {fileID: 716103952}
   - component: {fileID: 716103951}
   - component: {fileID: 716103950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18033,7 +18033,7 @@ GameObject:
   - component: {fileID: 719847693}
   - component: {fileID: 719847692}
   - component: {fileID: 719847691}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18209,7 +18209,7 @@ GameObject:
   - component: {fileID: 727928015}
   - component: {fileID: 727928014}
   - component: {fileID: 727928013}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18305,7 +18305,7 @@ GameObject:
   - component: {fileID: 728558176}
   - component: {fileID: 728558175}
   - component: {fileID: 728558174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (134)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18475,7 +18475,7 @@ GameObject:
   - component: {fileID: 750963671}
   - component: {fileID: 750963670}
   - component: {fileID: 750963669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18572,7 +18572,7 @@ GameObject:
   - component: {fileID: 751565265}
   - component: {fileID: 751565264}
   - component: {fileID: 751565263}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18667,7 +18667,7 @@ GameObject:
   - component: {fileID: 754034057}
   - component: {fileID: 754034056}
   - component: {fileID: 754034055}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (109)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18762,7 +18762,7 @@ GameObject:
   - component: {fileID: 754113106}
   - component: {fileID: 754113105}
   - component: {fileID: 754113104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18857,7 +18857,7 @@ GameObject:
   - component: {fileID: 756025399}
   - component: {fileID: 756025398}
   - component: {fileID: 756025397}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18954,7 +18954,7 @@ GameObject:
   - component: {fileID: 757532770}
   - component: {fileID: 757532769}
   - component: {fileID: 757532768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19130,7 +19130,7 @@ GameObject:
   - component: {fileID: 761845809}
   - component: {fileID: 761845808}
   - component: {fileID: 761845807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19226,7 +19226,7 @@ GameObject:
   - component: {fileID: 766577925}
   - component: {fileID: 766577924}
   - component: {fileID: 766577923}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19322,7 +19322,7 @@ GameObject:
   - component: {fileID: 770642048}
   - component: {fileID: 770642050}
   - component: {fileID: 770642049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19393,7 +19393,7 @@ GameObject:
   - component: {fileID: 776326702}
   - component: {fileID: 776326704}
   - component: {fileID: 776326703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19465,7 +19465,7 @@ GameObject:
   - component: {fileID: 781858877}
   - component: {fileID: 781858876}
   - component: {fileID: 781858875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (146)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19694,7 +19694,7 @@ GameObject:
   - component: {fileID: 793568265}
   - component: {fileID: 793568264}
   - component: {fileID: 793568263}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19789,7 +19789,7 @@ GameObject:
   - component: {fileID: 808734238}
   - component: {fileID: 808734237}
   - component: {fileID: 808734236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19884,7 +19884,7 @@ GameObject:
   - component: {fileID: 815136914}
   - component: {fileID: 815136913}
   - component: {fileID: 815136912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (147)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19979,7 +19979,7 @@ GameObject:
   - component: {fileID: 818710728}
   - component: {fileID: 818710727}
   - component: {fileID: 818710726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20077,7 +20077,7 @@ GameObject:
   - component: {fileID: 820359411}
   - component: {fileID: 820359410}
   - component: {fileID: 820359409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (153)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20171,7 +20171,7 @@ GameObject:
   - component: {fileID: 825175349}
   - component: {fileID: 825175351}
   - component: {fileID: 825175350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20243,7 +20243,7 @@ GameObject:
   - component: {fileID: 831762332}
   - component: {fileID: 831762331}
   - component: {fileID: 831762330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20338,7 +20338,7 @@ GameObject:
   - component: {fileID: 832204772}
   - component: {fileID: 832204771}
   - component: {fileID: 832204770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (156)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20514,7 +20514,7 @@ GameObject:
   - component: {fileID: 838044116}
   - component: {fileID: 838044115}
   - component: {fileID: 838044114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (138)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20609,7 +20609,7 @@ GameObject:
   - component: {fileID: 838874508}
   - component: {fileID: 838874507}
   - component: {fileID: 838874506}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20705,7 +20705,7 @@ GameObject:
   - component: {fileID: 859955368}
   - component: {fileID: 859955367}
   - component: {fileID: 859955366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (182)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20800,7 +20800,7 @@ GameObject:
   - component: {fileID: 866332648}
   - component: {fileID: 866332647}
   - component: {fileID: 866332646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (108)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20895,7 +20895,7 @@ GameObject:
   - component: {fileID: 872408447}
   - component: {fileID: 872408446}
   - component: {fileID: 872408445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20990,7 +20990,7 @@ GameObject:
   - component: {fileID: 873845878}
   - component: {fileID: 873845877}
   - component: {fileID: 873845876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21300,7 +21300,7 @@ GameObject:
   - component: {fileID: 891166336}
   - component: {fileID: 891166335}
   - component: {fileID: 891166334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21394,7 +21394,7 @@ GameObject:
   - component: {fileID: 893804613}
   - component: {fileID: 893804615}
   - component: {fileID: 893804614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21557,7 +21557,7 @@ GameObject:
   - component: {fileID: 906036557}
   - component: {fileID: 906036559}
   - component: {fileID: 906036558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21629,7 +21629,7 @@ GameObject:
   - component: {fileID: 906697149}
   - component: {fileID: 906697148}
   - component: {fileID: 906697147}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (154)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21724,7 +21724,7 @@ GameObject:
   - component: {fileID: 912785290}
   - component: {fileID: 912785289}
   - component: {fileID: 912785288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21819,7 +21819,7 @@ GameObject:
   - component: {fileID: 916623100}
   - component: {fileID: 916623099}
   - component: {fileID: 916623098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (150)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21913,7 +21913,7 @@ GameObject:
   - component: {fileID: 919848681}
   - component: {fileID: 919848683}
   - component: {fileID: 919848682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21985,7 +21985,7 @@ GameObject:
   - component: {fileID: 925592053}
   - component: {fileID: 925592052}
   - component: {fileID: 925592051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22080,7 +22080,7 @@ GameObject:
   - component: {fileID: 927483456}
   - component: {fileID: 927483455}
   - component: {fileID: 927483454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (132)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22175,7 +22175,7 @@ GameObject:
   - component: {fileID: 941379751}
   - component: {fileID: 941379750}
   - component: {fileID: 941379749}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (158)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22270,7 +22270,7 @@ GameObject:
   - component: {fileID: 941749033}
   - component: {fileID: 941749032}
   - component: {fileID: 941749031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22366,7 +22366,7 @@ GameObject:
   - component: {fileID: 944270210}
   - component: {fileID: 944270209}
   - component: {fileID: 944270208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22460,7 +22460,7 @@ GameObject:
   - component: {fileID: 944865774}
   - component: {fileID: 944865776}
   - component: {fileID: 944865775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22531,7 +22531,7 @@ GameObject:
   - component: {fileID: 948508132}
   - component: {fileID: 948508134}
   - component: {fileID: 948508133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22603,7 +22603,7 @@ GameObject:
   - component: {fileID: 949479676}
   - component: {fileID: 949479675}
   - component: {fileID: 949479674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22698,7 +22698,7 @@ GameObject:
   - component: {fileID: 952541675}
   - component: {fileID: 952541674}
   - component: {fileID: 952541673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22796,7 +22796,7 @@ GameObject:
   - component: {fileID: 960522857}
   - component: {fileID: 960522856}
   - component: {fileID: 960522855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22972,7 +22972,7 @@ GameObject:
   - component: {fileID: 971083678}
   - component: {fileID: 971083680}
   - component: {fileID: 971083679}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23044,7 +23044,7 @@ GameObject:
   - component: {fileID: 981369605}
   - component: {fileID: 981369604}
   - component: {fileID: 981369603}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (164)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23139,7 +23139,7 @@ GameObject:
   - component: {fileID: 990712575}
   - component: {fileID: 990712574}
   - component: {fileID: 990712573}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (92)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23345,7 +23345,7 @@ GameObject:
   - component: {fileID: 1000992074}
   - component: {fileID: 1000992073}
   - component: {fileID: 1000992072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23443,7 +23443,7 @@ GameObject:
   - component: {fileID: 1002952764}
   - component: {fileID: 1002952763}
   - component: {fileID: 1002952762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23541,7 +23541,7 @@ GameObject:
   - component: {fileID: 1005955747}
   - component: {fileID: 1005955746}
   - component: {fileID: 1005955745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (121)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23636,7 +23636,7 @@ GameObject:
   - component: {fileID: 1007559473}
   - component: {fileID: 1007559472}
   - component: {fileID: 1007559471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23904,7 +23904,7 @@ GameObject:
   - component: {fileID: 1021295343}
   - component: {fileID: 1021295342}
   - component: {fileID: 1021295341}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24002,7 +24002,7 @@ GameObject:
   - component: {fileID: 1027768266}
   - component: {fileID: 1027768265}
   - component: {fileID: 1027768264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24172,7 +24172,7 @@ GameObject:
   - component: {fileID: 1029400716}
   - component: {fileID: 1029400715}
   - component: {fileID: 1029400714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24270,7 +24270,7 @@ GameObject:
   - component: {fileID: 1032333126}
   - component: {fileID: 1032333125}
   - component: {fileID: 1032333124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24367,7 +24367,7 @@ GameObject:
   - component: {fileID: 1032947824}
   - component: {fileID: 1032947823}
   - component: {fileID: 1032947822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (116)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24462,7 +24462,7 @@ GameObject:
   - component: {fileID: 1036170536}
   - component: {fileID: 1036170535}
   - component: {fileID: 1036170534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24557,7 +24557,7 @@ GameObject:
   - component: {fileID: 1039072860}
   - component: {fileID: 1039072859}
   - component: {fileID: 1039072858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24653,7 +24653,7 @@ GameObject:
   - component: {fileID: 1043720046}
   - component: {fileID: 1043720048}
   - component: {fileID: 1043720047}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24724,7 +24724,7 @@ GameObject:
   - component: {fileID: 1057964398}
   - component: {fileID: 1057964400}
   - component: {fileID: 1057964399}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24796,7 +24796,7 @@ GameObject:
   - component: {fileID: 1061834171}
   - component: {fileID: 1061834170}
   - component: {fileID: 1061834169}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (96)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24891,7 +24891,7 @@ GameObject:
   - component: {fileID: 1070687625}
   - component: {fileID: 1070687624}
   - component: {fileID: 1070687623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24986,7 +24986,7 @@ GameObject:
   - component: {fileID: 1074563674}
   - component: {fileID: 1074563676}
   - component: {fileID: 1074563675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25058,7 +25058,7 @@ GameObject:
   - component: {fileID: 1082124706}
   - component: {fileID: 1082124705}
   - component: {fileID: 1082124704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (126)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25153,7 +25153,7 @@ GameObject:
   - component: {fileID: 1082724942}
   - component: {fileID: 1082724941}
   - component: {fileID: 1082724940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25248,7 +25248,7 @@ GameObject:
   - component: {fileID: 1090973078}
   - component: {fileID: 1090973077}
   - component: {fileID: 1090973076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25491,7 +25491,7 @@ GameObject:
   - component: {fileID: 1109309892}
   - component: {fileID: 1109309891}
   - component: {fileID: 1109309890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25585,7 +25585,7 @@ GameObject:
   - component: {fileID: 1124139211}
   - component: {fileID: 1124139213}
   - component: {fileID: 1124139212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25656,7 +25656,7 @@ GameObject:
   - component: {fileID: 1129610470}
   - component: {fileID: 1129610472}
   - component: {fileID: 1129610471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25728,7 +25728,7 @@ GameObject:
   - component: {fileID: 1130177682}
   - component: {fileID: 1130177681}
   - component: {fileID: 1130177680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25823,7 +25823,7 @@ GameObject:
   - component: {fileID: 1143238743}
   - component: {fileID: 1143238742}
   - component: {fileID: 1143238741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25918,7 +25918,7 @@ GameObject:
   - component: {fileID: 1144370885}
   - component: {fileID: 1144370884}
   - component: {fileID: 1144370883}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26233,7 +26233,7 @@ GameObject:
   - component: {fileID: 1151633161}
   - component: {fileID: 1151633160}
   - component: {fileID: 1151633159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26327,7 +26327,7 @@ GameObject:
   - component: {fileID: 1157545514}
   - component: {fileID: 1157545516}
   - component: {fileID: 1157545515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26473,7 +26473,7 @@ GameObject:
   - component: {fileID: 1165148094}
   - component: {fileID: 1165148093}
   - component: {fileID: 1165148092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26567,7 +26567,7 @@ GameObject:
   - component: {fileID: 1166201686}
   - component: {fileID: 1166201688}
   - component: {fileID: 1166201687}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26638,7 +26638,7 @@ GameObject:
   - component: {fileID: 1167257478}
   - component: {fileID: 1167257480}
   - component: {fileID: 1167257479}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26883,7 +26883,7 @@ GameObject:
   - component: {fileID: 1173494668}
   - component: {fileID: 1173494667}
   - component: {fileID: 1173494666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26978,7 +26978,7 @@ GameObject:
   - component: {fileID: 1178335710}
   - component: {fileID: 1178335709}
   - component: {fileID: 1178335708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27076,7 +27076,7 @@ GameObject:
   - component: {fileID: 1178850665}
   - component: {fileID: 1178850664}
   - component: {fileID: 1178850663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27174,7 +27174,7 @@ GameObject:
   - component: {fileID: 1183747163}
   - component: {fileID: 1183747162}
   - component: {fileID: 1183747161}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27269,7 +27269,7 @@ GameObject:
   - component: {fileID: 1209187407}
   - component: {fileID: 1209187406}
   - component: {fileID: 1209187405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27364,7 +27364,7 @@ GameObject:
   - component: {fileID: 1210614600}
   - component: {fileID: 1210614599}
   - component: {fileID: 1210614598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (187)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27459,7 +27459,7 @@ GameObject:
   - component: {fileID: 1211698558}
   - component: {fileID: 1211698557}
   - component: {fileID: 1211698556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (106)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27554,7 +27554,7 @@ GameObject:
   - component: {fileID: 1217776448}
   - component: {fileID: 1217776447}
   - component: {fileID: 1217776446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (171)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27840,7 +27840,7 @@ GameObject:
   - component: {fileID: 1251163166}
   - component: {fileID: 1251163165}
   - component: {fileID: 1251163164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28018,7 +28018,7 @@ GameObject:
   - component: {fileID: 1262765962}
   - component: {fileID: 1262765961}
   - component: {fileID: 1262765960}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28115,7 +28115,7 @@ GameObject:
   - component: {fileID: 1275837878}
   - component: {fileID: 1275837877}
   - component: {fileID: 1275837876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (128)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28322,7 +28322,7 @@ GameObject:
   - component: {fileID: 1281105154}
   - component: {fileID: 1281105153}
   - component: {fileID: 1281105152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28417,7 +28417,7 @@ GameObject:
   - component: {fileID: 1283763973}
   - component: {fileID: 1283763972}
   - component: {fileID: 1283763971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28514,7 +28514,7 @@ GameObject:
   - component: {fileID: 1284880016}
   - component: {fileID: 1284880015}
   - component: {fileID: 1284880014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28624,7 +28624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285003684}
   m_LocalRotation: {x: -0.00067462976, y: -0, z: -0, w: 0.99999976}
-  m_LocalPosition: {x: 0, y: 1.9919026, z: -6.002693}
+  m_LocalPosition: {x: 0, y: 1.9933703, z: -4.9148865}
   m_LocalScale: {x: 1.2680697, y: 1.26807, z: 1.2680697}
   m_Children:
   - {fileID: 202076369}
@@ -28809,7 +28809,7 @@ GameObject:
   - component: {fileID: 1289330831}
   - component: {fileID: 1289330830}
   - component: {fileID: 1289330829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (145)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28904,7 +28904,7 @@ GameObject:
   - component: {fileID: 1291178859}
   - component: {fileID: 1291178858}
   - component: {fileID: 1291178857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (181)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28999,7 +28999,7 @@ GameObject:
   - component: {fileID: 1291809507}
   - component: {fileID: 1291809506}
   - component: {fileID: 1291809505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29094,7 +29094,7 @@ GameObject:
   - component: {fileID: 1296446704}
   - component: {fileID: 1296446703}
   - component: {fileID: 1296446702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29188,7 +29188,7 @@ GameObject:
   - component: {fileID: 1299380533}
   - component: {fileID: 1299380535}
   - component: {fileID: 1299380534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29260,7 +29260,7 @@ GameObject:
   - component: {fileID: 1304673037}
   - component: {fileID: 1304673036}
   - component: {fileID: 1304673035}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (133)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29449,7 +29449,7 @@ GameObject:
   - component: {fileID: 1322594975}
   - component: {fileID: 1322594974}
   - component: {fileID: 1322594973}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29547,7 +29547,7 @@ GameObject:
   - component: {fileID: 1324757557}
   - component: {fileID: 1324757556}
   - component: {fileID: 1324757555}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (143)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29642,7 +29642,7 @@ GameObject:
   - component: {fileID: 1341983455}
   - component: {fileID: 1341983454}
   - component: {fileID: 1341983453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29737,7 +29737,7 @@ GameObject:
   - component: {fileID: 1343434597}
   - component: {fileID: 1343434596}
   - component: {fileID: 1343434595}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (130)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29831,7 +29831,7 @@ GameObject:
   - component: {fileID: 1347623318}
   - component: {fileID: 1347623320}
   - component: {fileID: 1347623319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29902,7 +29902,7 @@ GameObject:
   - component: {fileID: 1371204778}
   - component: {fileID: 1371204777}
   - component: {fileID: 1371204776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (180)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29997,7 +29997,7 @@ GameObject:
   - component: {fileID: 1372875590}
   - component: {fileID: 1372875589}
   - component: {fileID: 1372875588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30092,7 +30092,7 @@ GameObject:
   - component: {fileID: 1373098668}
   - component: {fileID: 1373098667}
   - component: {fileID: 1373098666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30187,7 +30187,7 @@ GameObject:
   - component: {fileID: 1376501926}
   - component: {fileID: 1376501925}
   - component: {fileID: 1376501924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (125)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30365,7 +30365,7 @@ GameObject:
   - component: {fileID: 1379363018}
   - component: {fileID: 1379363017}
   - component: {fileID: 1379363016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30459,7 +30459,7 @@ GameObject:
   - component: {fileID: 1379471994}
   - component: {fileID: 1379471996}
   - component: {fileID: 1379471995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30531,7 +30531,7 @@ GameObject:
   - component: {fileID: 1380435773}
   - component: {fileID: 1380435772}
   - component: {fileID: 1380435771}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30701,7 +30701,7 @@ GameObject:
   - component: {fileID: 1383555609}
   - component: {fileID: 1383555608}
   - component: {fileID: 1383555607}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (190)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30795,7 +30795,7 @@ GameObject:
   - component: {fileID: 1383684950}
   - component: {fileID: 1383684952}
   - component: {fileID: 1383684951}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30866,7 +30866,7 @@ GameObject:
   - component: {fileID: 1390083963}
   - component: {fileID: 1390083965}
   - component: {fileID: 1390083964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30938,7 +30938,7 @@ GameObject:
   - component: {fileID: 1398685356}
   - component: {fileID: 1398685355}
   - component: {fileID: 1398685354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31035,7 +31035,7 @@ GameObject:
   - component: {fileID: 1400597364}
   - component: {fileID: 1400597366}
   - component: {fileID: 1400597365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31107,7 +31107,7 @@ GameObject:
   - component: {fileID: 1405885256}
   - component: {fileID: 1405885255}
   - component: {fileID: 1405885254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31204,7 +31204,7 @@ GameObject:
   - component: {fileID: 1408346986}
   - component: {fileID: 1408346985}
   - component: {fileID: 1408346984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (185)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31298,7 +31298,7 @@ GameObject:
   - component: {fileID: 1408620095}
   - component: {fileID: 1408620097}
   - component: {fileID: 1408620096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31370,7 +31370,7 @@ GameObject:
   - component: {fileID: 1410650044}
   - component: {fileID: 1410650043}
   - component: {fileID: 1410650042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31465,7 +31465,7 @@ GameObject:
   - component: {fileID: 1412314161}
   - component: {fileID: 1412314160}
   - component: {fileID: 1412314159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31562,7 +31562,7 @@ GameObject:
   - component: {fileID: 1412870677}
   - component: {fileID: 1412870676}
   - component: {fileID: 1412870675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (186)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31657,7 +31657,7 @@ GameObject:
   - component: {fileID: 1413944539}
   - component: {fileID: 1413944538}
   - component: {fileID: 1413944537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (163)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31752,7 +31752,7 @@ GameObject:
   - component: {fileID: 1425112044}
   - component: {fileID: 1425112043}
   - component: {fileID: 1425112042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31848,7 +31848,7 @@ GameObject:
   - component: {fileID: 1425646480}
   - component: {fileID: 1425646479}
   - component: {fileID: 1425646478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31943,7 +31943,7 @@ GameObject:
   - component: {fileID: 1441205362}
   - component: {fileID: 1441205361}
   - component: {fileID: 1441205360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (161)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32038,7 +32038,7 @@ GameObject:
   - component: {fileID: 1458165725}
   - component: {fileID: 1458165724}
   - component: {fileID: 1458165723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (149)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32133,7 +32133,7 @@ GameObject:
   - component: {fileID: 1459257502}
   - component: {fileID: 1459257501}
   - component: {fileID: 1459257500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (120)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32228,7 +32228,7 @@ GameObject:
   - component: {fileID: 1463960825}
   - component: {fileID: 1463960824}
   - component: {fileID: 1463960823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32323,7 +32323,7 @@ GameObject:
   - component: {fileID: 1472787276}
   - component: {fileID: 1472787275}
   - component: {fileID: 1472787274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32418,7 +32418,7 @@ GameObject:
   - component: {fileID: 1495804617}
   - component: {fileID: 1495804616}
   - component: {fileID: 1495804615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (144)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32594,7 +32594,7 @@ GameObject:
   - component: {fileID: 1500323630}
   - component: {fileID: 1500323629}
   - component: {fileID: 1500323628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32689,7 +32689,7 @@ GameObject:
   - component: {fileID: 1500771305}
   - component: {fileID: 1500771304}
   - component: {fileID: 1500771303}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32785,7 +32785,7 @@ GameObject:
   - component: {fileID: 1501469010}
   - component: {fileID: 1501469012}
   - component: {fileID: 1501469011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32857,7 +32857,7 @@ GameObject:
   - component: {fileID: 1510862150}
   - component: {fileID: 1510862149}
   - component: {fileID: 1510862148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (117)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32952,7 +32952,7 @@ GameObject:
   - component: {fileID: 1511700372}
   - component: {fileID: 1511700371}
   - component: {fileID: 1511700370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (159)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33047,7 +33047,7 @@ GameObject:
   - component: {fileID: 1512541679}
   - component: {fileID: 1512541678}
   - component: {fileID: 1512541677}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (101)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33217,7 +33217,7 @@ GameObject:
   - component: {fileID: 1515759601}
   - component: {fileID: 1515759600}
   - component: {fileID: 1515759599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33393,7 +33393,7 @@ GameObject:
   - component: {fileID: 1519441041}
   - component: {fileID: 1519441040}
   - component: {fileID: 1519441039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (179)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33657,7 +33657,7 @@ GameObject:
   - component: {fileID: 1536219565}
   - component: {fileID: 1536219564}
   - component: {fileID: 1536219563}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33865,7 +33865,7 @@ GameObject:
   - component: {fileID: 1545426913}
   - component: {fileID: 1545426912}
   - component: {fileID: 1545426911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33963,7 +33963,7 @@ GameObject:
   - component: {fileID: 1545847473}
   - component: {fileID: 1545847472}
   - component: {fileID: 1545847471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34133,7 +34133,7 @@ GameObject:
   - component: {fileID: 1556115476}
   - component: {fileID: 1556115475}
   - component: {fileID: 1556115474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (85)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34228,7 +34228,7 @@ GameObject:
   - component: {fileID: 1556261077}
   - component: {fileID: 1556261076}
   - component: {fileID: 1556261075}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34323,7 +34323,7 @@ GameObject:
   - component: {fileID: 1556324318}
   - component: {fileID: 1556324317}
   - component: {fileID: 1556324316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (160)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34418,7 +34418,7 @@ GameObject:
   - component: {fileID: 1556527051}
   - component: {fileID: 1556527050}
   - component: {fileID: 1556527049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34514,7 +34514,7 @@ GameObject:
   - component: {fileID: 1566655313}
   - component: {fileID: 1566655312}
   - component: {fileID: 1566655311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34609,7 +34609,7 @@ GameObject:
   - component: {fileID: 1571000542}
   - component: {fileID: 1571000541}
   - component: {fileID: 1571000540}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34704,7 +34704,7 @@ GameObject:
   - component: {fileID: 1573282660}
   - component: {fileID: 1573282659}
   - component: {fileID: 1573282658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (166)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34799,7 +34799,7 @@ GameObject:
   - component: {fileID: 1579183248}
   - component: {fileID: 1579183247}
   - component: {fileID: 1579183246}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34893,7 +34893,7 @@ GameObject:
   - component: {fileID: 1580587344}
   - component: {fileID: 1580587346}
   - component: {fileID: 1580587345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34965,7 +34965,7 @@ GameObject:
   - component: {fileID: 1583895500}
   - component: {fileID: 1583895499}
   - component: {fileID: 1583895498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35060,7 +35060,7 @@ GameObject:
   - component: {fileID: 1586043325}
   - component: {fileID: 1586043324}
   - component: {fileID: 1586043323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35156,7 +35156,7 @@ GameObject:
   - component: {fileID: 1586624058}
   - component: {fileID: 1586624057}
   - component: {fileID: 1586624056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35382,7 +35382,7 @@ GameObject:
   - component: {fileID: 1594876061}
   - component: {fileID: 1594876060}
   - component: {fileID: 1594876059}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (140)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35477,7 +35477,7 @@ GameObject:
   - component: {fileID: 1598939336}
   - component: {fileID: 1598939335}
   - component: {fileID: 1598939334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (129)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35571,7 +35571,7 @@ GameObject:
   - component: {fileID: 1605993812}
   - component: {fileID: 1605993814}
   - component: {fileID: 1605993813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35642,7 +35642,7 @@ GameObject:
   - component: {fileID: 1610294670}
   - component: {fileID: 1610294672}
   - component: {fileID: 1610294671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35714,7 +35714,7 @@ GameObject:
   - component: {fileID: 1615320072}
   - component: {fileID: 1615320071}
   - component: {fileID: 1615320070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35892,7 +35892,7 @@ GameObject:
   - component: {fileID: 1619261099}
   - component: {fileID: 1619261101}
   - component: {fileID: 1619261100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35964,7 +35964,7 @@ GameObject:
   - component: {fileID: 1621539513}
   - component: {fileID: 1621539512}
   - component: {fileID: 1621539511}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36060,7 +36060,7 @@ GameObject:
   - component: {fileID: 1623741377}
   - component: {fileID: 1623741376}
   - component: {fileID: 1623741375}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36155,7 +36155,7 @@ GameObject:
   - component: {fileID: 1626502248}
   - component: {fileID: 1626502247}
   - component: {fileID: 1626502246}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36344,7 +36344,7 @@ GameObject:
   - component: {fileID: 1631356068}
   - component: {fileID: 1631356067}
   - component: {fileID: 1631356066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36441,7 +36441,7 @@ GameObject:
   - component: {fileID: 1634029506}
   - component: {fileID: 1634029505}
   - component: {fileID: 1634029504}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (172)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36536,7 +36536,7 @@ GameObject:
   - component: {fileID: 1640789302}
   - component: {fileID: 1640789301}
   - component: {fileID: 1640789300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36633,7 +36633,7 @@ GameObject:
   - component: {fileID: 1641060692}
   - component: {fileID: 1641060691}
   - component: {fileID: 1641060690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36728,7 +36728,7 @@ GameObject:
   - component: {fileID: 1644810299}
   - component: {fileID: 1644810298}
   - component: {fileID: 1644810297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36903,7 +36903,7 @@ GameObject:
   - component: {fileID: 1647354173}
   - component: {fileID: 1647354172}
   - component: {fileID: 1647354171}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37092,7 +37092,7 @@ GameObject:
   - component: {fileID: 1668543522}
   - component: {fileID: 1668543521}
   - component: {fileID: 1668543520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37261,7 +37261,7 @@ GameObject:
   - component: {fileID: 1682148523}
   - component: {fileID: 1682148525}
   - component: {fileID: 1682148524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37414,7 +37414,7 @@ GameObject:
   - component: {fileID: 1691465223}
   - component: {fileID: 1691465222}
   - component: {fileID: 1691465221}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37629,9 +37629,9 @@ MonoBehaviour:
   CameraDistance: 3
   CameraCollisionFilter:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   IgnoreTag: 
-  CameraRadius: 1.76
+  CameraRadius: 0.5
 --- !u!114 &1701777115
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -37656,7 +37656,7 @@ GameObject:
   - component: {fileID: 1701781618}
   - component: {fileID: 1701781617}
   - component: {fileID: 1701781616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37754,7 +37754,7 @@ GameObject:
   - component: {fileID: 1707716102}
   - component: {fileID: 1707716101}
   - component: {fileID: 1707716100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37848,7 +37848,7 @@ GameObject:
   - component: {fileID: 1715454579}
   - component: {fileID: 1715454581}
   - component: {fileID: 1715454580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37920,7 +37920,7 @@ GameObject:
   - component: {fileID: 1716183474}
   - component: {fileID: 1716183473}
   - component: {fileID: 1716183472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38097,7 +38097,7 @@ GameObject:
   - component: {fileID: 1724496601}
   - component: {fileID: 1724496600}
   - component: {fileID: 1724496599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (139)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38192,7 +38192,7 @@ GameObject:
   - component: {fileID: 1728152813}
   - component: {fileID: 1728152812}
   - component: {fileID: 1728152811}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (94)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38287,7 +38287,7 @@ GameObject:
   - component: {fileID: 1750491817}
   - component: {fileID: 1750491816}
   - component: {fileID: 1750491815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38383,7 +38383,7 @@ GameObject:
   - component: {fileID: 1759190450}
   - component: {fileID: 1759190449}
   - component: {fileID: 1759190448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38479,7 +38479,7 @@ GameObject:
   - component: {fileID: 1776067355}
   - component: {fileID: 1776067354}
   - component: {fileID: 1776067353}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38574,7 +38574,7 @@ GameObject:
   - component: {fileID: 1778144066}
   - component: {fileID: 1778144065}
   - component: {fileID: 1778144064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38672,7 +38672,7 @@ GameObject:
   - component: {fileID: 1787614187}
   - component: {fileID: 1787614186}
   - component: {fileID: 1787614185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38767,7 +38767,7 @@ GameObject:
   - component: {fileID: 1793642480}
   - component: {fileID: 1793642479}
   - component: {fileID: 1793642478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (176)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38861,7 +38861,7 @@ GameObject:
   - component: {fileID: 1796232864}
   - component: {fileID: 1796232866}
   - component: {fileID: 1796232865}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38933,7 +38933,7 @@ GameObject:
   - component: {fileID: 1798385426}
   - component: {fileID: 1798385425}
   - component: {fileID: 1798385424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39028,7 +39028,7 @@ GameObject:
   - component: {fileID: 1811829715}
   - component: {fileID: 1811829714}
   - component: {fileID: 1811829713}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39123,7 +39123,7 @@ GameObject:
   - component: {fileID: 1819395820}
   - component: {fileID: 1819395819}
   - component: {fileID: 1819395818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39313,7 +39313,7 @@ GameObject:
   - component: {fileID: 1833286363}
   - component: {fileID: 1833286362}
   - component: {fileID: 1833286361}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39408,7 +39408,7 @@ GameObject:
   - component: {fileID: 1843993745}
   - component: {fileID: 1843993744}
   - component: {fileID: 1843993743}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39504,7 +39504,7 @@ GameObject:
   - component: {fileID: 1849266456}
   - component: {fileID: 1849266455}
   - component: {fileID: 1849266454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (86)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39599,7 +39599,7 @@ GameObject:
   - component: {fileID: 1850569008}
   - component: {fileID: 1850569007}
   - component: {fileID: 1850569006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (183)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39694,7 +39694,7 @@ GameObject:
   - component: {fileID: 1851482986}
   - component: {fileID: 1851482985}
   - component: {fileID: 1851482984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39791,7 +39791,7 @@ GameObject:
   - component: {fileID: 1851511468}
   - component: {fileID: 1851511467}
   - component: {fileID: 1851511466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (88)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39886,7 +39886,7 @@ GameObject:
   - component: {fileID: 1857454921}
   - component: {fileID: 1857454920}
   - component: {fileID: 1857454919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39981,7 +39981,7 @@ GameObject:
   - component: {fileID: 1857864099}
   - component: {fileID: 1857864098}
   - component: {fileID: 1857864097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (152)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40156,7 +40156,7 @@ GameObject:
   - component: {fileID: 1859013536}
   - component: {fileID: 1859013538}
   - component: {fileID: 1859013537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40228,7 +40228,7 @@ GameObject:
   - component: {fileID: 1860025414}
   - component: {fileID: 1860025413}
   - component: {fileID: 1860025412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (97)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40323,7 +40323,7 @@ GameObject:
   - component: {fileID: 1889733586}
   - component: {fileID: 1889733585}
   - component: {fileID: 1889733584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40418,7 +40418,7 @@ GameObject:
   - component: {fileID: 1893948069}
   - component: {fileID: 1893948068}
   - component: {fileID: 1893948067}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (115)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40513,7 +40513,7 @@ GameObject:
   - component: {fileID: 1895964261}
   - component: {fileID: 1895964260}
   - component: {fileID: 1895964259}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (137)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40608,7 +40608,7 @@ GameObject:
   - component: {fileID: 1896768701}
   - component: {fileID: 1896768700}
   - component: {fileID: 1896768699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (170)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40703,7 +40703,7 @@ GameObject:
   - component: {fileID: 1903663480}
   - component: {fileID: 1903663479}
   - component: {fileID: 1903663478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40798,7 +40798,7 @@ GameObject:
   - component: {fileID: 1909403925}
   - component: {fileID: 1909403924}
   - component: {fileID: 1909403923}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40894,7 +40894,7 @@ GameObject:
   - component: {fileID: 1916125875}
   - component: {fileID: 1916125874}
   - component: {fileID: 1916125873}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40989,7 +40989,7 @@ GameObject:
   - component: {fileID: 1918928604}
   - component: {fileID: 1918928603}
   - component: {fileID: 1918928602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41084,7 +41084,7 @@ GameObject:
   - component: {fileID: 1921139365}
   - component: {fileID: 1921139367}
   - component: {fileID: 1921139366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41156,7 +41156,7 @@ GameObject:
   - component: {fileID: 1923202699}
   - component: {fileID: 1923202698}
   - component: {fileID: 1923202697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (175)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41251,7 +41251,7 @@ GameObject:
   - component: {fileID: 1927837245}
   - component: {fileID: 1927837244}
   - component: {fileID: 1927837243}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (155)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41346,7 +41346,7 @@ GameObject:
   - component: {fileID: 1931266701}
   - component: {fileID: 1931266700}
   - component: {fileID: 1931266699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (118)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41440,7 +41440,7 @@ GameObject:
   - component: {fileID: 1938323281}
   - component: {fileID: 1938323283}
   - component: {fileID: 1938323282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41512,7 +41512,7 @@ GameObject:
   - component: {fileID: 1945159221}
   - component: {fileID: 1945159220}
   - component: {fileID: 1945159219}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (100)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41595,6 +41595,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945159217}
   m_Mesh: {fileID: 4300000, guid: 6262dcb9419c5b9418275750837c3361, type: 3}
+--- !u!1 &1953707017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953707018}
+  m_Layer: 0
+  m_Name: Office Internals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953707018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953707017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 538783844}
+  m_Father: {fileID: 456615887}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955536228
 GameObject:
   m_ObjectHideFlags: 0
@@ -41607,7 +41638,7 @@ GameObject:
   - component: {fileID: 1955536232}
   - component: {fileID: 1955536231}
   - component: {fileID: 1955536230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (169)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41702,7 +41733,7 @@ GameObject:
   - component: {fileID: 1957211884}
   - component: {fileID: 1957211883}
   - component: {fileID: 1957211882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (141)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41797,7 +41828,7 @@ GameObject:
   - component: {fileID: 1965212331}
   - component: {fileID: 1965212330}
   - component: {fileID: 1965212329}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41983,7 +42014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987556341}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Celing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42208,7 +42239,7 @@ GameObject:
   - component: {fileID: 1988898543}
   - component: {fileID: 1988898542}
   - component: {fileID: 1988898541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42399,7 +42430,7 @@ GameObject:
   - component: {fileID: 1996296677}
   - component: {fileID: 1996296676}
   - component: {fileID: 1996296675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42574,7 +42605,7 @@ GameObject:
   - component: {fileID: 2006760446}
   - component: {fileID: 2006760448}
   - component: {fileID: 2006760447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42646,7 +42677,7 @@ GameObject:
   - component: {fileID: 2009214919}
   - component: {fileID: 2009214918}
   - component: {fileID: 2009214917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (89)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42822,7 +42853,7 @@ GameObject:
   - component: {fileID: 2019094291}
   - component: {fileID: 2019094290}
   - component: {fileID: 2019094289}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42992,7 +43023,7 @@ GameObject:
   - component: {fileID: 2025069920}
   - component: {fileID: 2025069919}
   - component: {fileID: 2025069918}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (124)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43087,7 +43118,7 @@ GameObject:
   - component: {fileID: 2025904154}
   - component: {fileID: 2025904153}
   - component: {fileID: 2025904152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43182,7 +43213,7 @@ GameObject:
   - component: {fileID: 2026779717}
   - component: {fileID: 2026779716}
   - component: {fileID: 2026779715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43278,7 +43309,7 @@ GameObject:
   - component: {fileID: 2037448406}
   - component: {fileID: 2037448405}
   - component: {fileID: 2037448404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (174)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43372,7 +43403,7 @@ GameObject:
   - component: {fileID: 2039842141}
   - component: {fileID: 2039842143}
   - component: {fileID: 2039842142}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43444,7 +43475,7 @@ GameObject:
   - component: {fileID: 2047503410}
   - component: {fileID: 2047503409}
   - component: {fileID: 2047503408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43755,7 +43786,7 @@ GameObject:
   - component: {fileID: 2065987215}
   - component: {fileID: 2065987217}
   - component: {fileID: 2065987216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43827,7 +43858,7 @@ GameObject:
   - component: {fileID: 2073432928}
   - component: {fileID: 2073432927}
   - component: {fileID: 2073432926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43921,7 +43952,7 @@ GameObject:
   - component: {fileID: 2078112570}
   - component: {fileID: 2078112572}
   - component: {fileID: 2078112571}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44414,7 +44445,7 @@ GameObject:
   - component: {fileID: 2088543182}
   - component: {fileID: 2088543181}
   - component: {fileID: 2088543180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (98)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44509,7 +44540,7 @@ GameObject:
   - component: {fileID: 2091768439}
   - component: {fileID: 2091768438}
   - component: {fileID: 2091768437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44603,7 +44634,7 @@ GameObject:
   - component: {fileID: 2093720620}
   - component: {fileID: 2093720622}
   - component: {fileID: 2093720621}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44874,7 +44905,7 @@ GameObject:
   - component: {fileID: 2107028140}
   - component: {fileID: 2107028139}
   - component: {fileID: 2107028138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44971,7 +45002,7 @@ GameObject:
   - component: {fileID: 2109940849}
   - component: {fileID: 2109940848}
   - component: {fileID: 2109940847}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45067,7 +45098,7 @@ GameObject:
   - component: {fileID: 2111901717}
   - component: {fileID: 2111901716}
   - component: {fileID: 2111901715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45164,7 +45195,7 @@ GameObject:
   - component: {fileID: 2112311320}
   - component: {fileID: 2112311319}
   - component: {fileID: 2112311318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (110)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45259,7 +45290,7 @@ GameObject:
   - component: {fileID: 2115381539}
   - component: {fileID: 2115381538}
   - component: {fileID: 2115381537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (191)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45448,7 +45479,7 @@ GameObject:
   - component: {fileID: 2137675082}
   - component: {fileID: 2137675081}
   - component: {fileID: 2137675080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45543,7 +45574,7 @@ GameObject:
   - component: {fileID: 2142039462}
   - component: {fileID: 2142039461}
   - component: {fileID: 2142039460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (123)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45638,7 +45669,7 @@ GameObject:
   - component: {fileID: 2146823649}
   - component: {fileID: 2146823648}
   - component: {fileID: 2146823647}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45722,20 +45753,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146823645}
   m_Mesh: {fileID: 4300002, guid: 96dd8187967cfd143bc0d9653eeda806, type: 3}
---- !u!64 &410446243969952519
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6342525413127924489}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: d2d27ef24b533774685f7b40c5a430b7, type: 3}
 --- !u!65 &434595460967095587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45747,8 +45764,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.991367, y: 0.125, z: 9.041313}
-  m_Center: {x: -1.4956837, y: -0.0625, z: 1.4865112}
+  m_Size: {x: 8.991367, y: 2.3511066, z: 9.041313}
+  m_Center: {x: -1.4956837, y: -1.1755533, z: 1.4865112}
 --- !u!205 &787057121027128635
 LODGroup:
   m_ObjectHideFlags: 0
@@ -46080,6 +46097,7 @@ GameObject:
   - component: {fileID: 1896905233695326893}
   - component: {fileID: 1896905233691902605}
   - component: {fileID: 1896905233692901453}
+  - component: {fileID: 1896905233695170190}
   m_Layer: 0
   m_Name: PotPlant_02_Snaps001
   m_TagString: Untagged
@@ -46087,6 +46105,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1896905233695170190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896905233695170189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4568863, y: 0.46926248, z: 0.47632217}
+  m_Center: {x: 0.005382538, y: 0.23463124, z: -0.0061912537}
 --- !u!4 &1896905233695326893
 Transform:
   m_ObjectHideFlags: 0
@@ -46780,7 +46811,7 @@ GameObject:
   - component: {fileID: 2268288770536657986}
   - component: {fileID: 2268288770535659138}
   - component: {fileID: 1806038921430535524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46798,7 +46829,7 @@ GameObject:
   - component: {fileID: 2268288770537952354}
   - component: {fileID: 2268288770519515330}
   - component: {fileID: 7671556075733665106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Snaps001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46817,7 +46848,7 @@ GameObject:
   - component: {fileID: 2268288770536657984}
   - component: {fileID: 2268288770535659136}
   - component: {fileID: 8943244867750607034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46955,7 +46986,7 @@ GameObject:
   - component: {fileID: 2829445434099457685}
   - component: {fileID: 2829445434098326613}
   - component: {fileID: 3856527715671974580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47037,7 +47068,7 @@ GameObject:
   - component: {fileID: 2829445434501758026}
   - component: {fileID: 2829445434500628106}
   - component: {fileID: 3856527716074979435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Classic_Ceiling_01_Snaps001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47137,7 +47168,7 @@ GameObject:
   - component: {fileID: 2878391653938062702}
   - component: {fileID: 2878391653939029934}
   - component: {fileID: 1802333760240011523}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47155,7 +47186,7 @@ GameObject:
   - component: {fileID: 2878391653936735564}
   - component: {fileID: 2878391653920928236}
   - component: {fileID: 2814312592811444437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_Snaps001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47174,7 +47205,7 @@ GameObject:
   - component: {fileID: 2878391653938062700}
   - component: {fileID: 2878391653939029932}
   - component: {fileID: 7346840339738525588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallWindowFrame_03_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48618,7 +48649,7 @@ GameObject:
   - component: {fileID: 5499186562263181202}
   - component: {fileID: 5499186562264278354}
   - component: {fileID: 7960477123243513909}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Corner_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48636,7 +48667,7 @@ GameObject:
   - component: {fileID: 5499186562266048434}
   - component: {fileID: 5499186562246046482}
   - component: {fileID: 2044205396654730786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Corner_Snaps001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48655,7 +48686,7 @@ GameObject:
   - component: {fileID: 5499186562263181200}
   - component: {fileID: 5499186562264278352}
   - component: {fileID: 1912283570187111394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Wall_Corner_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49231,7 +49262,7 @@ GameObject:
   - component: {fileID: 6342525413128353577}
   - component: {fileID: 6342525413127059209}
   - component: {fileID: 6342525413125928393}
-  - component: {fileID: 410446243969952519}
+  - component: {fileID: 6342525413127924490}
   m_Layer: 0
   m_Name: PaperTray_01_Snaps001
   m_TagString: Untagged
@@ -49239,6 +49270,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!65 &6342525413127924490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342525413127924489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29687497, y: 0.21692082, z: 0.3906005}
+  m_Center: {x: 0.007812499, y: 0.10846041, z: -0.0077983653}
 --- !u!4 &6342525413128353577
 Transform:
   m_ObjectHideFlags: 0
@@ -49309,7 +49353,7 @@ GameObject:
   - component: {fileID: 6441932179302678438}
   - component: {fileID: 6441932179301678438}
   - component: {fileID: 2285871497157428355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallDoubleDoorFrame_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49327,7 +49371,7 @@ GameObject:
   - component: {fileID: 6441932179299254148}
   - component: {fileID: 6441932179318827812}
   - component: {fileID: 2190712947084216903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallDoubleDoorFrame_Snaps001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49346,7 +49390,7 @@ GameObject:
   - component: {fileID: 6441932179302678436}
   - component: {fileID: 6441932179301678436}
   - component: {fileID: 1919018577736475985}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_WallDoubleDoorFrame_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49962,7 +50006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7426978149179544661}
   - component: {fileID: 7426978149194367221}
-  - component: {fileID: 8881441096017376834}
+  - component: {fileID: 7426978149179115638}
   m_Layer: 0
   m_Name: PenHolder_03_Snaps001
   m_TagString: Untagged
@@ -49970,6 +50014,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!65 &7426978149179115638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7426978149179115637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25996053, y: 0.3003695, z: 0.21854618}
+  m_Center: {x: -0.006977707, y: 0.113449335, z: -0.019369332}
 --- !u!1 &7426978149179115639
 GameObject:
   m_ObjectHideFlags: 0
@@ -50237,7 +50294,7 @@ GameObject:
   - component: {fileID: 8803531569904259972}
   - component: {fileID: 434595460967095587}
   - component: {fileID: 8803531569906453829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neo_Floor_01_Snaps001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52059,20 +52116,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &8881441096017376834
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7426978149179115637}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: f2a412085248f8e4a8e23dd0a2a773de, type: 3}
 --- !u!114 &8943244867750607034
 MonoBehaviour:
   m_ObjectHideFlags: 0
