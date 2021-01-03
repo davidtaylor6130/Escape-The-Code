@@ -12,6 +12,9 @@ public class TextDisplay : MonoBehaviour
     private WaitForSeconds _longWait;
     private State _state = State.Initialising;
 
+    private string ms_DebugInput;
+    private bool mb_ReadingDebugCommand;
+
     public bool IsIdle { get { return _state == State.Idle; } }
     public bool IsBusy { get { return _state != State.Idle; } }
 
@@ -32,8 +35,30 @@ public class TextDisplay : MonoBehaviour
 
         while (currentLetter < charArray.Length)
         {
-            _displayText.text += charArray[currentLetter++];
-            yield return _shortWait;
+            if (charArray[currentLetter] == '[')
+            {
+                mb_ReadingDebugCommand = true;
+                currentLetter++;
+            }
+            else if (charArray[currentLetter] == ']')
+            {
+                mb_ReadingDebugCommand = false;
+                currentLetter++;
+                Debug.Log(ms_DebugInput);
+            }
+            else if (mb_ReadingDebugCommand)
+            {
+                Debug.Log("TASK DEBUG FOUND");
+                ms_DebugInput += charArray[currentLetter];
+                currentLetter++;
+                yield return _shortWait;
+            }
+            else
+            {
+                _displayText.text += charArray[currentLetter];
+                currentLetter++;
+                yield return _shortWait;
+            }
         }
 
         _displayText.text += "\n";
