@@ -26,14 +26,8 @@ public class ElectronicInteractable : MonoBehaviour
     public CustomLerp lerp;
     private bool Entering;
     
-
     [Header("Sound")]
     public AudioSource SparkSoundEffect;
-
-    void Start()
-    {
-                
-    }
 
     // Update is called once per frame
     void Update()
@@ -63,7 +57,7 @@ public class ElectronicInteractable : MonoBehaviour
         //- toggle player emmiter and gui promt depending player emmiter status -//
         if (Entering)
         {
-            Player.GetComponent<ParticleSystem>().Stop();
+            Player.GetComponent<PlayerMovement>().NormalParticleEffect.Stop();
             TakeControlGuiPrompt.SetActive(false);
             //- Camera Zoom on the Interactable Object -//
             GameState.SetNewActiveCamera(VMCam);
@@ -71,10 +65,10 @@ public class ElectronicInteractable : MonoBehaviour
         }
         else if (!Entering)
         {
-            GameState.IsPlayerActive = true;
+            GameState.IsPlayerActive = TypeOfMovement.Normal;
             isControllingObject = false;
 
-            Player.GetComponent<ParticleSystem>().Play();
+            Player.GetComponent<PlayerMovement>().NormalParticleEffect.Play();
             TakeControlGuiPrompt.SetActive(true);
             //- Re-enable Players Camera -//
             GameState.SetPlayerCameraActive();
@@ -91,7 +85,7 @@ public class ElectronicInteractable : MonoBehaviour
                 PlayersPreviousPosition = Player.transform.position;
                 
                 //- Stop Player Movement -//
-                GameState.IsPlayerActive = false;
+                GameState.IsPlayerActive = TypeOfMovement.NoMovement;
                 isControllingObject = true;
                 Entering = true;
                 
