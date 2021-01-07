@@ -12,6 +12,9 @@ public class ElectronicInteractable : MonoBehaviour
     public Transform JumpPoint;
     public GameObject Player;
     public Vector3 PlayersPreviousPosition;
+    public TypeOfMovement PlayerStateAfterInteraction = TypeOfMovement.NoMovement;
+    public TypeOfMovement PlayerStateAfterExiting = TypeOfMovement.Normal;
+    private PlayerMovement playerMovement;
 
     [Header("Object Information")]
     public bool isControllingObject = false;
@@ -23,86 +26,47 @@ public class ElectronicInteractable : MonoBehaviour
     
     [Header("Jump Bezier Curve")]
     public float JumpHeight = 10.0f;
-    public CustomLerp lerp;
+    private CustomLerp lerp;
     private bool Entering;
     
     [Header("Sound")]
     public AudioSource SparkSoundEffect;
 
+    void Start()
+    {
+        lerp = Player.GetComponent<CustomLerp>();
+        playerMovement = Player.GetComponent<PlayerMovement>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        lerp.LerpUpdate();
-        if (lerp.IsLerpCompleated())
-        {
-            Player.GetComponent<Rigidbody>().isKinematic = false;
-            if (Entering)
-            {
-                EnteringExitingEffects();
-                Entering = false;
-            }
-        }
-        else
-        {
-            Player.GetComponent<Rigidbody>().isKinematic = false;
-        }
-    }
 
-    void EnteringExitingEffects()
-    {
-        //- Play Particle and sound effects -//
-        SparkParticleEffect.Play();
-        SparkSoundEffect.Play();
-
-        //- toggle player emmiter and gui promt depending player emmiter status -//
-        if (Entering)
-        {
-            Player.GetComponent<PlayerMovement>().NormalParticleEffect.Stop();
-            TakeControlGuiPrompt.SetActive(false);
-            //- Camera Zoom on the Interactable Object -//
-            GameState.SetNewActiveCamera(VMCam);
-            Player.transform.position = JumpPoint.position;
-        }
-        else if (!Entering)
-        {
-            GameState.IsPlayerActive = TypeOfMovement.Normal;
-            isControllingObject = false;
-
-            Player.GetComponent<PlayerMovement>().NormalParticleEffect.Play();
-            TakeControlGuiPrompt.SetActive(true);
-            //- Re-enable Players Camera -//
-            GameState.SetPlayerCameraActive();
-        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == Player.name)
         {
-            if (Input.GetButtonDown("Possess") && isControllingObject == false)
+            if (isControllingObject == true && Input.GetButtonDown("Possess")) // if controlling object exit object
             {
-                //- Save Players Entry point -//
-                PlayersPreviousPosition = Player.transform.position;
-                
-                //- Stop Player Movement -//
-                GameState.IsPlayerActive = TypeOfMovement.NoMovement;
-                isControllingObject = true;
-                Entering = true;
-                
-                //- turns off Player Gravity -//
-                Player.GetComponent<Rigidbody>().isKinematic = true;
+                //- Setting Internal Data -//
+                isControllingObject = false; // Keeping Track of player controll for object
+                TakeControlGuiPrompt.SetActive(true); // Toggle off and on Gui Element when controlling object
 
-                //- calculate player jump -//
-                lerp.StartLerp(Player.transform.position, JumpPoint.position, JumpHeight);
+                //- Set/Animate Player Movement -//
+                playerMovement.SetPlayerMovementType(PlayerStateAfterExiting, WhenToExicute.Instant, SparkSoundEffect, SparkParticleEffect);
+                playerMovement.PlayerLerpTo(PlayersPreviousPosition, JumpHeight);
             }
-            else if (Input.GetButtonDown("Possess") && isControllingObject == true)
+            else if(isControllingObject == false && Input.GetButtonDown("Possess")) // if not controlling object enter
             {
-                //- Turns off Player Gravity -//
-                Player.GetComponent<Rigidbody>().isKinematic = true;
-                //- Play Effects -//
-                EnteringExitingEffects();
-                //- calculate player jump -//
-                lerp.StartLerp(JumpPoint.position, PlayersPreviousPosition, JumpHeight);
+                //- Setting Internal Data -//
+                isControllingObject = true; // Keeping Track of player control for specific object
+                PlayersPreviousPosition = Player.transform.position;
+
+                //- Set/Animate Player Movement -//
+                playerMovement.SetPlayerMovementType(PlayerStateAfterInteraction, WhenToExicute.AfterAnimation, SparkSoundEffect, SparkParticleEffect);
+                playerMovement.PlayerLerpTo(JumpPoint.position, JumpHeight);
             }
         }
     }

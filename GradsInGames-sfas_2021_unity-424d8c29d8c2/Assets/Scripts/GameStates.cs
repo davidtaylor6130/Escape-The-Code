@@ -5,16 +5,12 @@ using Cinemachine;
 
 public class GameStates : MonoBehaviour
 {
-    [Header("Player Information")]
-    public TypeOfMovement IsPlayerActive;
-
     [Header("Cinemachine Infomation")]
     public CinemachineVirtualCamera[] VMCams;
     private CinemachineVirtualCamera CurrentActive;
     // Start is called before the first frame update
     void Start()
     {
-        IsPlayerActive = TypeOfMovement.Normal;
         foreach (CinemachineVirtualCamera temp in VMCams)
         {
             temp.enabled = false;

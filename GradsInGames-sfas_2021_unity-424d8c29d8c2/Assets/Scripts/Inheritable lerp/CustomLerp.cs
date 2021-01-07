@@ -14,12 +14,12 @@ public class CustomLerp : MonoBehaviour
     [Tooltip("This is the object that moves due to the points given")]              public GameObject m_Character;
 
     //- Private Variables -//
-    [SerializeField] [Tooltip("Storing the calculated Points")]                     private Vector3[] m_nodesToTravel;
-    [SerializeField] [Tooltip("Storing the calculated Points")]                     private Vector3 m_nextnodeToTravel;
-    [SerializeField] [Tooltip("If The Lerp Is Active")]                             private bool m_isLerpActive;
-    [SerializeField] [Tooltip("If The Lerp Is Active")]                             private bool m_lerpIsFinished;
-    [SerializeField] [Tooltip("Stores Current Progress")]                           private int m_currentPoint;
-    [SerializeField] [Tooltip("Time Since Start Lerp was called")]                  private float m_timer;
+    [Tooltip("Storing the calculated Points")]                                      private Vector3[] m_nodesToTravel;
+    [Tooltip("Storing the calculated Points")]                                      private Vector3 m_nextnodeToTravel;
+    [Tooltip("If The Lerp Is Active")]                                              private bool m_isLerpActive;
+    [Tooltip("If The Lerp Is Active")]                                              private bool m_lerpIsFinished;
+    [Tooltip("Stores Current Progress")]                                            private int m_currentPoint;
+    [Tooltip("Time Since Start Lerp was called")]                                   private float m_timer;
 
 
     // Update is called once per frame
