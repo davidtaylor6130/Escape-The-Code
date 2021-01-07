@@ -10,12 +10,13 @@ public class CustomLerp : MonoBehaviour
     //- Public Variables -//
     [Header("Calculated Node Position")]
     [Tooltip("Larger the number Smoother The curve in the line, Recomended is 10")] public int m_lineSamplePoints = 10;
-    [Tooltip("Speed At which the Character Object Moves")]                          public float m_movementSpeed;
-    [Tooltip("This is the object that moves due to the points given")]              public GameObject m_Character;
+    private float movementSpeed;
+    public GameObject m_Character;
 
     //- Private Variables -//
     [Tooltip("Storing the calculated Points")]                                      private Vector3[] m_nodesToTravel;
     [Tooltip("Storing the calculated Points")]                                      private Vector3 m_nextnodeToTravel;
+    private Vector3 m_startPosition;
     [Tooltip("If The Lerp Is Active")]                                              private bool m_isLerpActive;
     [Tooltip("If The Lerp Is Active")]                                              private bool m_lerpIsFinished;
     [Tooltip("Stores Current Progress")]                                            private int m_currentPoint;
@@ -27,10 +28,10 @@ public class CustomLerp : MonoBehaviour
     {
         if (m_isLerpActive)
         {
-            m_timer += Time.deltaTime * m_movementSpeed;
+            m_timer += Time.deltaTime * movementSpeed;
             if (m_Character.transform.position != m_nextnodeToTravel)
             {
-                m_Character.transform.position = Vector3.Lerp(m_nodesToTravel[0], m_nextnodeToTravel, m_timer);
+                m_Character.transform.position = Vector3.Lerp(m_startPosition, m_nextnodeToTravel, m_timer);
             }
             else if (m_currentPoint == m_nodesToTravel.Length - 1 && Vector3.Distance(m_Character.transform.position, m_nodesToTravel[m_nodesToTravel.Length - 1]) < 2f)
             {
@@ -41,23 +42,39 @@ public class CustomLerp : MonoBehaviour
             {
                 m_currentPoint++;
                 m_nextnodeToTravel = m_nodesToTravel[m_currentPoint];
+                m_startPosition = m_Character.transform.position;
+                m_timer = 0;
             }
         }
     }
 
-    public void StartLerp(Vector3 a_positionOne, Vector3 a_positionTwo, float af_curveHeight)
+    public void StartLerp(Vector3 a_positionOne, Vector3 a_positionTwo, float af_curveHeight, float af_speed)
     {
         m_lerpIsFinished = false;
         m_isLerpActive = true;
-        //- calculate inbetween point and increase hight by set amount -//
-        Vector3 Point2 = new Vector3(((a_positionOne.x + a_positionTwo.x) / 2), (((a_positionOne.y + a_positionTwo.y) / 2) + af_curveHeight), ((a_positionOne.z + a_positionTwo.z) / 2));
-        //- calculate Bezier Curve with 3 points and save the amount of sample points to lerp character with -//
-        m_nodesToTravel = GetQuadraticCurvePointsArray(a_positionOne, Point2, a_positionTwo);
+
+        //- if no curve dont bother calculating the curve -//
+        if (af_curveHeight == 0.0f)
+        {
+            m_nodesToTravel = new Vector3[2];
+            m_nodesToTravel[0] = a_positionOne;
+            m_nodesToTravel[1] = a_positionTwo;
+        }
+        else
+        {
+            //- calculate inbetween point and increase hight by set amount -//
+            Vector3 Point2 = new Vector3(((a_positionOne.x + a_positionTwo.x) / 2), (((a_positionOne.y + a_positionTwo.y) / 2) + af_curveHeight), ((a_positionOne.z + a_positionTwo.z) / 2));
+            //- calculate Bezier Curve with 3 points and save the amount of sample points to lerp character with -//
+            m_nodesToTravel = GetQuadraticCurvePointsArray(a_positionOne, Point2, a_positionTwo);
+        }
+
+        movementSpeed = af_speed;
 
         //- Resetting Lerp Variables -//
         m_currentPoint = 0;
         m_timer = 0;
         m_nextnodeToTravel = m_nodesToTravel[m_currentPoint];
+        m_startPosition = m_Character.transform.position;
     }
 
     public bool IsLerpCompleated()
@@ -72,15 +89,17 @@ public class CustomLerp : MonoBehaviour
 
     private Vector3[] GetQuadraticCurvePointsArray(Vector3 a_point0, Vector3 a_point1, Vector3 a_point2)
     {
+        int temp = m_lineSamplePoints + 2;
 
-        Vector3[] curvePositions = new Vector3[m_lineSamplePoints + 2];
+
+        Vector3[] curvePositions = new Vector3[temp];
         curvePositions[0] = a_point0;
-        curvePositions[m_lineSamplePoints + 1] = a_point2;
+        curvePositions[temp - 1] = a_point2;
 
-        for (int i = 2; i < m_lineSamplePoints + 2; i++)
+        for (int i = 1; i < temp - 1; i++)
         {
-            float t = i / (float)m_lineSamplePoints;
-            curvePositions[i - 1] = CalculateQuadraticBezierPoint(t, a_point0, a_point1, a_point2);
+            float t = i / (float)temp;
+            curvePositions[i] = CalculateQuadraticBezierPoint(t, a_point0, a_point1, a_point2);
         }
         return curvePositions;
     }

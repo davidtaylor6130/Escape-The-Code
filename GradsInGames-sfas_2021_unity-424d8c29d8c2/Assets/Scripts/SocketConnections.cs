@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Direction 
-{ 
-    Up = 0,
-    Down = 1,
-    Left = 2,
-    Right = 3,
-    Continuous = 4
-};
+[System.Serializable]
+public struct ConnectionInfo
+{
+    public Transform transform;
+    public Direction direction;
+}
 
 public class SocketConnections : MonoBehaviour
 {
-    [System.Serializable]
-    public struct ConnectionInfo
-    {
-        public Transform transform;
-        public Direction direction;
-    }
+    [Header("Player")]
+    public GameObject Player;
 
+    [Header("SocketManager")]
+    public SocketManager manager;
+
+    [Header("Current Connections")]
     public ConnectionInfo[] Connections;
     private LineRenderer Renderers;
 
@@ -45,5 +43,17 @@ public class SocketConnections : MonoBehaviour
             }
         }
         return new Vector3(0, 0, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == Player.name)
+            manager.SetPlayersClosesNode(this);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == Player.name)
+            manager.SetPlayersClosesNode(null);
     }
 }

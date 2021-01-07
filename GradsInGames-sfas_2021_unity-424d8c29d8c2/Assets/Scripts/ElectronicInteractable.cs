@@ -25,16 +25,14 @@ public class ElectronicInteractable : MonoBehaviour
     public ParticleSystem SparkParticleEffect;
     
     [Header("Jump Bezier Curve")]
-    public float JumpHeight = 10.0f;
-    private CustomLerp lerp;
-    private bool Entering;
+    public float JumpHeight = 0.0f;
+    public float JumpMovementSpeed;
     
     [Header("Sound")]
     public AudioSource SparkSoundEffect;
 
     void Start()
     {
-        lerp = Player.GetComponent<CustomLerp>();
         playerMovement = Player.GetComponent<PlayerMovement>();
     }
 
@@ -54,9 +52,12 @@ public class ElectronicInteractable : MonoBehaviour
                 isControllingObject = false; // Keeping Track of player controll for object
                 TakeControlGuiPrompt.SetActive(true); // Toggle off and on Gui Element when controlling object
 
+                //- Focus On Player -//
+                GameState.SetPlayerCameraActive();
+
                 //- Set/Animate Player Movement -//
                 playerMovement.SetPlayerMovementType(PlayerStateAfterExiting, WhenToExicute.Instant, SparkSoundEffect, SparkParticleEffect);
-                playerMovement.PlayerLerpTo(PlayersPreviousPosition, JumpHeight);
+                playerMovement.PlayerLerpTo(PlayersPreviousPosition, JumpHeight, JumpMovementSpeed);
             }
             else if(isControllingObject == false && Input.GetButtonDown("Possess")) // if not controlling object enter
             {
@@ -64,9 +65,12 @@ public class ElectronicInteractable : MonoBehaviour
                 isControllingObject = true; // Keeping Track of player control for specific object
                 PlayersPreviousPosition = Player.transform.position;
 
+                //- Focus On Object Camera -//
+                GameState.SetNewActiveCamera(VMCam);
+
                 //- Set/Animate Player Movement -//
                 playerMovement.SetPlayerMovementType(PlayerStateAfterInteraction, WhenToExicute.AfterAnimation, SparkSoundEffect, SparkParticleEffect);
-                playerMovement.PlayerLerpTo(JumpPoint.position, JumpHeight);
+                playerMovement.PlayerLerpTo(JumpPoint.position, JumpHeight, JumpMovementSpeed);
             }
         }
     }

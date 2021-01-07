@@ -53,7 +53,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Data Over Power (D.O.P) Movement")]
     [Tooltip("Cinimachine D.O.P virtual camera")]           public CinemachineVirtualCamera DOPVertualCamera;
     [Tooltip("Yellow Electricity Particle Effect")]         public ParticleSystem DOPParticleEffect;
-    [Tooltip("Lerp")]                                       public CustomLerp DOPLerp;
+    [Tooltip("PowerSocket Manager Class")]                  public SocketManager socketManager;
+    [Tooltip("How Fast The player moves In DOP Mode")]      public float DOPMovmentSpeed;
     private GameObject StartingSocket;
     private GameObject DestinationSocket;
 
@@ -139,15 +140,58 @@ public class PlayerMovement : MonoBehaviour
 
     void DOPMovement()
     {
-        Debug.Log("DOP Movement Running");
-
-
-
-
-        //- Camera Movement -//
-        Vector3 rotationInput = new Vector3(((Input.GetAxis("Mouse Y") * rotationSpeed) * Time.deltaTime), ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
-        rotation += rotationInput;
-        TargetPosition.eulerAngles = rotation;
+        //- Get WASD Input from Unity Input system -//
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        Vector3 destination;
+        //- Inputs system is mainly used both for moving an input so its axis based so if statement separated the movement into left/right/up/down  -//
+        if (movement.x > 0.1f)
+        {
+            if ((destination = socketManager.GetDirectionDestination(Direction.Right)) != new Vector3(0, 0, 0))
+            {
+                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+            }
+            else
+            {
+                Debug.Log("NotValidMove");
+            }
+            Debug.Log("D");
+        }
+        else if (movement.x < -0.1f)
+        {
+            if ((destination = socketManager.GetDirectionDestination(Direction.Left)) != new Vector3(0, 0, 0))
+            {
+                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+            }
+            else
+            {
+                Debug.Log("NotValidMove");
+            }
+            Debug.Log("A");
+        }
+        else if (movement.z > 0.2f)
+        {
+            if ((destination = socketManager.GetDirectionDestination(Direction.Up)) != new Vector3(0,0,0))
+            {
+                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+            }
+            else
+            {
+                Debug.Log("NotValidMove");
+            }
+            Debug.Log("W");
+        }
+        else if (movement.z < -0.2f)
+        {
+            if ((destination = socketManager.GetDirectionDestination(Direction.Down)) != new Vector3(0, 0, 0))
+            {
+                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+            }
+            else
+            {
+                Debug.Log("NotValidMove");
+            }
+            Debug.Log("S");
+        }
 
         //- Camera Zoom -//
         if (Input.GetAxis("Mouse ScrollWheel") != 0.0f)
@@ -179,6 +223,7 @@ public class PlayerMovement : MonoBehaviour
                         break;
 
                     case TypeOfMovement.DOP:
+                        GameState.SetNewActiveCamera(DOPVertualCamera);
                         DOPParticleEffect.Play();
                         rb.isKinematic = true;
                         break;
@@ -209,9 +254,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void PlayerLerpTo(Vector3 endPos, float height = 0.0f)
+    public void PlayerLerpTo(Vector3 endPos, float height, float movementspeed)
     {
-        lerp.StartLerp(Player.transform.position, endPos, height);
+        lerp.StartLerp(Player.transform.position, endPos, height, movementspeed);
     }
 
     //- Query Functions -//
