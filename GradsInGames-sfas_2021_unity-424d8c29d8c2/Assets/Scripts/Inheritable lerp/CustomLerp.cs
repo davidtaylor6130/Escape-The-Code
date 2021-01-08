@@ -91,7 +91,6 @@ public class CustomLerp : MonoBehaviour
     {
         int temp = m_lineSamplePoints + 2;
 
-
         Vector3[] curvePositions = new Vector3[temp];
         curvePositions[0] = a_point0;
         curvePositions[temp - 1] = a_point2;

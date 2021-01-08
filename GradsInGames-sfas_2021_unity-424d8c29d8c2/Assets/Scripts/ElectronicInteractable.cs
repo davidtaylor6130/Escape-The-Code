@@ -9,15 +9,14 @@ public class ElectronicInteractable : MonoBehaviour
     public GameStates GameState;
 
     [Header("Player Information")]
-    public Transform JumpPoint;
+    public Transform EntryJumpPoint;
+    public Transform ExitJumpPoint;
     public GameObject Player;
-    public Vector3 PlayersPreviousPosition;
     public TypeOfMovement PlayerStateAfterInteraction = TypeOfMovement.NoMovement;
     public TypeOfMovement PlayerStateAfterExiting = TypeOfMovement.Normal;
     private PlayerMovement playerMovement;
 
     [Header("Object Information")]
-    public bool isControllingObject = false;
     public CinemachineVirtualCamera VMCam;
 
     [Header("Graphic Elements")]
@@ -31,25 +30,28 @@ public class ElectronicInteractable : MonoBehaviour
     [Header("Sound")]
     public AudioSource SparkSoundEffect;
 
+    [Header("Misc")]
+    public bool IsInitalComputer;
+
     void Start()
     {
         playerMovement = Player.GetComponent<PlayerMovement>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (IsInitalComputer)
+        {
+            GameState.SetNewActiveCamera(VMCam);
+            playerMovement.isControllingObject = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == Player.name)
         {
-            if (isControllingObject == true && Input.GetButtonDown("Possess")) // if controlling object exit object
+            if (playerMovement.isControllingObject == true && Input.GetButtonDown("Possess")) // if controlling object exit object
             {
                 //- Setting Internal Data -//
-                isControllingObject = false; // Keeping Track of player controll for object
+                playerMovement.isControllingObject = false; // Keeping Track of player controll for object
                 TakeControlGuiPrompt.SetActive(true); // Toggle off and on Gui Element when controlling object
 
                 //- Focus On Player -//
@@ -57,20 +59,19 @@ public class ElectronicInteractable : MonoBehaviour
 
                 //- Set/Animate Player Movement -//
                 playerMovement.SetPlayerMovementType(PlayerStateAfterExiting, WhenToExicute.Instant, SparkSoundEffect, SparkParticleEffect);
-                playerMovement.PlayerLerpTo(PlayersPreviousPosition, JumpHeight, JumpMovementSpeed);
+                playerMovement.PlayerLerpTo(ExitJumpPoint.position, JumpHeight, JumpMovementSpeed);
             }
-            else if(isControllingObject == false && Input.GetButtonDown("Possess")) // if not controlling object enter
+            else if(playerMovement.isControllingObject == false && Input.GetButtonDown("Possess")) // if not controlling object enter
             {
                 //- Setting Internal Data -//
-                isControllingObject = true; // Keeping Track of player control for specific object
-                PlayersPreviousPosition = Player.transform.position;
+                playerMovement.isControllingObject = true; // Keeping Track of player control for specific object
 
                 //- Focus On Object Camera -//
                 GameState.SetNewActiveCamera(VMCam);
 
                 //- Set/Animate Player Movement -//
                 playerMovement.SetPlayerMovementType(PlayerStateAfterInteraction, WhenToExicute.AfterAnimation, SparkSoundEffect, SparkParticleEffect);
-                playerMovement.PlayerLerpTo(JumpPoint.position, JumpHeight, JumpMovementSpeed);
+                playerMovement.PlayerLerpTo(EntryJumpPoint.position, JumpHeight, JumpMovementSpeed);
             }
         }
     }

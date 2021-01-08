@@ -32,7 +32,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 rotation;
     private Rigidbody rb;
     private float CenterToGround;
-    
+
+    //- Bool to save if character is controlling an object -//
+    public bool isControllingObject;
+
     //- Var to save refrance to queued movementType Errors -//
     private bool waitToChangeMovementType;
     private TypeOfMovement desiredMovementType;
@@ -55,8 +58,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Yellow Electricity Particle Effect")]         public ParticleSystem DOPParticleEffect;
     [Tooltip("PowerSocket Manager Class")]                  public SocketManager socketManager;
     [Tooltip("How Fast The player moves In DOP Mode")]      public float DOPMovmentSpeed;
-    private GameObject StartingSocket;
-    private GameObject DestinationSocket;
+
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Input.GetButton("Possess"));
+
         //- Update Lerp -//
         lerp.LerpUpdate();
         
@@ -123,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
             else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
                 rb.velocity += Vector3.up * Physics.gravity.y * (2.0f - 1) * Time.deltaTime;
             
-
             //- Camera Movement -//
             Vector3 rotationInput = new Vector3(((Input.GetAxis("Mouse Y") * rotationSpeed) * Time.deltaTime), ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
             rotation += rotationInput;
@@ -141,8 +144,8 @@ public class PlayerMovement : MonoBehaviour
     void DOPMovement()
     {
         //- Get WASD Input from Unity Input system -//
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-        Vector3 destination;
+        Vector3 destination, movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+
         //- Inputs system is mainly used both for moving an input so its axis based so if statement separated the movement into left/right/up/down  -//
         if (movement.x > 0.1f)
         {
@@ -150,11 +153,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
             }
-            else
-            {
-                Debug.Log("NotValidMove");
-            }
-            Debug.Log("D");
         }
         else if (movement.x < -0.1f)
         {
@@ -162,11 +160,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
             }
-            else
-            {
-                Debug.Log("NotValidMove");
-            }
-            Debug.Log("A");
         }
         else if (movement.z > 0.2f)
         {
@@ -174,11 +167,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
             }
-            else
-            {
-                Debug.Log("NotValidMove");
-            }
-            Debug.Log("W");
         }
         else if (movement.z < -0.2f)
         {
@@ -186,19 +174,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
             }
-            else
-            {
-                Debug.Log("NotValidMove");
-            }
-            Debug.Log("S");
         }
 
-        //- Camera Zoom -//
-        if (Input.GetAxis("Mouse ScrollWheel") != 0.0f)
-        {
-            float lf_distance = VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance += Input.GetAxis("Mouse ScrollWheel");
-            VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance = Mathf.Clamp(lf_distance, 1, 4);
-        }
     }
 
     public void SetPlayerMovementType(TypeOfMovement a_movementType, WhenToExicute a_whenToExicute, AudioSource a_audioSourceToPlay, ParticleSystem a_particleEffectToPlay)
