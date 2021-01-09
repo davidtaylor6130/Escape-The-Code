@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Yellow Electricity Particle Effect")]         public ParticleSystem DOPParticleEffect;
     [Tooltip("PowerSocket Manager Class")]                  public SocketManager socketManager;
     [Tooltip("How Fast The player moves In DOP Mode")]      public float DOPMovmentSpeed;
+    private Direction PreviousDirection;
 
 
     // Start is called before the first frame update
@@ -93,13 +94,16 @@ public class PlayerMovement : MonoBehaviour
         {
             case TypeOfMovement.Normal:
                 NormalMovement();
+                socketManager.toggleVisualConnectionsOn(false);
                 break;
 
             case TypeOfMovement.DOP:
                 DOPMovement();
+                socketManager.toggleVisualConnectionsOn(true);
                 break;
 
             case TypeOfMovement.NoMovement:
+                socketManager.toggleVisualConnectionsOn(false);
                 break;
 
             default:
@@ -146,34 +150,70 @@ public class PlayerMovement : MonoBehaviour
         //- Get WASD Input from Unity Input system -//
         Vector3 destination, movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 
-        //- Inputs system is mainly used both for moving an input so its axis based so if statement separated the movement into left/right/up/down  -//
-        if (movement.x > 0.1f)
+        if (lerp.IsLerpCompleated() && socketManager.isContinuousNode())
         {
-            if ((destination = socketManager.GetDirectionDestination(Direction.Right)) != new Vector3(0, 0, 0))
+            if ((destination = socketManager.GetDirectionDestination(PreviousDirection)) != new Vector3(0, 0, 0))
             {
                 lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+            }
+            else
+                Debug.Log("Error Continuous Node true and no correct direction for next point");
+        }
+        else
+        {
+            //- Inputs system is mainly used both for moving an input so its axis based so if statement separated the movement into left/right/up/down  -//
+            if (movement.x > 0.1f)
+            {
+                if ((destination = socketManager.GetDirectionDestination(Direction.Right)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Right;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
+                else
+                    Debug.Log("Error Player Selected Direction with no correct direction for next point");
+            }
+            else if (movement.x < -0.1f)
+            {
+                if ((destination = socketManager.GetDirectionDestination(Direction.Left)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Left;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
+                else
+                    Debug.Log("Error Player Selected Direction with no correct direction for next point");
+            }
+            else if (movement.z > 0.2f)
+            {
+                if ((destination = socketManager.GetDirectionDestination(Direction.Up)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Up;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
+                else
+                    Debug.Log("Error Player Selected Direction with no correct direction for next point");
+            }
+            else if (movement.z < -0.2f)
+            {
+                if ((destination = socketManager.GetDirectionDestination(Direction.Down)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Down;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
+                else
+                    Debug.Log("Error Player Selected Direction with no correct direction for next point");
             }
         }
-        else if (movement.x < -0.1f)
+
+        //- Camera Movement -//
+        Vector3 rotationInput = new Vector3(((Input.GetAxis("Mouse Y") * rotationSpeed) * Time.deltaTime), ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
+        rotation += rotationInput;
+        TargetPosition.eulerAngles = rotation;
+
+        //- Camera Zoom -//
+        if (Input.GetAxis("Mouse ScrollWheel") != 0.0f)
         {
-            if ((destination = socketManager.GetDirectionDestination(Direction.Left)) != new Vector3(0, 0, 0))
-            {
-                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
-            }
-        }
-        else if (movement.z > 0.2f)
-        {
-            if ((destination = socketManager.GetDirectionDestination(Direction.Up)) != new Vector3(0,0,0))
-            {
-                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
-            }
-        }
-        else if (movement.z < -0.2f)
-        {
-            if ((destination = socketManager.GetDirectionDestination(Direction.Down)) != new Vector3(0, 0, 0))
-            {
-                lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
-            }
+            float lf_distance = VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance += Input.GetAxis("Mouse ScrollWheel");
+            VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance = Mathf.Clamp(lf_distance, 1, 4);
         }
 
     }

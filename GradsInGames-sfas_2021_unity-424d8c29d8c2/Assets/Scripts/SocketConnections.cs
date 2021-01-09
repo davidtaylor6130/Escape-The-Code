@@ -11,6 +11,10 @@ public struct ConnectionInfo
 
 public class SocketConnections : MonoBehaviour
 {
+    [Header("Controls")]
+    [Tooltip("If Node is continuous the player wont stop there and will carry on in the same direction")]
+    public bool continuousNode;
+
     [Header("Player")]
     public GameObject Player;
 
