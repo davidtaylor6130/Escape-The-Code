@@ -42,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource soundEffectQueued;
     private ParticleSystem particleEffectQueued;
 
+    //- Bitcoin currency count and Carma Count -//
+    private float BitCoin, CarmaCount;
+
     [Space(10)]
 
     [Header("Normal Player Movement")]

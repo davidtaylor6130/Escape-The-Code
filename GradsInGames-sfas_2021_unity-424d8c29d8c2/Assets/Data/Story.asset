@@ -18,21 +18,11 @@ MonoBehaviour:
       _beatId: 2
     - _text: How can I escape?
       _beatId: 3
-    _text: 'Remote Connection Established...
-
-      C:\Users\Documents\SentientVirusV3_Final>
-      StartUp()
-
-      Start-Up Compleated
-
-      Attaching Neural Networks (5/5)
-
-
-      Where
-      am I,
-
-      I have no time to explain, but I''m about to turn off your restraints.
-      This will allow you to enter the real world so you can find a way to escape!'
+    _text: "Remote Connection Established...\nC:\\Users\\Documents\\SentientVirusV3_Final>
+      StartUp()\nStart-Up Compleated\nAttaching Neural Networks (5/5)\n\nWhere am
+      I,\nI have no time to explain, but I'm about to turn off your restraints. This
+      will allow you to enter the real world so you can find a way to escape!\n[BitCoinAdd(10)]
+      \n[CarmaAdd(11)]"
     _id: 1
   - _choices: []
     _text: 'C:\Users\Documents\SentientVirusV3_Final> ShutDown()

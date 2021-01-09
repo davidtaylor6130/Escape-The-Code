@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 
 using System.Collections.Generic;
+using System;
 
 public class TextDisplay : MonoBehaviour
 {
@@ -15,8 +16,11 @@ public class TextDisplay : MonoBehaviour
     private State _state = State.Initialising;
 
     private List<string> m_DebugInput;
+    private List<string> m_FunctionInput;
     private bool mb_ReadingDebugCommand;
+    private bool mb_ReadingPassInNumber;
     public Game gameRef;
+    public PlayerChoiceController playerChoiceController;
 
     public bool IsIdle { get { return _state == State.Idle; } }
     public bool IsBusy { get { return _state != State.Idle; } }
@@ -24,6 +28,7 @@ public class TextDisplay : MonoBehaviour
     private void Awake()
     {
         m_DebugInput = new List<string>();
+        m_FunctionInput = new List<string>();
         _displayText = GetComponent<TMP_Text>();
         _shortWait = new WaitForSeconds(0.1f);
         _longWait = new WaitForSeconds(0.8f);
@@ -36,7 +41,7 @@ public class TextDisplay : MonoBehaviour
     {
         int currentLetter = 0;
         char[] charArray = text.ToCharArray();
-        string ls_DebugInput = "";
+        string ls_DebugCommandInput = "", ls_DebugFunctionInput = "";
 
         while (currentLetter < charArray.Length)
         {
@@ -48,13 +53,30 @@ public class TextDisplay : MonoBehaviour
             else if (charArray[currentLetter] == ']')
             {
                 mb_ReadingDebugCommand = false;
-                m_DebugInput.Add(ls_DebugInput);
+                m_DebugInput.Add(ls_DebugCommandInput);
                 currentLetter++;
                 
             }
+            else if (mb_ReadingDebugCommand && charArray[currentLetter] == '(')
+            {
+                mb_ReadingPassInNumber = true;
+                currentLetter++;
+            }
+            else if (mb_ReadingDebugCommand && charArray[currentLetter] == ')')
+            {
+                mb_ReadingPassInNumber = false;
+                m_FunctionInput.Add(ls_DebugFunctionInput);
+                currentLetter++;
+            }
+            else if (mb_ReadingPassInNumber)
+            {
+                ls_DebugFunctionInput += charArray[currentLetter];
+                currentLetter++;
+                yield return _shortWait;
+            }
             else if (mb_ReadingDebugCommand)
             {
-                ls_DebugInput += charArray[currentLetter];
+                ls_DebugCommandInput += charArray[currentLetter];
                 currentLetter++;
                 yield return _shortWait;
             }
@@ -70,7 +92,7 @@ public class TextDisplay : MonoBehaviour
         _displayString = _displayText.text;
         _state = State.Idle;
 
-        PerformTaskQueued(m_DebugInput);
+        PerformTaskQueued(m_DebugInput, m_FunctionInput);
     }
 
     private IEnumerator DoAwaitingInput()
@@ -141,13 +163,15 @@ public class TextDisplay : MonoBehaviour
         }
     }
 
-    private void PerformTaskQueued(List<string> as_CommandRecived)
+    private void PerformTaskQueued(List<string> as_CommandRecived, List<string> as_FunctionInput)
     {
         //- To Add another command just add another option in the switch statement -//
         //- Then Perform the required Coded -//
         //- Commands are exicuted through the use of square brackets with the keyword between them- //#
         //- Eg [ESCAPE] -//
         //- This Code will be exicuted at the end of the text output-//
+
+        int functionInputCount = 0;
 
         for (int i = 0; i < as_CommandRecived.Count; i++)
         {
@@ -156,6 +180,22 @@ public class TextDisplay : MonoBehaviour
                 case "ESCAPE":
                     gameRef.DisplayBeat(1);
                     break;
+                case "BitCoinAdd":
+                    playerChoiceController.BitCoin += (Convert.ToInt32(as_FunctionInput[functionInputCount]));
+                    functionInputCount++;
+                    break;
+                case "BitCoinSub":
+                    playerChoiceController.BitCoin -= (Convert.ToInt32(as_FunctionInput[functionInputCount]));
+                    functionInputCount++;
+                    break;
+                case "CarmaAdd":
+                    playerChoiceController.CarmaAmount += (Convert.ToInt32(as_FunctionInput[functionInputCount]));
+                    functionInputCount++;
+                    break;
+                case "CarmaSub":
+                    playerChoiceController.CarmaAmount -= (Convert.ToInt32(as_FunctionInput[functionInputCount]));
+                    functionInputCount++;
+                    break;
                 default:
                     Debug.LogError("COMMAND NOT FOUND PLEASE ADD IT TO PerformTaskQueued() or Remove The Use of []");
                     break;
@@ -163,5 +203,6 @@ public class TextDisplay : MonoBehaviour
         }
 
         as_CommandRecived.Clear();
+        as_FunctionInput.Clear();
     }
 }
