@@ -22,6 +22,7 @@ public class ElectronicInteractable : MonoBehaviour
     [Header("Graphic Elements")]
     public GameObject TakeControlGuiPrompt;
     public ParticleSystem SparkParticleEffect;
+    public GameObject[] ElementsToOutline;
     
     [Header("Jump Bezier Curve")]
     public float JumpHeight = 0.0f;
@@ -79,12 +80,22 @@ public class ElectronicInteractable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == Player.name)
+        {
             TakeControlGuiPrompt.SetActive(true);
+
+            foreach (GameObject objToOutline in ElementsToOutline)
+                objToOutline.layer = LayerMask.NameToLayer("Outline");
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == Player.name)
+        {
             TakeControlGuiPrompt.SetActive(false);
+            
+            foreach (GameObject objToOutline in ElementsToOutline)
+                objToOutline.layer = LayerMask.NameToLayer("Default");
+        }
     }
 }
