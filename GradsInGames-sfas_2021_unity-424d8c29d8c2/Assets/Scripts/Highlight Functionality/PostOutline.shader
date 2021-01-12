@@ -39,6 +39,10 @@
 
             half4 frag(v2f i) : COLOR
             {
+                #if UNITY_UV_STARTS_AT_TOP
+                        i.uvs.y = 1 - i.uvs.y;
+                #endif
+
                 //if something already exists underneath the fragment, discard the fragment.
                     if (tex2D(_MainTex,i.uvs.xy).r > 0)
                     {
