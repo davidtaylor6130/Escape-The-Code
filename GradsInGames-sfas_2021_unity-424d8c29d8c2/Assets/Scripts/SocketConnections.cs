@@ -27,6 +27,11 @@ public class SocketConnections : MonoBehaviour
 
     public void Start()
     {
+        DrawConnections();
+    }
+
+    public void DrawConnections()
+    {
         Renderers = this.gameObject.GetComponent<LineRenderer>();
         Renderers.positionCount = Connections.Length * 2;
 
@@ -55,9 +60,9 @@ public class SocketConnections : MonoBehaviour
             manager.SetPlayersClosesNode(this);
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == Player.name)
-            manager.SetPlayersClosesNode(null);
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.name == Player.name)
+    //        manager.SetPlayersClosesNode(null);
+    //}
 }

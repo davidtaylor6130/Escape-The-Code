@@ -17,12 +17,12 @@ public class SocketManager : MonoBehaviour
     public GameObject[] AllSockets;
 
     private SocketConnections nearestSocketToPlayer;
-    private LineRenderer[] Connections;
+    private SocketConnections[] Connections;
 
     // Start is called before the first frame update
     void Start()
     {
-        Connections = this.gameObject.GetComponentsInChildren<LineRenderer>();
+        Connections = this.gameObject.GetComponentsInChildren<SocketConnections>();
     }
 
     // Update is called once per frame
@@ -48,8 +48,19 @@ public class SocketManager : MonoBehaviour
 
     public void toggleVisualConnectionsOn(bool VisualLinesOn)
     {
-        foreach (LineRenderer lineRenderer in Connections)
-            lineRenderer.enabled = VisualLinesOn;
+        foreach (SocketConnections lineRenderer in Connections)
+            lineRenderer.GetComponent<LineRenderer>().enabled = VisualLinesOn;
         
+    }
+
+    [ContextMenu("Refresh Connections")]
+    public void toggleVisualLinesDebug()
+    {
+        Connections = this.gameObject.GetComponentsInChildren<SocketConnections>();
+        foreach (SocketConnections lineRenderer in Connections)
+        {
+            lineRenderer.DrawConnections();
+            lineRenderer.GetComponent<LineRenderer>().enabled = true;
+        }
     }
 }
