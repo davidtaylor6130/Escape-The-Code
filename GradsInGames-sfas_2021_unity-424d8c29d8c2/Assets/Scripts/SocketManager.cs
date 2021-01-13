@@ -8,7 +8,11 @@ public enum Direction
     Up = 0,
     Down = 1,
     Left = 2,
-    Right = 3
+    Right = 3,
+    Up1,
+    Down1,
+    Left1,
+    Right1
 };
 
 public class SocketManager : MonoBehaviour

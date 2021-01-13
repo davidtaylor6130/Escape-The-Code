@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Yellow Electricity Particle Effect")]         public ParticleSystem DOPParticleEffect;
     [Tooltip("PowerSocket Manager Class")]                  public SocketManager socketManager;
     [Tooltip("How Fast The player moves In DOP Mode")]      public float DOPMovmentSpeed;
-    private Direction PreviousDirection;
+    private Direction PreviousDirection, AltPreviousDirection;
 
 
     // Start is called before the first frame update
@@ -172,6 +172,11 @@ public class PlayerMovement : MonoBehaviour
                     PreviousDirection = Direction.Right;
                     lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
                 }
+                else if ((destination = socketManager.GetDirectionDestination(Direction.Right1)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Right1;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
                 else
                     Debug.Log("Error Player Selected Direction with no correct direction for next point");
             }
@@ -180,6 +185,11 @@ public class PlayerMovement : MonoBehaviour
                 if ((destination = socketManager.GetDirectionDestination(Direction.Left)) != new Vector3(0, 0, 0))
                 {
                     PreviousDirection = Direction.Left;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
+                else if ((destination = socketManager.GetDirectionDestination(Direction.Left1)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Left1;
                     lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
                 }
                 else
@@ -192,6 +202,11 @@ public class PlayerMovement : MonoBehaviour
                     PreviousDirection = Direction.Up;
                     lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
                 }
+                else if ((destination = socketManager.GetDirectionDestination(Direction.Up1)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Up1;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
                 else
                     Debug.Log("Error Player Selected Direction with no correct direction for next point");
             }
@@ -200,6 +215,11 @@ public class PlayerMovement : MonoBehaviour
                 if ((destination = socketManager.GetDirectionDestination(Direction.Down)) != new Vector3(0, 0, 0))
                 {
                     PreviousDirection = Direction.Down;
+                    lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
+                }
+                else if ((destination = socketManager.GetDirectionDestination(Direction.Down1)) != new Vector3(0, 0, 0))
+                {
+                    PreviousDirection = Direction.Down1;
                     lerp.StartLerp(Player.transform.position, destination, 0.0f, DOPMovmentSpeed);
                 }
                 else

@@ -59,10 +59,4 @@ public class SocketConnections : MonoBehaviour
         if (other.gameObject.name == Player.name)
             manager.SetPlayersClosesNode(this);
     }
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.name == Player.name)
-    //        manager.SetPlayersClosesNode(null);
-    //}
 }
