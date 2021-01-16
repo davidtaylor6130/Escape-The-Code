@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public enum TypeOfMovement
@@ -21,14 +22,15 @@ public enum WhenToExicute
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Game State")]
-    [Tooltip("Game State Controller")]                      public GameStates GameState;
+    [Tooltip("Game State Controller")] public GameStates GameState;
+    [Tooltip("Day Night Controller")] public DayController DayNightController;
 
     [Space(10)]
 
     [Header("Universal Player Movement Data")]
-    [Tooltip("Setting Player Object Refrance")]             public GameObject Player;
-    [Tooltip("CustomLerpScript to move player")]            public CustomLerp lerp;
-    [Tooltip("Currently The Players Movement Type")]        public TypeOfMovement currentMovementType;
+    [Tooltip("Setting Player Object Refrance")] public GameObject Player;
+    [Tooltip("CustomLerpScript to move player")] public CustomLerp lerp;
+    [Tooltip("Currently The Players Movement Type")] public TypeOfMovement currentMovementType;
     private Vector3 rotation;
     private Rigidbody rb;
     private float CenterToGround;
@@ -42,26 +44,28 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource soundEffectQueued;
     private ParticleSystem particleEffectQueued;
 
-    //- Bitcoin currency count and Carma Count -//
-    private float BitCoin, CarmaCount;
-
     [Space(10)]
 
     [Header("Normal Player Movement")]
-    [Tooltip("Cinemachine Virtual Camera Ref")]             public CinemachineVirtualCamera VirtualCameraControl;
-    [Tooltip("Normal Movement Particle Effect")]            public ParticleSystem NormalParticleEffect;
-    [Tooltip("Camera Follow and Look Point")]               public Transform TargetPosition;
-    [Tooltip("How Fast The Player Moves")]                  public float PlayerMovementSpeed = 1.0f;
-    [Tooltip("Mouse Sensitivity")]                          public float rotationSpeed = 100.0f;
-    
+    [Tooltip("Cinemachine Virtual Camera Ref")] public CinemachineVirtualCamera VirtualCameraControl;
+    [Tooltip("Normal Movement Particle Effect")] public ParticleSystem NormalParticleEffect;
+    [Tooltip("Camera Follow and Look Point")] public Transform TargetPosition;
+    [Tooltip("How Fast The Player Moves")] public float PlayerMovementSpeed = 1.0f;
+    [Tooltip("Mouse Sensitivity")] public float rotationSpeed = 100.0f;
+
+    [Tooltip("Pannel That Causes The Fade To Black")] public Image FadeToBlack;
+    [Tooltip("Time Outside of the Interactable Object")] public float PlayerCharge = 0.0f;
+    [Tooltip("Charge Loss Speed")] public float PlayerChargeLossSpeed = 0.5f;
+    [Tooltip("Charge Refil Speed")] public float PlayerChargeRechargeSpeed = 0.5f;
+
     [Space(10)]
 
     [Header("Data Over Power (D.O.P) Movement")]
-    [Tooltip("Cinimachine D.O.P virtual camera")]           public CinemachineVirtualCamera DOPVertualCamera;
-    [Tooltip("Yellow Electricity Particle Effect")]         public ParticleSystem DOPParticleEffect;
-    [Tooltip("PowerSocket Manager Class")]                  public SocketManager socketManager;
-    [Tooltip("How Fast The player moves In DOP Mode")]      public float DOPMovmentSpeed;
-    private Direction PreviousDirection, AltPreviousDirection;
+    [Tooltip("Cinimachine D.O.P virtual camera")] public CinemachineVirtualCamera DOPVertualCamera;
+    [Tooltip("Yellow Electricity Particle Effect")] public ParticleSystem DOPParticleEffect;
+    [Tooltip("PowerSocket Manager Class")] public SocketManager socketManager;
+    [Tooltip("How Fast The player moves In DOP Mode")] public float DOPMovmentSpeed;
+    private Direction PreviousDirection;
 
 
     // Start is called before the first frame update
@@ -85,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         //- Update Lerp -//
         lerp.LerpUpdate();
-        
+
         //- If statement to change Movement type after lerp is done -//
         if (waitToChangeMovementType && lerp.IsLerpCompleated())
         {
@@ -93,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //- Run correct Movement code based on current movement -//
-        switch(currentMovementType)
+        switch (currentMovementType)
         {
             case TypeOfMovement.Normal:
                 NormalMovement();
@@ -106,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case TypeOfMovement.NoMovement:
+                NoMovement();
                 socketManager.toggleVisualConnectionsOn(false);
                 break;
 
@@ -117,34 +122,40 @@ public class PlayerMovement : MonoBehaviour
 
     void NormalMovement()
     {
-            //- Movement Code -//
-            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-            movement = transform.TransformDirection(movement * PlayerMovementSpeed);
-            movement.y = rb.velocity.y;
-            rb.velocity = movement;
+        //- Movement Code -//
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        movement = transform.TransformDirection(movement * PlayerMovementSpeed);
+        movement.y = rb.velocity.y;
+        rb.velocity = movement;
 
-            //- Check For Jump and add velocity upwards -//
-            if (Input.GetButtonDown("Jump") && isGrounded(0.1f))
-                GetComponent<Rigidbody>().velocity = (Vector3.up * 5);
+        //- Check For Jump and add velocity upwards -//
+        if (Input.GetButtonDown("Jump") && isGrounded(0.1f))
+            GetComponent<Rigidbody>().velocity = (Vector3.up * 5);
 
-            //- Gravity Calculations -//
-            if (rb.velocity.y < 0)
-                rb.velocity += Vector3.up * Physics.gravity.y * (2.5f - 1) * Time.deltaTime;
-            //- If jump button isnt pressed slow fall -//
-            else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
-                rb.velocity += Vector3.up * Physics.gravity.y * (2.0f - 1) * Time.deltaTime;
-            
-            //- Camera Movement -//
-            Vector3 rotationInput = new Vector3(((Input.GetAxis("Mouse Y") * rotationSpeed) * Time.deltaTime), ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
-            rotation += rotationInput;
-            TargetPosition.eulerAngles = rotation;
+        //- Gravity Calculations -//
+        if (rb.velocity.y < 0)
+            rb.velocity += Vector3.up * Physics.gravity.y * (2.5f - 1) * Time.deltaTime;
+        //- If jump button isnt pressed slow fall -//
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+            rb.velocity += Vector3.up * Physics.gravity.y * (2.0f - 1) * Time.deltaTime;
 
-            //- Camera Zoom -//
-            if (Input.GetAxis("Mouse ScrollWheel") != 0.0f)
-            {
-                float lf_distance = VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance += Input.GetAxis("Mouse ScrollWheel");
-                VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance = Mathf.Clamp(lf_distance, 1, 4);
-            }
+        //- Camera Movement -//
+        Vector3 rotationInput = new Vector3(((Input.GetAxis("Mouse Y") * rotationSpeed) * Time.deltaTime), ((Input.GetAxis("Mouse X") * rotationSpeed) * Time.deltaTime), 0.0f);
+        rotation += rotationInput;
+        TargetPosition.eulerAngles = rotation;
+
+        //- Camera Zoom -//
+        if (Input.GetAxis("Mouse ScrollWheel") != 0.0f)
+        {
+            float lf_distance = VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance += Input.GetAxis("Mouse ScrollWheel");
+            VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance = Mathf.Clamp(lf_distance, 1, 4);
+        }
+
+        if (PlayerCharge < 100)
+        {
+            PlayerCharge += Time.deltaTime * PlayerChargeLossSpeed;
+            FadeToBlackFunc(PlayerCharge);
+        }
 
     }
 
@@ -239,6 +250,20 @@ public class PlayerMovement : MonoBehaviour
             VirtualCameraControl.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraDistance = Mathf.Clamp(lf_distance, 1, 4);
         }
 
+        if (PlayerCharge > 0)
+        {
+            PlayerCharge -= Time.deltaTime * PlayerChargeRechargeSpeed;
+            FadeToBlackFunc(PlayerCharge);
+        }
+    }
+
+    void NoMovement()
+    {
+        if (PlayerCharge > 0)
+        {
+            PlayerCharge -= Time.deltaTime * PlayerChargeRechargeSpeed;
+            FadeToBlackFunc(PlayerCharge);
+        }
     }
 
     public void SetPlayerMovementType(TypeOfMovement a_movementType, WhenToExicute a_whenToExicute, AudioSource a_audioSourceToPlay, ParticleSystem a_particleEffectToPlay)
@@ -278,8 +303,11 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 //- Playing Visual And Audio Effects -//
-                a_audioSourceToPlay.Play();
-                a_particleEffectToPlay.Play();
+                if (a_audioSourceToPlay != null)
+                    a_audioSourceToPlay.Play();
+
+                if (a_particleEffectToPlay != null)
+                    a_particleEffectToPlay.Play();
 
                 //- if this was a queue change resets the bool for next use -//
                 waitToChangeMovementType = false;
@@ -302,7 +330,15 @@ public class PlayerMovement : MonoBehaviour
     //- Query Functions -//
     bool isGrounded(float af_leeway)
     {
-       //- fire raycast down and uses the distance to fround for length plus leeway to allow check to work on all terrain -//
+        //- fire raycast down and uses the distance to fround for length plus leeway to allow check to work on all terrain -//
         return Physics.Raycast(transform.position, -Vector3.up, CenterToGround + af_leeway);
+    }
+
+
+    private void FadeToBlackFunc(float a_alphaValue)
+    {
+        Color tempColour = FadeToBlack.color;
+        tempColour.a = (a_alphaValue / 100);
+        FadeToBlack.color = tempColour;
     }
 }

@@ -24,7 +24,9 @@ public class GameStates : MonoBehaviour
     public void SetNewActiveCamera(CinemachineVirtualCamera a_newVMCam)
     {
         //- disable current vmCam -//
-        CurrentActive.enabled = false;
+        if (CurrentActive != null)
+            CurrentActive.enabled = false;
+
         //- SetNew Cam and activate it -//
         CurrentActive = a_newVMCam;
         CurrentActive.enabled = true;

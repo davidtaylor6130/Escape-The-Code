@@ -42,6 +42,7 @@ public class ElectronicInteractable : MonoBehaviour
         {
             GameState.SetNewActiveCamera(VMCam);
             playerMovement.isControllingObject = true;
+            playerMovement.SetPlayerMovementType(TypeOfMovement.NoMovement, WhenToExicute.Instant, null, null);
         }
     }
 
