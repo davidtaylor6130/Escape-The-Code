@@ -203,7 +203,7 @@ Material:
     - _EnableSpecularOcclusion: 0
     - _EnableWind: 0
     - _EnergyConservingSpecularColor: 1
-    - _GlossMapScale: 0.179
+    - _GlossMapScale: 0.25
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _HdrpVersion: 2
