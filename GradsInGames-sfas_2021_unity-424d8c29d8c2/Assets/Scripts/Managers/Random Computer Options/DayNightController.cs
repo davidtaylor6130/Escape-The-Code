@@ -51,9 +51,10 @@ public class DayNightController : MonoBehaviour
     public GameObject[] CameraToTexture;
     private TextureRenderers[] CamToTex;
 
+    public RenderTexture[] RenderTextures;
+
     [Header("Final Output")]
     public ActiveComputerInfo[] FormattedComputers;
-
 
     // Start is called before the first frame update
     void Start()
@@ -88,15 +89,29 @@ public class DayNightController : MonoBehaviour
     {
         //- Clears All Info About What is selected -//
         ResetDay();
+
         //- Generate and format Info For Each Computer -//
         FormatComputersToActivate();
+
+        //- Asigned Correct Data To Relevent Systems -//
+        AsignDataToComputers();
+    }
+
+    void AsignDataToComputers()
+    {
+        for (int i = 0; i < FormattedComputers.Length; i++)
+        {
+            Material tempMat = new Material(Shader.Find("Standard"));
+            tempMat.mainTexture = RenderTextures[FormattedComputers[i].RenderTextureIndex];
+            FormattedComputers[i].Screen.GetComponent<Renderer>().material = tempMat;
+        }
     }
 
     void FormatComputersToActivate()
     {
         //- Generate Required Information -//
         for (int i = 0; i < AmountOfComputersActive; i++)
-        {
+        { 
             //- PcInfo -//
             // What Computer To Active
             FormattedComputers[i].ComputerIndex = GetRandomComputer();
@@ -153,6 +168,8 @@ public class DayNightController : MonoBehaviour
     [ContextMenu("Reset Day")]
     void ResetDay()
     {
+        ActiveEvents = new List<int>();
+
         //- Deactivate all screens -//
         for (int i = 0; i < Computers.Length; i++)
         {
