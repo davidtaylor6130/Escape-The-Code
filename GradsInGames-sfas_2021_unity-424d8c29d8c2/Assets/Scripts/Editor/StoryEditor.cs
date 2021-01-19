@@ -51,11 +51,10 @@ public class StoryEditor : EditorWindow
 
         //- Horizontal Asset File Selection -//
         EditorGUILayout.BeginHorizontal();
-        string temp = GUILayout.TextField("Story.asset", GUILayout.Height(50));
+        string temp = EditorGUILayout.TextArea("Story.asset", GUILayout.Height(50));
         if (GUILayout.Button("Load New File", GUILayout.Height(50), GUILayout.Width(150)))
         {
-            //_fileSelected = temp;
-            //this.Repaint();
+            _fileSelected = new string(temp.ToCharArray());
         }
         EditorGUILayout.EndHorizontal();
         //- End Of Horizontal -//

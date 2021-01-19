@@ -25,7 +25,7 @@ public class StoryData : ScriptableObject
         if (data == null)
         {
             data = CreateInstance<StoryData>();
-            AssetDatabase.CreateAsset(data, PathToAsset);
+            AssetDatabase.CreateAsset(data, PathToAsset + NameOfFile);
         }
 
         return data;
