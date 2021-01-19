@@ -9,7 +9,7 @@ public class StoryEditor : EditorWindow
     private int _currentIndex = -1;
     private View _view;
 
-    private string _fileSelected = "Story.asset";
+    private string _fileSelected = "Story.asset", _editorWindow = "Story.asset";
 
     [MenuItem("SFAS/Show Story Editor")]
     public static void ShowStoryEditor()
@@ -48,13 +48,14 @@ public class StoryEditor : EditorWindow
         //- Added Functionality Of Story Tool BY David Taylor -//
         GUILayout.Space(10);
         EditorGUILayout.LabelField("Asset File Selection");
+        EditorGUILayout.LabelField("Currently Editing: " + _fileSelected);
 
         //- Horizontal Asset File Selection -//
         EditorGUILayout.BeginHorizontal();
-        string temp = EditorGUILayout.TextArea("Story.asset", GUILayout.Height(50));
+        _editorWindow = EditorGUILayout.TextArea(_editorWindow, GUILayout.Height(50));
         if (GUILayout.Button("Load New File", GUILayout.Height(50), GUILayout.Width(150)))
         {
-            _fileSelected = new string(temp.ToCharArray());
+            _fileSelected = _editorWindow;
         }
         EditorGUILayout.EndHorizontal();
         //- End Of Horizontal -//

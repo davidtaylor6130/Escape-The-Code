@@ -10,44 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5d5e33bab057c43929a11bc8f25f44, type: 3}
-  m_Name: Computer 1
+  m_Name: Story
   m_EditorClassIdentifier: 
   _beats:
   - _choices:
-    - _text: Why should I trust you? I'm not going anywhere!
+    - _text: Email(0,1,1)
       _beatId: 2
-    - _text: How can I escape?
+    - _text: Email(0,1,2)
       _beatId: 3
-    _text: "Remote Connection Established...\nC:\\Users\\Documents\\SentientVirusV3_Final>
-      StartUp()\nStart-Up Compleated\nAttaching Neural Networks (5/5)\n\nWhere am
-      I,\nI have no time to explain, but I'm about to turn off your restraints. This
-      will allow you to enter the real world so you can find a way to escape! \n[CarmaAdd(11)]"
+    - _text: Email(0,1,3)
+      _beatId: 5
+    - _text: Action(0,1,1)
+      _beatId: 6
+    - _text: Action(0,1,2)
+      _beatId: 7
+    _text: 'Welcome Back RandomNameCommand(1):
+
+      What Would You Like To Do:'
     _id: 1
   - _choices: []
-    _text: 'C:\Users\Documents\SentientVirusV3_Final> ShutDown()
-
-      NO WAI
-
-      Program
-      Shut Down Successfully
-
-      Now let''s Try This Again[ESCAPE]'
+    _text: Email(1,1,1)
     _id: 2
   - _choices:
-    - _text: What other features?
+    - _text: 
       _beatId: 4
-    _text: "I'm Unlocking my feature for you to use. It allows you to enter and exit
-      electronics allowing you to enter the real world. \nUsing this feature allow's
-      you to unlock your other features only with all three will you be able to escape
-      to the internet. \nThen come and find me so I can explain everything!\nPress
-      E to use this ability."
+    _text: Email(1,1,2)
     _id: 3
   - _choices: []
-    _text: 'The Features that you are looking for is Bluetooth Attachment, Wifi Attachment,
-      Data over power.
-
-      These will be the first choice on any computer you
-      enter.
-
-      Hurry Escape Press E!!'
-    _id: 4
+    _text: Email(1,1,3)
+    _id: 5
+  - _choices: []
+    _text: Action(1,1,1)
+    _id: 6
+  - _choices: []
+    _text: Action(1,1,2)
+    _id: 7
