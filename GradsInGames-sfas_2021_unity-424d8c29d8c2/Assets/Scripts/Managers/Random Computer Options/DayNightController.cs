@@ -28,6 +28,7 @@ public struct ActiveComputerInfo
     public int ComputerIndex;
     public List<int> EventIndex;
     public int RenderTextureIndex;
+    public GameObject Screen;
 };
 
 public class DayNightController : MonoBehaviour
@@ -35,6 +36,8 @@ public class DayNightController : MonoBehaviour
     [Header("Settings")]
     [Range(1,10)] public int AmountOfComputersActive;
     [Range(1,5)] public int EventsPerSystem;
+
+    public RenderTexture DeActiveRenderTexture;
 
     [Header("PC Events")]
     public PcEvent[] Events;
@@ -65,10 +68,14 @@ public class DayNightController : MonoBehaviour
     [ContextMenu("Get Camera To Texture Info")]
     void GetCameraToTextureInfo()
     {
+        // Create New data array
         CamToTex = new TextureRenderers[CameraToTexture.Length];
 
+
+        //- Loop though all Camera To Textures -//
         for (int i = 0; i < CameraToTexture.Length; i++)
         {
+            //- Save Required Info Into Easier to understand Format -//
             CamToTex[i].ParentObject = CameraToTexture[i];
             CamToTex[i].OnScreenText = CameraToTexture[i].GetComponentInChildren<TextMeshProUGUI>();
             CamToTex[i].Camera = CameraToTexture[i].GetComponentInChildren<Camera>();
@@ -80,21 +87,37 @@ public class DayNightController : MonoBehaviour
     void RefreshComputers()
     {
         //- Clears All Info About What is selected -//
-        ResetToDay();
+        ResetDay();
+        //- Generate and format Info For Each Computer -//
+        FormatComputersToActivate();
+    }
 
+    void FormatComputersToActivate()
+    {
         //- Generate Required Information -//
         for (int i = 0; i < AmountOfComputersActive; i++)
         {
             //- PcInfo -//
             // What Computer To Active
             FormattedComputers[i].ComputerIndex = GetRandomComputer();
-            
+
             // Select Amount Of Events
             for (int j = 0; j < EventsPerSystem; j++)
                 FormattedComputers[i].EventIndex.Add(GetRandomEvent());
-            
+
             // Link Render Text System
             FormattedComputers[i].RenderTextureIndex = i;
+
+            // Loops Through all childern of Computers
+            foreach (Transform Child in Computers[FormattedComputers[i].ComputerIndex].GetComponentsInChildren<Transform>())
+            {
+                //- if screen then save ref and move on-//
+                if (Child.name == "Screen")
+                {
+                    FormattedComputers[i].Screen = Child.gameObject;
+                    break;
+                }
+            }
 
             //- Clear Active Events -//
             ActiveEvents.Clear();
@@ -127,14 +150,34 @@ public class DayNightController : MonoBehaviour
         return randomSelection;
     }
 
-    void ResetToDay()
+    [ContextMenu("Reset Day")]
+    void ResetDay()
     {
-        FormattedComputers = new ActiveComputerInfo[AmountOfComputersActive];
-        ActiveComputers.Clear();
-
-        foreach (GameObject temp in Computers)
+        //- Deactivate all screens -//
+        for (int i = 0; i < Computers.Length; i++)
         {
-            temp.SetActive(false);
+            foreach (Transform Child in Computers[i].GetComponentsInChildren<Transform>())
+            {
+                //- if screen then save ref and move on-//
+                if (Child.name == "Screen")
+                {
+                    Child.gameObject.GetComponent<Material>().SetTexture("Albedo", DeActiveRenderTexture, UnityEngine.Rendering.RenderTextureSubElement.Default);
+                    Debug.LogError("SET TO BASE SCREEN RENDER TEXTURE");
+                    break;
+                }
+            }
         }
+
+        //- Create New Array -//
+        FormattedComputers = new ActiveComputerInfo[AmountOfComputersActive];
+
+        //- Create New List -//
+        for (int i = 0; i < AmountOfComputersActive; i++)
+        {
+            FormattedComputers[i].EventIndex = new List<int>();
+        }
+
+        //- CLear Active Computers -//
+        ActiveComputers.Clear();
     }
 }
