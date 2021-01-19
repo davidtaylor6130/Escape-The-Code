@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5d5e33bab057c43929a11bc8f25f44, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  _beats:
+  - _choices:
+    - _text: Why should I trust you? I'm not going anywhere!
+      _beatId: 2
+    - _text: How can I escape?
+      _beatId: 3
+    _text: "Remote Connection Established...\nC:\\Users\\Documents\\SentientVirusV3_Final>
+      StartUp()\nStart-Up Compleated\nAttaching Neural Networks (5/5)\n\nWhere am
+      I,\nI have no time to explain, but I'm about to turn off your restraints. This
+      will allow you to enter the real world so you can find a way to escape! \n[CarmaAdd(11)]"
+    _id: 1
+  - _choices: []
+    _text: 'C:\Users\Documents\SentientVirusV3_Final> ShutDown()
+
+      NO WAI
+
+      Program
+      Shut Down Successfully
+
+      Now let''s Try This Again[ESCAPE]'
+    _id: 2
+  - _choices:
+    - _text: What other features?
+      _beatId: 4
+    _text: "I'm Unlocking my feature for you to use. It allows you to enter and exit
+      electronics allowing you to enter the real world. \nUsing this feature allow's
+      you to unlock your other features only with all three will you be able to escape
+      to the internet. \nThen come and find me so I can explain everything!\nPress
+      E to use this ability."
+    _id: 3
+  - _choices: []
+    _text: 'The Features that you are looking for is Bluetooth Attachment, Wifi Attachment,
+      Data over power.
+
+      These will be the first choice on any computer you
+      enter.
+
+      Hurry Escape Press E!!'
+    _id: 4

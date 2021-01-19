@@ -17,11 +17,11 @@ public class StoryData : ScriptableObject
     }
 
 #if UNITY_EDITOR
-    public const string PathToAsset = "Assets/Data/Story.asset";
+    public const string PathToAsset = "Assets/Data/";
 
-    public static StoryData LoadData()
+    public static StoryData LoadData(String NameOfFile)
     {
-        StoryData data = AssetDatabase.LoadAssetAtPath<StoryData>(PathToAsset);
+        StoryData data = AssetDatabase.LoadAssetAtPath<StoryData>(PathToAsset + NameOfFile);
         if (data == null)
         {
             data = CreateInstance<StoryData>();

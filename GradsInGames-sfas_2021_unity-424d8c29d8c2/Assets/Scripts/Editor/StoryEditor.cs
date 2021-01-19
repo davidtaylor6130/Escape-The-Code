@@ -9,6 +9,8 @@ public class StoryEditor : EditorWindow
     private int _currentIndex = -1;
     private View _view;
 
+    private string _fileSelected = "Story.asset";
+
     [MenuItem("SFAS/Show Story Editor")]
     public static void ShowStoryEditor()
     {
@@ -17,7 +19,7 @@ public class StoryEditor : EditorWindow
 
     void OnGUI()
     {
-        StoryData data = StoryData.LoadData();
+        StoryData data = StoryData.LoadData(_fileSelected);
         SerializedObject dataObj = new SerializedObject(data);
         SerializedProperty beatList = dataObj.FindProperty("_beats");
 
@@ -42,6 +44,24 @@ public class StoryEditor : EditorWindow
     private void OnGUI_ListView(SerializedProperty beatList)
     {
         EditorGUILayout.BeginVertical();
+
+        //- Added Functionality Of Story Tool BY David Taylor -//
+        GUILayout.Space(10);
+        EditorGUILayout.LabelField("Asset File Selection");
+
+        //- Horizontal Asset File Selection -//
+        EditorGUILayout.BeginHorizontal();
+        string temp = GUILayout.TextField("Story.asset", GUILayout.Height(50));
+        if (GUILayout.Button("Load New File", GUILayout.Height(50), GUILayout.Width(150)))
+        {
+            //_fileSelected = temp;
+            //this.Repaint();
+        }
+        EditorGUILayout.EndHorizontal();
+        //- End Of Horizontal -//
+
+        GUILayout.Space(10);
+        //- End Of Added Section By David Taylor -//
 
         if (beatList.arraySize == 0)
         {

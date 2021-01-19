@@ -180,8 +180,7 @@ public class DayNightController : MonoBehaviour
                 {
                     Material Mat = new Material(Shader.Find("Standard"));
                     Mat.mainTexture = DeActiveRenderTexture;
-                    Child.gameObject.GetComponent<Renderer>().material = Mat;
-                    Debug.LogError("SET TO BASE SCREEN RENDER TEXTURE");
+                    Child.gameObject.GetComponent<Renderer>().material = Mat; 
                     break;
                 }
             }
