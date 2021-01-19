@@ -161,7 +161,9 @@ public class DayNightController : MonoBehaviour
                 //- if screen then save ref and move on-//
                 if (Child.name == "Screen")
                 {
-                    Child.gameObject.GetComponent<Material>().SetTexture("Albedo", DeActiveRenderTexture, UnityEngine.Rendering.RenderTextureSubElement.Default);
+                    Material Mat = new Material(Shader.Find("Standard"));
+                    Mat.mainTexture = DeActiveRenderTexture;
+                    Child.gameObject.GetComponent<Renderer>().material = Mat;
                     Debug.LogError("SET TO BASE SCREEN RENDER TEXTURE");
                     break;
                 }
