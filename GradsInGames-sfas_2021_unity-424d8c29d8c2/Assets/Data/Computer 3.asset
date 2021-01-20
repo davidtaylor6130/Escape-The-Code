@@ -14,34 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beats:
   - _choices:
-    - _text: Email(0,3,1)
+    - _text: '[Email(0,3,1)]'
       _beatId: 2
-    - _text: Email(0,3,2)
+    - _text: '[Email(0,3,2)]'
       _beatId: 3
-    - _text: Email(0,3,3)
+    - _text: '[Email(0,3,3)]'
       _beatId: 5
-    - _text: Action(0,3,1)
+    - _text: '[Action(0,3,1)]'
       _beatId: 6
-    - _text: Action(0,3,2)
+    - _text: '[Action(0,3,2)]'
       _beatId: 7
-    _text: 'Welcome Back RandomNameCommand(3):
+    _text: 'Welcome Back [Name(3)]:
 
       What Would You Like To Do:'
     _id: 1
   - _choices: []
-    _text: Email(1,3,1)
+    _text: '[Email(1,3,1)]'
     _id: 2
   - _choices:
     - _text: 
       _beatId: 4
-    _text: Email(1,3,2)
+    _text: '[Email(1,3,2)]'
     _id: 3
   - _choices: []
-    _text: Email(1,3,3)
+    _text: '[Email(1,3,3)]'
     _id: 5
   - _choices: []
-    _text: Action(1,3,1)
+    _text: '[Action(1,3,1)]'
     _id: 6
   - _choices: []
-    _text: Action(1,1,2)
+    _text: '[Action(1,1,2)]'
     _id: 7
