@@ -3,7 +3,9 @@ guid: 90d459face176724aa64ede85749b89c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - DeActiveRenderTexture: {fileID: 8400000, guid: 9e7ff00ba1cb6b84ab794d366a5ad59d,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

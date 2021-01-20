@@ -22,6 +22,8 @@ public class TextDisplay : MonoBehaviour
     public Game gameRef;
     public PlayerChoiceController playerChoiceController;
 
+    public DayNightController DayNightController; 
+
     public bool IsIdle { get { return _state == State.Idle; } }
     public bool IsBusy { get { return _state != State.Idle; } }
 
@@ -39,8 +41,10 @@ public class TextDisplay : MonoBehaviour
 
     private IEnumerator DoShowText(string text)
     {
+        string tempText = text;
+
         int currentLetter = 0;
-        char[] charArray = text.ToCharArray();
+        char[] charArray = tempText.ToCharArray();
         string ls_DebugCommandInput = "", ls_DebugFunctionInput = "";
 
         while (currentLetter < charArray.Length)
@@ -53,7 +57,31 @@ public class TextDisplay : MonoBehaviour
             else if (charArray[currentLetter] == ']')
             {
                 mb_ReadingDebugCommand = false;
-                m_DebugInput.Add(ls_DebugCommandInput);
+                if (ls_DebugCommandInput == "Email" || ls_DebugCommandInput == "Action" || ls_DebugCommandInput == "Name")
+                {
+                    switch (ls_DebugCommandInput)
+                    {
+                        case "Email":
+                            tempText = tempText.Insert(currentLetter + 1, DayNightController.GetEmail(m_FunctionInput[m_FunctionInput.Count - 1]));
+                            break;
+
+                        case "Action":
+                            tempText = tempText.Insert(currentLetter + 1, DayNightController.GetAction(m_FunctionInput[m_FunctionInput.Count - 1]));
+                            break;
+
+                        case "Name":
+                            tempText = tempText.Insert(currentLetter + 1, DayNightController.GetRandomName(m_FunctionInput[m_FunctionInput.Count - 1]));
+                            break;
+                    }
+                    charArray = tempText.ToCharArray();
+                    m_FunctionInput.Remove(m_FunctionInput[m_FunctionInput.Count - 1]);
+                }
+                else
+                {
+                    m_DebugInput.Add(ls_DebugCommandInput);
+                }
+
+                ls_DebugCommandInput = "";
                 currentLetter++;
                 
             }
@@ -66,6 +94,7 @@ public class TextDisplay : MonoBehaviour
             {
                 mb_ReadingPassInNumber = false;
                 m_FunctionInput.Add(ls_DebugFunctionInput);
+                ls_DebugFunctionInput = "";
                 currentLetter++;
             }
             else if (mb_ReadingPassInNumber)
@@ -180,22 +209,42 @@ public class TextDisplay : MonoBehaviour
                 case "ESCAPE":
                     gameRef.DisplayBeat(1);
                     break;
+                
                 case "BitCoinAdd":
                     playerChoiceController.BitCoin += (Convert.ToInt32(as_FunctionInput[functionInputCount]));
                     functionInputCount++;
                     break;
+                
                 case "BitCoinSub":
                     playerChoiceController.BitCoin -= (Convert.ToInt32(as_FunctionInput[functionInputCount]));
                     functionInputCount++;
                     break;
+                
                 case "CarmaAdd":
                     playerChoiceController.CarmaAmount += (Convert.ToInt32(as_FunctionInput[functionInputCount]));
                     functionInputCount++;
                     break;
+                
                 case "CarmaSub":
                     playerChoiceController.CarmaAmount -= (Convert.ToInt32(as_FunctionInput[functionInputCount]));
                     functionInputCount++;
                     break;
+                
+                //case "Email":
+                //    DoShowText(DayNightController.GetEmail(as_FunctionInput[functionInputCount]));
+                //    functionInputCount++;
+                //    break;
+                
+                //case "Action":
+                //    Display(DayNightController.GetAction(as_FunctionInput[functionInputCount]));
+                //    functionInputCount++;
+                //    break;
+                
+                //case "Name":
+                //    Display(DayNightController.GetRandomName(as_FunctionInput[functionInputCount]));
+                //    functionInputCount++;
+                //    break;
+                
                 default:
                     Debug.LogError("COMMAND NOT FOUND PLEASE ADD IT TO PerformTaskQueued() or Remove The Use of []");
                     break;

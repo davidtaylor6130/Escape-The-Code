@@ -198,4 +198,22 @@ public class DayNightController : MonoBehaviour
         //- CLear Active Computers -//
         ActiveComputers.Clear();
     }
+
+    public string GetEmail(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int EmailIndex*/)
+    {
+        Debug.Log("GetEmail: " + UnformattedInput);
+        return "IT WORKED Email";
+    }
+
+    public string GetAction(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int ActionIndex*/)
+    {
+        Debug.Log("GetAction: " + UnformattedInput);
+        return "IT WORKED ACtion";
+    }
+
+    public string GetRandomName(string UnformattedInput/*int PcIndex*/)
+    {
+        Debug.Log("GetRandomName: " + UnformattedInput);
+        return "It Worked Name";
+    }
 }
