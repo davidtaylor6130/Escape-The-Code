@@ -216,11 +216,11 @@ public class DayNightController : MonoBehaviour
 
         if (ProcessedInputs[0] == 0)
         {
-            output = Events[FormattedComputers[ProcessedInputs[1]].EventIndex[ProcessedInputs[2]]].NameOfEvent;
+            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2]]].NameOfEvent;
         }
         else if (ProcessedInputs[0] == 1)
         {
-            output = Events[FormattedComputers[ProcessedInputs[1]].EventIndex[ProcessedInputs[2]]].OutputOfEvent;
+            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2]]].OutputOfEvent;
         }
         return output;
     }
