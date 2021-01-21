@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+
+//- Specifying What Random Class To Use -//
+using Random = UnityEngine.Random;
 
 [System.Serializable]
 public struct PcEvent
@@ -201,19 +205,59 @@ public class DayNightController : MonoBehaviour
 
     public string GetEmail(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int EmailIndex*/)
     {
-        Debug.Log("GetEmail: " + UnformattedInput);
+        int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 3, ',');
         return "IT WORKED Email";
     }
 
     public string GetAction(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int ActionIndex*/)
     {
-        Debug.Log("GetAction: " + UnformattedInput);
-        return "IT WORKED ACtion";
+        int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 3, ',');
+        string output = "";
+
+        if (ProcessedInputs[0] == 0)
+        {
+            output = Events[FormattedComputers[ProcessedInputs[1]].EventIndex[ProcessedInputs[2]]].NameOfEvent;
+        }
+        else if (ProcessedInputs[0] == 1)
+        {
+            output = Events[FormattedComputers[ProcessedInputs[1]].EventIndex[ProcessedInputs[2]]].OutputOfEvent;
+        }
+        return output;
     }
 
     public string GetRandomName(string UnformattedInput/*int PcIndex*/)
     {
-        Debug.Log("GetRandomName: " + UnformattedInput);
+        int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 1, ',');
         return "It Worked Name";
+    }
+
+    int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)
+    {
+        int[] Inputs = new int[length];
+        string tempStorage = "";
+        int inputCount = 0;
+
+        for (int i = 0; i <= unformattedInput.Length; i++)
+        {
+            if (unformattedInput.Length == i)
+            {
+                tempStorage = "";
+                tempStorage += unformattedInput[i - 1];
+                Inputs[inputCount] = Convert.ToInt32(tempStorage);
+                break;
+            }
+            else if (unformattedInput[i] == stopCharacter)
+            {
+                Inputs[inputCount] = Convert.ToInt32(tempStorage);
+                inputCount++;
+                tempStorage = "";
+            }
+            else
+            {
+                tempStorage += unformattedInput[i];
+            }
+        }
+
+        return Inputs;
     }
 }

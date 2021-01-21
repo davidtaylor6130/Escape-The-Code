@@ -230,21 +230,6 @@ public class TextDisplay : MonoBehaviour
                     functionInputCount++;
                     break;
                 
-                //case "Email":
-                //    DoShowText(DayNightController.GetEmail(as_FunctionInput[functionInputCount]));
-                //    functionInputCount++;
-                //    break;
-                
-                //case "Action":
-                //    Display(DayNightController.GetAction(as_FunctionInput[functionInputCount]));
-                //    functionInputCount++;
-                //    break;
-                
-                //case "Name":
-                //    Display(DayNightController.GetRandomName(as_FunctionInput[functionInputCount]));
-                //    functionInputCount++;
-                //    break;
-                
                 default:
                     Debug.LogError("COMMAND NOT FOUND PLEASE ADD IT TO PerformTaskQueued() or Remove The Use of []");
                     break;
