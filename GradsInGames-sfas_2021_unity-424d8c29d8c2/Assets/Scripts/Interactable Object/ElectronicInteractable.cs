@@ -7,6 +7,7 @@ public class ElectronicInteractable : MonoBehaviour
 {
     [Header("Game State")]
     public GameStates GameState;
+    public Game GameRef;
 
     [Header("Player Information")]
     public Transform EntryJumpPoint;
@@ -40,6 +41,7 @@ public class ElectronicInteractable : MonoBehaviour
 
         if (IsInitalComputer)
         {
+            GameRef.IsCurrenlyActive = true;
             GameState.SetNewActiveCamera(VMCam);
             playerMovement.isControllingObject = true;
             playerMovement.SetPlayerMovementType(TypeOfMovement.NoMovement, WhenToExicute.Instant, null, null);
@@ -56,6 +58,10 @@ public class ElectronicInteractable : MonoBehaviour
                 playerMovement.isControllingObject = false; // Keeping Track of player controll for object
                 TakeControlGuiPrompt.SetActive(true); // Toggle off and on Gui Element when controlling object
 
+                //- Allow Computer to run if its a computer -//
+                if (tag == "Computer" && GameRef != null)
+                    GameRef.IsCurrenlyActive = false;
+
                 //- Focus On Player -//
                 GameState.SetPlayerCameraActive();
 
@@ -67,6 +73,9 @@ public class ElectronicInteractable : MonoBehaviour
             {
                 //- Setting Internal Data -//
                 playerMovement.isControllingObject = true; // Keeping Track of player control for specific object
+
+                if(tag == "Computer" && GameRef != null)
+                    GameRef.IsCurrenlyActive = true;
 
                 //- Focus On Object Camera -//
                 GameState.SetNewActiveCamera(VMCam);
@@ -98,5 +107,10 @@ public class ElectronicInteractable : MonoBehaviour
             foreach (GameObject objToOutline in ElementsToOutline)
                 objToOutline.layer = LayerMask.NameToLayer("Default");
         }
+    }
+
+    public void SetGameRef(Game a_GameRef)
+    {
+        GameRef = a_GameRef;
     }
 }

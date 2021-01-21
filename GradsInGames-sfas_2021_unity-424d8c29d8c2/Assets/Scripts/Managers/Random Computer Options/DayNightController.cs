@@ -145,6 +145,8 @@ public class DayNightController : MonoBehaviour
                 }
             }
 
+            Computers[FormattedComputers[i].ComputerIndex].GetComponent<ElectronicInteractable>().SetGameRef(CamToTex[i].ParentObject.GetComponent<Game>());
+
             //- Clear Active Events -//
             ActiveEvents.Clear();
         }
@@ -205,7 +207,12 @@ public class DayNightController : MonoBehaviour
         {
             FormattedComputers[i].EventIndex = new List<int>();
             FormattedComputers[i].EventCompleated = new List<bool>();
+            
+            //- fill Eventcompleated list -//
+            for (int j = 0; j < EventsPerSystem; j++)
+                FormattedComputers[i].EventCompleated.Add(false);
         }
+
 
         //- CLear Active Computers -//
         ActiveComputers.Clear();
@@ -224,12 +231,27 @@ public class DayNightController : MonoBehaviour
 
         if (ProcessedInputs[0] == 0)
         {
-            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2] - 1]].NameOfEvent;
+            if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
+            {
+                output = "Compleated Event";
+            }
+            else
+            {
+                output = Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].NameOfEvent;
+            }
         }
         else if (ProcessedInputs[0] == 1)
         {
-            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
-        }
+            if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
+            {
+                output = "Compleated Event [ESCAPE]";
+            }
+            else
+            {
+                output = Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
+            }
+            FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] = true;
+        }  
         return output;
     }
 

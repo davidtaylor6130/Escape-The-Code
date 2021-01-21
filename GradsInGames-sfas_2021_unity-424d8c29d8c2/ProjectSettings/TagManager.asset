@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Invisable
+  - Computer
   layers:
   - Default
   - TransparentFX

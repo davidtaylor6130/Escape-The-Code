@@ -9,6 +9,9 @@ public class Game : MonoBehaviour
     private BeatData _currentBeat;
     private WaitForSeconds _wait;
 
+    //- Bool to stop all computers updating with same input -//
+    public bool IsCurrenlyActive;
+
     private void Awake()
     {
         _output = GetComponentInChildren<TextDisplay>();
@@ -18,7 +21,7 @@ public class Game : MonoBehaviour
 
     private void Update()
     {
-        if(_output.IsIdle)
+        if(_output.IsIdle && IsCurrenlyActive == true)
         {
             if (_currentBeat == null)
             {
