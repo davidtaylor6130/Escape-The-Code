@@ -101,13 +101,11 @@ public class TextDisplay : MonoBehaviour
             {
                 ls_DebugFunctionInput += charArray[currentLetter];
                 currentLetter++;
-                yield return _shortWait;
             }
             else if (mb_ReadingDebugCommand)
             {
                 ls_DebugCommandInput += charArray[currentLetter];
                 currentLetter++;
-                yield return _shortWait;
             }
             else
             {

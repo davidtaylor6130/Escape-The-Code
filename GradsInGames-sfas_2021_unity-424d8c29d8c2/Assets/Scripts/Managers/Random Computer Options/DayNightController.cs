@@ -39,8 +39,9 @@ public struct ActiveComputerInfo
 public class DayNightController : MonoBehaviour
 {
     [Header("Settings")]
-    [Range(1,10)] public int AmountOfComputersActive;
-    [Range(1,5)] public int EventsPerSystem;
+    public int AmountOfComputersActive;
+    public int EventsPerSystem;
+    public int EmailsPerSystem;
 
     public RenderTexture DeActiveRenderTexture;
 
@@ -54,6 +55,9 @@ public class DayNightController : MonoBehaviour
 
     [Header("Random Name List")]
     public string[] Names;
+
+    [Header("Email Formats")]
+    public string[] EmailFormats;
 
     [Header("Camera To Texture Systems")]
     public GameObject[] CameraToTexture;
@@ -220,11 +224,11 @@ public class DayNightController : MonoBehaviour
 
         if (ProcessedInputs[0] == 0)
         {
-            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2]]].NameOfEvent;
+            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2] - 1]].NameOfEvent;
         }
         else if (ProcessedInputs[0] == 1)
         {
-            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2]]].OutputOfEvent;
+            output = Events[FormattedComputers[(ProcessedInputs[1] - 1)].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
         }
         return output;
     }
@@ -232,7 +236,7 @@ public class DayNightController : MonoBehaviour
     public string GetRandomName(string UnformattedInput/*int PcIndex*/)
     {
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 1, ',');
-        return Names[ProcessedInputs[0]];
+        return Names[ProcessedInputs[0] - 1];
     }
 
     int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)
@@ -245,10 +249,7 @@ public class DayNightController : MonoBehaviour
         {
             if (unformattedInput.Length == i)
             {
-                tempStorage = "";
-                tempStorage += unformattedInput[i - 1];
                 Inputs[inputCount] = Convert.ToInt32(tempStorage);
-                break;
             }
             else if (unformattedInput[i] == stopCharacter)
             {
