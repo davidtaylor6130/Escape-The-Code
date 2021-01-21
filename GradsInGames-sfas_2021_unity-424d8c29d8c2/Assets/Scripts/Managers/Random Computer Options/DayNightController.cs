@@ -31,6 +31,7 @@ public struct ActiveComputerInfo
 {
     public int ComputerIndex;
     public List<int> EventIndex;
+    public List<bool> EventCompleated;
     public int RenderTextureIndex;
     public GameObject Screen;
 };
@@ -51,11 +52,13 @@ public class DayNightController : MonoBehaviour
     public GameObject[] Computers;
     public List<int> ActiveComputers;
 
+    [Header("Random Name List")]
+    public string[] Names;
+
     [Header("Camera To Texture Systems")]
     public GameObject[] CameraToTexture;
-    private TextureRenderers[] CamToTex;
-
     public RenderTexture[] RenderTextures;
+    private TextureRenderers[] CamToTex;
 
     [Header("Final Output")]
     public ActiveComputerInfo[] FormattedComputers;
@@ -197,6 +200,7 @@ public class DayNightController : MonoBehaviour
         for (int i = 0; i < AmountOfComputersActive; i++)
         {
             FormattedComputers[i].EventIndex = new List<int>();
+            FormattedComputers[i].EventCompleated = new List<bool>();
         }
 
         //- CLear Active Computers -//
@@ -228,7 +232,7 @@ public class DayNightController : MonoBehaviour
     public string GetRandomName(string UnformattedInput/*int PcIndex*/)
     {
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 1, ',');
-        return "It Worked Name";
+        return Names[ProcessedInputs[0]];
     }
 
     int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)
