@@ -25,6 +25,12 @@ public struct Email
 [System.Serializable]
 public struct EmailTemplate
 {
+    public EmailTemplateFormat[] EmailTemplates;
+};
+
+[System.Serializable]
+public struct EmailTemplateFormat
+{
     public string To;
     public string From;
     public string Subject;
@@ -49,8 +55,7 @@ public class EmailGenerator : MonoBehaviour
     public List<int> ActiveFillerEmails;
 
     [Header("Generated Emails Based Of User Pc Input")]
-    public int asdasd;
-    public EmailTemplate[,] GeneratedEmailTemplates;
+    public EmailTemplate[] emailTemplateForAutoGeneration;
     [Space(10)]
     public Email[,] GeneratedEmails;
     public List<int> ActiveGeneratedEmails;
@@ -87,7 +92,7 @@ public class EmailGenerator : MonoBehaviour
                     int EmailVersionIndex = Random.Range(0, 3);
 
                     //- Get Email Name and Output -//
-                    tempEmail = EmailTemplateToEmail(GeneratedEmailTemplates[RecorededActions[i, j].ActionIndex, EmailVersionIndex], i);
+                    tempEmail = EmailTemplateToEmail(GeneratedEmailTemplates[RecorededActions[i, j].ActionIndex].EmailTemplates[EmailVersionIndex], i);
 
                     //- Save Email To Array For Later Use -//
                     GeneratedEmails[i, j] = tempEmail;
@@ -107,7 +112,7 @@ public class EmailGenerator : MonoBehaviour
             return GeneratedEmails[PcIndex, EmailIndex].OutputOfEmail;
     }
 
-    public Email EmailTemplateToEmail(EmailTemplate template, int PcIndex)
+    public Email EmailTemplateToEmail(EmailTemplateFormat template, int PcIndex)
     {
         Email Temp = new Email();
         //- Generate Email Name -//
