@@ -208,7 +208,7 @@ public class DayNightController : MonoBehaviour
     public string GetEmail(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int EmailIndex*/)
     {
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 3, ',');
-        return "IT WORKED Email";
+        return EmailGen.GetEmailInfo(ProcessedInputs[0], ProcessedInputs[1], ProcessedInputs[2]);
     }
 
     public string GetAction(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int ActionIndex*/)
@@ -231,7 +231,7 @@ public class DayNightController : MonoBehaviour
         {
             if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
             {
-                output = "Compleated Event [PAUSE(1)] [ESCAPE]";
+                output = "Compleated Event \n Press esc to return to main menu";
             }
             else
             {

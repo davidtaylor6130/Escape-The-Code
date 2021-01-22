@@ -20,6 +20,16 @@ public class NameGenerator : MonoBehaviour
     {
         return names[index];
     }
+
+    public string GetNameExcluding(int index)
+    {
+        int RandomNumber;
+        do {
+            RandomNumber = Random.Range(0, names.Length);
+        } while (RandomNumber == index);
+
+        return names[RandomNumber];
+    }
 }
 
 //- This is a seprate class to allow for faster and easier devleopment in the future -//

@@ -93,8 +93,11 @@ public class ElectronicInteractable : MonoBehaviour
         {
             TakeControlGuiPrompt.SetActive(true);
 
-            foreach (GameObject objToOutline in ElementsToOutline)
-                objToOutline.layer = LayerMask.NameToLayer("Outline");
+            if (GameRef != null)
+            {
+                foreach (GameObject objToOutline in ElementsToOutline)
+                    objToOutline.layer = LayerMask.NameToLayer("Outline");
+            }
         }
     }
 
@@ -103,9 +106,12 @@ public class ElectronicInteractable : MonoBehaviour
         if (other.gameObject.name == Player.name)
         {
             TakeControlGuiPrompt.SetActive(false);
-            
-            foreach (GameObject objToOutline in ElementsToOutline)
-                objToOutline.layer = LayerMask.NameToLayer("Default");
+
+            if (GameRef != null)
+            {
+                foreach (GameObject objToOutline in ElementsToOutline)
+                    objToOutline.layer = LayerMask.NameToLayer("Default");
+            }
         }
     }
 
