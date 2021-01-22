@@ -190,7 +190,7 @@ public class TextDisplay : MonoBehaviour
         }
     }
 
-    private void PerformTaskQueued(List<string> as_CommandRecived, List<string> as_FunctionInput)
+    private IEnumerator PerformTaskQueued(List<string> as_CommandRecived, List<string> as_FunctionInput)
     {
         //- To Add another command just add another option in the switch statement -//
         //- Then Perform the required Coded -//
@@ -206,6 +206,12 @@ public class TextDisplay : MonoBehaviour
             {
                 case "ESCAPE":
                     gameRef.DisplayBeat(1);
+                    break;
+
+                case "PAUSE":
+                    int TimeToPauseFor = Convert.ToInt32(as_FunctionInput[functionInputCount]);
+                    functionInputCount++;
+                    yield return TimeToPauseFor;
                     break;
                 
                 case "BitCoinAdd":

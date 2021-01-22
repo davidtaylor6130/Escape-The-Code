@@ -32,6 +32,8 @@ public class DayNightController : MonoBehaviour
     public int AmountOfComputersActive;
     public int EventsPerSystem;
     public int EmailsPerSystem;
+    public EmailGenerator EmailGen;
+    public EventGenerator EventGen;
 
     public RenderTexture DeActiveRenderTexture;
 
@@ -235,15 +237,15 @@ public class DayNightController : MonoBehaviour
         {
             if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
             {
-                output = "Compleated Event [ESCAPE]";
+                output = "Compleated Event [PAUSE(1)] [ESCAPE]";
             }
             else
             {
                 //- Send Output Data -//
                 output = Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
-                
+
                 //- Add Event For Later use to construct Emails -//
-                EventsTriggered.Add(new EventActivationInformation(FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1], ProcessedInputs[1]));
+                EmailGen.AddCompleatedEvent(FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1], ProcessedInputs[1]);
             }
             FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] = true;
         }  
