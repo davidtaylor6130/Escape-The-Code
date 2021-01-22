@@ -57,6 +57,7 @@ public class DayNightController : MonoBehaviour
     public string[] Names;
 
     [Header("Email Formats")]
+    public List<EventActivationInformation> EventsTriggered;
     public string[] EmailFormats;
 
     [Header("Camera To Texture Systems")]
@@ -82,7 +83,6 @@ public class DayNightController : MonoBehaviour
     {
         // Create New data array
         CamToTex = new TextureRenderers[CameraToTexture.Length];
-
 
         //- Loop though all Camera To Textures -//
         for (int i = 0; i < CameraToTexture.Length; i++)
@@ -182,6 +182,7 @@ public class DayNightController : MonoBehaviour
     void ResetDay()
     {
         ActiveEvents = new List<int>();
+        EventsTriggered = new List<EventActivationInformation>();
 
         //- Deactivate all screens -//
         for (int i = 0; i < Computers.Length; i++)
@@ -248,7 +249,11 @@ public class DayNightController : MonoBehaviour
             }
             else
             {
+                //- Send Output Data -//
                 output = Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
+                
+                //- Add Event For Later use to construct Emails -//
+                EventsTriggered.Add(new EventActivationInformation(FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1], ProcessedInputs[1]));
             }
             FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] = true;
         }  
