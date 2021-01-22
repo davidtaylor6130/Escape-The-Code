@@ -14,23 +14,20 @@ public struct PcEvent
 
 public class EventGenerator : MonoBehaviour
 {
+    [Header("Settings")]
+    public int EventsPerComputer;
+    private int AmountOfComputers;
+
     [Header("PC Events")]
     public PcEvent[] Events;
     private List<int> ActiveEvents;
 
-    // Start is called before the first frame update
-    void Start()
+    public void CustomStart(int a_amountOfComputers)
     {
-        
+        AmountOfComputers = a_amountOfComputers;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    int GetRandomEvent()
+    public int GetRandomEvent()
     {
         int randomSelection = 0;
         do
@@ -43,8 +40,13 @@ public class EventGenerator : MonoBehaviour
         return randomSelection;
     }
 
+    public void ClearRandomSelectedMemory()
+    {
+        ActiveEvents.Clear();
+    }
+
     public void ResetDay()
     {
-       
+        ActiveEvents = new List<int>();
     }
 }

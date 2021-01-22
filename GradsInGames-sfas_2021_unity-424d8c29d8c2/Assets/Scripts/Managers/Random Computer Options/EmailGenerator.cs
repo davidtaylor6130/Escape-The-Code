@@ -22,6 +22,10 @@ public struct ConstructedEmail
 
 public class EmailGenerator : MonoBehaviour
 {
+    [Header("Settings")]
+    public int EmailsPerComputer;
+    private int AmountOfComputers;
+
     [Header("Recorded User Activations")]
     public List<EventActivationInformation> RecorededActions;
 
@@ -33,11 +37,19 @@ public class EmailGenerator : MonoBehaviour
     public ConstructedEmail[] GeneratedEmails;
     public List<int> ActiveGeneratedEmails;
 
-    public ConstructedEmail[] GenerateEmails(int AmountOfEmailsPerComputer)
+    public void CustomStart(int a_amountOfComputers)
+    {
+        AmountOfComputers = a_amountOfComputers;
+
+        //- Initalise List To Store Information -//
+        RecorededActions = new List<EventActivationInformation>();
+    }
+
+    public ConstructedEmail[] GenerateEmails()
     {
         GeneratedEmails = new ConstructedEmail[RecorededActions.Count];
 
-        ConstructedEmail[] EmailsToReturn = new ConstructedEmail[AmountOfEmailsPerComputer];
+        ConstructedEmail[] EmailsToReturn = new ConstructedEmail[EmailsPerComputer];
 
         //- if Actions Recored Construct Emails Based On Them -//
         if (RecorededActions.Count != 0)
@@ -46,7 +58,7 @@ public class EmailGenerator : MonoBehaviour
         }
 
         //- Each Email Per Computer -//
-        for (int i = 0; i < AmountOfEmailsPerComputer; i++)
+        for (int i = 0; i < EmailsPerComputer; i++)
         {
             //- if there is no generated emails then just pull out of the random dev created pool -//
             if (GeneratedEmails.Length == 0)
@@ -105,6 +117,7 @@ public class EmailGenerator : MonoBehaviour
 
     public void ResetDay()
     {
-        
+        ActiveFillerEmails = new List<int>();
+        ActiveGeneratedEmails = new List<int>();
     }
 }

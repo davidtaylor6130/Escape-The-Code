@@ -28,25 +28,22 @@ public struct ActiveComputerInfo
 
 public class DayNightController : MonoBehaviour
 {
+    [Header("Generator Links")]
+    public EmailGenerator EmailGen;
+    public EventGenerator EventGen;
+    public NameGenerator NameGen;
+
     [Header("Settings")]
     public int AmountOfComputersActive;
     public int EventsPerSystem;
     public int EmailsPerSystem;
-    public EmailGenerator EmailGen;
-    public EventGenerator EventGen;
-
+    
+    [Tooltip("What Shows On Computers That Arnt Selected")]
     public RenderTexture DeActiveRenderTexture;
 
     [Header("Computer Selection")]
     public GameObject[] Computers;
     public List<int> ActiveComputers;
-
-    [Header("Random Name List")]
-    public string[] Names;
-
-    [Header("Email Formats")]
-    public List<EventActivationInformation> EventsTriggered;
-    public string[] EmailFormats;
 
     [Header("Camera To Texture Systems")]
     public GameObject[] CameraToTexture;
@@ -59,12 +56,26 @@ public class DayNightController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EventGen.CustomStart(AmountOfComputersActive);
+        EmailGen.CustomStart(AmountOfComputersActive);
+        NameGen.CustomStart(AmountOfComputersActive);
+
         //- Get Refrances to Camera To Texture Components -//
         GetCameraToTextureInfo();
 
         //- Calculate Days Computer's and events -//
         RefreshComputers();
     }
+
+    //[ContextMenu("Move Names")]
+    //public void moveData()
+    //{
+    //    NameGen.names = new string[Names.Length];
+    //    for (int i = 0; i < Names.Length; i++)
+    //    {
+    //        NameGen.names[i] = Names[i];
+    //    }
+    //}
 
     [ContextMenu("Get Camera To Texture Info")]
     void GetCameraToTextureInfo()
@@ -117,7 +128,7 @@ public class DayNightController : MonoBehaviour
 
             // Select Amount Of Events
             for (int j = 0; j < EventsPerSystem; j++)
-                FormattedComputers[i].EventIndex.Add(GetRandomEvent());
+                FormattedComputers[i].EventIndex.Add(EventGen.GetRandomEvent());
 
             // Link Render Text System
             FormattedComputers[i].RenderTextureIndex = i;
@@ -136,7 +147,8 @@ public class DayNightController : MonoBehaviour
             Computers[FormattedComputers[i].ComputerIndex].GetComponent<ElectronicInteractable>().SetGameRef(CamToTex[i].ParentObject.GetComponent<Game>());
 
             //- Clear Active Events -//
-            ActiveEvents.Clear();
+            EventGen.ClearRandomSelectedMemory();
+            EmailGen.ClearRandomSelectionMemory();
         }
     }
 
@@ -153,24 +165,11 @@ public class DayNightController : MonoBehaviour
         return randomSelection;
     }
 
-    int GetRandomEvent()
-    {
-        int randomSelection = 0;
-        do
-        {
-            randomSelection = Random.Range(0, Events.Length);
-        }
-        while (ActiveEvents.Contains(randomSelection));
-        ActiveEvents.Add(randomSelection);
-
-        return randomSelection;
-    }
-
     [ContextMenu("Reset Day")]
     void ResetDay()
     {
-        ActiveEvents = new List<int>();
-        EventsTriggered = new List<EventActivationInformation>();
+        EventGen.ResetDay();
+        EmailGen.ResetDay();
 
         //- Deactivate all screens -//
         for (int i = 0; i < Computers.Length; i++)
@@ -202,7 +201,6 @@ public class DayNightController : MonoBehaviour
                 FormattedComputers[i].EventCompleated.Add(false);
         }
 
-
         //- CLear Active Computers -//
         ActiveComputers.Clear();
     }
@@ -226,7 +224,7 @@ public class DayNightController : MonoBehaviour
             }
             else
             {
-                output = Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].NameOfEvent;
+                output = EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].NameOfEvent;
             }
         }
         else if (ProcessedInputs[0] == 1)
@@ -238,7 +236,7 @@ public class DayNightController : MonoBehaviour
             else
             {
                 //- Send Output Data -//
-                output = Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
+                output = EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
 
                 //- Add Event For Later use to construct Emails -//
                 EmailGen.AddCompleatedEvent(FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1], ProcessedInputs[1]);
@@ -251,7 +249,7 @@ public class DayNightController : MonoBehaviour
     public string GetRandomName(string UnformattedInput/*int PcIndex*/)
     {
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 1, ',');
-        return Names[ProcessedInputs[0] - 1];
+        return NameGen.GetName(ProcessedInputs[0] - 1);
     }
 
     int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)
