@@ -34,6 +34,7 @@ public struct EmailTemplateFormat
     public string To;
     public string From;
     public string Subject;
+    [TextArea]
     public string Content;
     public string Attachments;
 };
@@ -92,7 +93,7 @@ public class EmailGenerator : MonoBehaviour
                     int EmailVersionIndex = Random.Range(0, 3);
 
                     //- Get Email Name and Output -//
-                    tempEmail = EmailTemplateToEmail(GeneratedEmailTemplates[RecorededActions[i, j].ActionIndex].EmailTemplates[EmailVersionIndex], i);
+                    tempEmail = EmailTemplateToEmail(emailTemplateForAutoGeneration[RecorededActions[i, j].ActionIndex].EmailTemplates[EmailVersionIndex], i);
 
                     //- Save Email To Array For Later Use -//
                     GeneratedEmails[i, j] = tempEmail;
@@ -119,13 +120,12 @@ public class EmailGenerator : MonoBehaviour
         Temp.NameOfEmail = template.Subject + " From: " + NameGen.GetName(PcIndex);
 
         //- Generate Email Output-//
-        Temp.OutputOfEmail = "> " + NameGen.GetNameExcluding(PcIndex) + "\n" +
-                            "> From: " + NameGen.GetName(PcIndex) + "\n" +
+        Temp.OutputOfEmail = "> " + (template.To != "" ? template.To : NameGen.GetNameExcluding(PcIndex)) + "\n" +
+                            "> From: " + (template.From != "" ? template.From : NameGen.GetName(PcIndex)) + "\n" +
                             "> Subject: " + template.Subject + "\n" +
                             "> Content: " + template.Content + "\n" +
                             "> Attachments: " + template.Attachments + "\n" +
                             "\n" + "Press Esc To Return To Menu";
-
         return Temp;
     }
 
