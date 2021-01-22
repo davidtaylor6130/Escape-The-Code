@@ -8,16 +8,6 @@ using System;
 using Random = UnityEngine.Random;
 
 [System.Serializable]
-public struct PcEvent
-{
-    public string NameOfEvent;
-    [TextArea]
-    public string OutputOfEvent;
-    public float NoticableCost;
-    public float CarmaCost;
-};
-
-[System.Serializable]
 public struct TextureRenderers
 {
     public GameObject ParentObject;

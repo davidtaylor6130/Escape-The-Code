@@ -102,4 +102,9 @@ public class EmailGenerator : MonoBehaviour
         ActiveGeneratedEmails.Clear();
         ActiveFillerEmails.Clear();
     }
+
+    public void ResetDay()
+    {
+        
+    }
 }
