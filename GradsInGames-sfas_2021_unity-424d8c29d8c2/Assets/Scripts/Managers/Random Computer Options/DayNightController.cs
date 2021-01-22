@@ -37,10 +37,6 @@ public class DayNightController : MonoBehaviour
 
     public RenderTexture DeActiveRenderTexture;
 
-    [Header("PC Events")]
-    public PcEvent[] Events;
-    private List<int> ActiveEvents;
-
     [Header("Computer Selection")]
     public GameObject[] Computers;
     public List<int> ActiveComputers;
