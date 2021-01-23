@@ -6428,10 +6428,10 @@ RectTransform:
   m_Father: {fileID: 954351148}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -250, y: 130}
-  m_SizeDelta: {x: 315, y: 75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -250, y: -148.5}
+  m_SizeDelta: {x: -675, y: -482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958929726
 MonoBehaviour:
@@ -6800,10 +6800,10 @@ RectTransform:
   m_Father: {fileID: 570250631}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.04, y: -0.79}
-  m_SizeDelta: {x: 1097.4056, y: 65.58304}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 1.039978, y: 37.21}
+  m_SizeDelta: {x: 141.40564, y: 65.58304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256203184
 MonoBehaviour:
@@ -6825,8 +6825,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Created By David Taylor      Twitter @davidtaylor6130      LinkedIn: davidtaylor6130                                     
-    Portfolio: davidtaylor6130.github.io'
+  m_text: 'Created By David Taylor      Twitter @davidtaylor6130      LinkedIn: davidtaylor6130
+
+    Portfolio:
+    davidtaylor6130.github.io'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90b6f6c99348973438203fff41f8b02c, type: 2}
   m_sharedMaterial: {fileID: -1788798596391352350, guid: 90b6f6c99348973438203fff41f8b02c,
@@ -6858,7 +6860,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 12
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -6890,7 +6892,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.6708374, w: -0.096660815}
+  m_margin: {x: 72.55398, y: 0, z: 73.7561, w: -0.096660815}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7261,10 +7263,10 @@ RectTransform:
   m_Father: {fileID: 954351148}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 250, y: 130}
-  m_SizeDelta: {x: 315, y: 75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 250, y: -148.5}
+  m_SizeDelta: {x: -675, y: -482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575899251
 MonoBehaviour:

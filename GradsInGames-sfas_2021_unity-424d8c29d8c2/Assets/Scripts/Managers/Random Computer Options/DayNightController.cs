@@ -33,8 +33,9 @@ public class DayNightController : MonoBehaviour
     public EventGenerator EventGen;
     public NameGenerator NameGen;
 
-    [Header("PlayerChoiceController")]
+    [Header("Misc Refrances")]
     public PlayerChoiceController PlayerChoiceTracker;
+    public SmallLoadingScreen loadingScreen;
 
     [Header("Settings")]
     public int AmountOfComputersActive;
@@ -262,6 +263,11 @@ public class DayNightController : MonoBehaviour
     {
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 1, ',');
         return NameGen.GetName(ProcessedInputs[0] - 1);
+    }
+
+    public void DayFinished()
+    {
+        loadingScreen.StartLoadingScreen(2.0f);
     }
 
     int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)
