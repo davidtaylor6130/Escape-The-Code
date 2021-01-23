@@ -67,50 +67,67 @@ public class EmailGenerator : MonoBehaviour
 
         //- Initalise List To Store Information -//
         RecorededActions = new EventActivationInformation[AmountOfComputers,2];
+
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                RecorededActions[i, j].ActionIndex = -1;
+                RecorededActions[i, j].NameAndPcIndex = -1;
+            }
+        }
     }
 
     [ContextMenu("GenerateEmails")]
     public void GenerateEmails()
     {
-        GeneratedEmails = new Email[AmountOfComputers, 2];
+        GeneratedEmails = new Email[AmountOfComputers, EmailsPerComputer];
 
         for (int i = 0; i < AmountOfComputers; i++)
         {
+
             //- loop through possible events -//
-            for (int j = 0; j < 2; j++)
+            for (int j = 0; j < EmailsPerComputer; j++)
             {
-                if (RecorededActions[i, j].ActionIndex == -1 && RecorededActions[i, j].NameAndPcIndex == -1)
+                if (j != 2)
                 {
-                    //- Set Random Filler Email -//
+                    if (RecorededActions[i, j].ActionIndex == -1 && RecorededActions[i, j].NameAndPcIndex == -1)
+                    {
+                        //- Set Random Filler Email -//
+                        GeneratedEmails[i, j] = FillerEmails[GetRandomFillerEmail()];
+                    }
+                    else
+                    {
+                        //- Create Temp Email Storage -//
+                        Email tempEmail = new Email();
+
+                        //- Select Randomly what email template to use for this action -//
+                        int EmailVersionIndex = Random.Range(0, 3);
+
+                        //- Get Email Name and Output -//
+                        tempEmail = EmailTemplateToEmail(emailTemplateForAutoGeneration[RecorededActions[i, j].ActionIndex].EmailTemplates[EmailVersionIndex], i);
+
+                        //- Save Email To Array For Later Use -//
+                        GeneratedEmails[i, j] = tempEmail;
+                    }
+                }
+                else if (j == 2)
+                {
                     GeneratedEmails[i, j] = FillerEmails[GetRandomFillerEmail()];
                 }
-                else
-                {
-                    //- Create Temp Email Storage -//
-                    Email tempEmail = new Email();
-
-                    //- Select Randomly what email template to use for this action -//
-                    int EmailVersionIndex = Random.Range(0, 3);
-
-                    //- Get Email Name and Output -//
-                    tempEmail = EmailTemplateToEmail(emailTemplateForAutoGeneration[RecorededActions[i, j].ActionIndex].EmailTemplates[EmailVersionIndex], i);
-
-                    //- Save Email To Array For Later Use -//
-                    GeneratedEmails[i, j] = tempEmail;
-                }
             }
-        }
 
-        //- Allows next call to reslect same emails -//
-        ClearRandomSelectionMemory();
+            //- Allows next call to reslect same emails -//
+            ClearRandomSelectionMemory();
+        }
     }
     
     public string GetEmailInfo(int TitleOrBody, int PcIndex, int EmailIndex)
     {
         if (TitleOrBody == 0)
-            return GeneratedEmails[PcIndex, EmailIndex].NameOfEmail;
+            return GeneratedEmails[PcIndex - 1, EmailIndex - 1].NameOfEmail;
         else
-            return GeneratedEmails[PcIndex, EmailIndex].OutputOfEmail;
+            return GeneratedEmails[PcIndex - 1, EmailIndex - 1].OutputOfEmail;
     }
 
     public Email EmailTemplateToEmail(EmailTemplateFormat template, int PcIndex)
