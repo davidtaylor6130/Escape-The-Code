@@ -33,6 +33,9 @@ public class DayNightController : MonoBehaviour
     public EventGenerator EventGen;
     public NameGenerator NameGen;
 
+    [Header("PlayerChoiceController")]
+    public PlayerChoiceController PlayerChoiceTracker;
+
     [Header("Settings")]
     public int AmountOfComputersActive;
     public int EventsPerSystem;
@@ -66,16 +69,6 @@ public class DayNightController : MonoBehaviour
         //- Calculate Days Computer's and events -//
         RefreshComputers();
     }
-
-    //[ContextMenu("Move Names")]
-    //public void moveData()
-    //{
-    //    NameGen.names = new string[Names.Length];
-    //    for (int i = 0; i < Names.Length; i++)
-    //    {
-    //        NameGen.names[i] = Names[i];
-    //    }
-    //}
 
     [ContextMenu("Get Camera To Texture Info")]
     void GetCameraToTextureInfo()
@@ -144,6 +137,7 @@ public class DayNightController : MonoBehaviour
                 }
             }
 
+            //- Set refrance to each screens Game script -//
             Computers[FormattedComputers[i].ComputerIndex].GetComponent<ElectronicInteractable>().SetGameRef(CamToTex[i].ParentObject.GetComponent<Game>());
 
             //- Clear Active Events -//
@@ -168,6 +162,7 @@ public class DayNightController : MonoBehaviour
     [ContextMenu("Reset Day")]
     void ResetDay()
     {
+        PlayerChoiceTracker.ResetDay();
         EventGen.ResetDay();
         EmailGen.ResetDay();
 
@@ -213,9 +208,13 @@ public class DayNightController : MonoBehaviour
 
     public string GetAction(string UnformattedInput/*int TitleOrMainBody, int PcIndex, int ActionIndex*/)
     {
+        //- Process and save input's -//
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 3, ',');
+        
+        //- temp string var -//
         string output = "";
 
+        //- if title of event -//
         if (ProcessedInputs[0] == 0)
         {
             if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
@@ -227,6 +226,7 @@ public class DayNightController : MonoBehaviour
                 output = EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].NameOfEvent;
             }
         }
+        //- if main body of text -//
         else if (ProcessedInputs[0] == 1)
         {
             if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
@@ -238,8 +238,20 @@ public class DayNightController : MonoBehaviour
                 //- Send Output Data -//
                 output = EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].OutputOfEvent;
 
+                //- increase or decrease carma ammount by developer set ammount -//
+                PlayerChoiceTracker.CarmaAmount += EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].CarmaCost;
+                
+                //- Update Noticeable Ammount -//
+                PlayerChoiceTracker.NoticeablenessChange(EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].NoticableCost);
+
+                //- noticeable ness death state -//
+                if (PlayerChoiceTracker.NoticableNess > 100)
+                {
+                    Debug.LogError("YOUR DEAD");
+                }
+
                 //- Add Event For Later use to construct Emails -//
-                EmailGen.AddCompleatedEvent(FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1], ProcessedInputs[1]);
+                EmailGen.AddCompleatedEvent(ProcessedInputs[1], ProcessedInputs[2]);
             }
             FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] = true;
         }  

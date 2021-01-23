@@ -66,7 +66,7 @@ public class EmailGenerator : MonoBehaviour
         AmountOfComputers = a_amountOfComputers;
 
         //- Initalise List To Store Information -//
-        RecorededActions = new EventActivationInformation[AmountOfComputers,2];
+        RecorededActions = new EventActivationInformation[AmountOfComputers, 2];
 
         for (int i = 0; i < 10; i++)
         {
@@ -146,10 +146,10 @@ public class EmailGenerator : MonoBehaviour
         return Temp;
     }
 
-    public void AddCompleatedEvent(int EventIndex, int nameIndex)
+    public void AddCompleatedEvent(int PcIndex, int EventIndex)
     {
         //- Can do a max of -//
-        RecorededActions[(nameIndex - 1), EventIndex] = new EventActivationInformation(EventIndex, nameIndex);
+        RecorededActions[(PcIndex - 1), (EventIndex - 1)] = new EventActivationInformation(PcIndex, EventIndex);
     }
 
     public int GetRandomFillerEmail()
