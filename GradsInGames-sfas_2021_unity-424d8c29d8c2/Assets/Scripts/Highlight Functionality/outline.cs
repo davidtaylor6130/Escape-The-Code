@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class outline : MonoBehaviour
 {
-	[Header("Settings")]
+	[Header("Active Object Settings")]
 	public Color OutlineColour;
+	public Color DimOutlineColour;
 	[Range(0.0f, 0.005f)]	public float OutputStrength;
 
 	[Header("Shaders")]
@@ -14,16 +15,24 @@ public class outline : MonoBehaviour
 	Material _outlineMaterial;
 	Camera TempCam;
 
+	public bool IsActiveComputer = true;
+
+
 	void Start()
 	{
+		//- Create Temp Camera and Mat -//
 		_outlineMaterial = new Material(Outline);
 		TempCam = new GameObject().AddComponent<Camera>();
-
-		_outlineMaterial.SetColor("_Color", OutlineColour);
 	}
 
     private void Update()
     {
+		//- Update Its Output Color  -//
+		if (IsActiveComputer)
+			_outlineMaterial.SetColor("_Color", OutlineColour);
+		else if (!IsActiveComputer)
+			_outlineMaterial.SetColor("_Color", DimOutlineColour);
+		//- Set Its Strength -//
 		_outlineMaterial.SetFloat("_Strength", OutputStrength);
     }
 

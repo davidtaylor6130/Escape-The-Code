@@ -293,7 +293,7 @@ public class PlayerMovement : MonoBehaviour
                         break;
 
                     case TypeOfMovement.NoMovement:
-                        rb.isKinematic = true;
+                        GetComponent<Rigidbody>().isKinematic = true;
                         break;
 
                     default:

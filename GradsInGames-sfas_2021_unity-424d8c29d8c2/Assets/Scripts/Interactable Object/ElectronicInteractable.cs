@@ -8,6 +8,7 @@ public class ElectronicInteractable : MonoBehaviour
     [Header("Game State")]
     public GameStates GameState;
     public Game GameRef;
+    public outline outlineRef;
 
     [Header("Player Information")]
     public Transform EntryJumpPoint;
@@ -93,11 +94,12 @@ public class ElectronicInteractable : MonoBehaviour
         {
             TakeControlGuiPrompt.SetActive(true);
 
-            if (GameRef != null)
-            {
-                foreach (GameObject objToOutline in ElementsToOutline)
-                    objToOutline.layer = LayerMask.NameToLayer("Outline");
-            }
+            //- Turn outline color to birght green if computer is active or dark green for non interactable objects -//
+            outlineRef.IsActiveComputer = (GameRef != null);
+            
+            //- Set Objects to outline ont the correct layer -//
+            foreach (GameObject objToOutline in ElementsToOutline)
+                objToOutline.layer = LayerMask.NameToLayer("Outline");
         }
     }
 
@@ -106,12 +108,8 @@ public class ElectronicInteractable : MonoBehaviour
         if (other.gameObject.name == Player.name)
         {
             TakeControlGuiPrompt.SetActive(false);
-
-            if (GameRef != null)
-            {
-                foreach (GameObject objToOutline in ElementsToOutline)
-                    objToOutline.layer = LayerMask.NameToLayer("Default");
-            }
+            foreach (GameObject objToOutline in ElementsToOutline)
+                objToOutline.layer = LayerMask.NameToLayer("Default");
         }
     }
 
