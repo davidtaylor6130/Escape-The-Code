@@ -112,6 +112,12 @@ public class DayNightController : MonoBehaviour
 
     void FormatComputersToActivate()
     {
+        //- remove any previous connections -//
+        for (int i = 0; i < Computers.Length; i++ )
+        {
+            Computers[i].GetComponent<ElectronicInteractable>().SetGameRef(null);
+        }
+        
         //- Generate Required Information -//
         for (int i = 0; i < AmountOfComputersActive; i++)
         { 
@@ -231,7 +237,7 @@ public class DayNightController : MonoBehaviour
         {
             if (FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] == true)
             {
-                output = "Compleated Event \n Press esc to return to main menu";
+                output = "Compleated Event \n Press tab to return to main menu";
             }
             else
             {
@@ -258,7 +264,7 @@ public class DayNightController : MonoBehaviour
         return output;
     }
 
-    public string GetRandomName(string UnformattedInput/*int PcIndex*/)
+    public string GetRandomName(string UnformattedInput)
     {
         int[] ProcessedInputs = ProcessIntInput(UnformattedInput, 1, ',');
         return NameGen.GetName(ProcessedInputs[0] - 1);
@@ -267,7 +273,7 @@ public class DayNightController : MonoBehaviour
     public void DayFinished()
     {
         loadingScreen.StartLoadingScreen(2.0f);
-        ResetDay();
+        RefreshComputers();
         loadingScreen.StopLoadingScreen();
     }
 
