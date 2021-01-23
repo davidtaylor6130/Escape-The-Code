@@ -246,7 +246,7 @@ public class DayNightController : MonoBehaviour
                 PlayerChoiceTracker.NoticeablenessChange(EventGen.Events[FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]].NoticableCost);
 
                 //- noticeable ness death state -//
-                if (PlayerChoiceTracker.NoticableNess > 100)
+                if (PlayerChoiceTracker.NoticableNess >= 100)
                 {
                     Debug.LogError("YOUR DEAD");
                 }
