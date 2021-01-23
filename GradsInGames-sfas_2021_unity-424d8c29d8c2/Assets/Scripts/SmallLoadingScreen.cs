@@ -6,13 +6,11 @@ public class SmallLoadingScreen : MonoBehaviour
 {
     public GameObject LoadingScreen;
     public GameObject[] ToToggleOff;
-    private float timeLeft = 0;
+    private float timeLeft = 10;
     private bool stopCalled = false;
 
     private void Update()
     {
-        timeLeft -= Time.deltaTime;
-
         if (timeLeft < 0 && stopCalled)
         {
             LoadingScreen.SetActive(false);
@@ -21,10 +19,16 @@ public class SmallLoadingScreen : MonoBehaviour
             foreach (GameObject toToggle in ToToggleOff)
                 toToggle.SetActive(true);
         }
+        else
+        {
+            timeLeft -= Time.deltaTime;
+        }
     }
 
     public void StartLoadingScreen(float minTime)
     {
+        timeLeft = minTime;
+
         LoadingScreen.SetActive(true);
         stopCalled = false;
 

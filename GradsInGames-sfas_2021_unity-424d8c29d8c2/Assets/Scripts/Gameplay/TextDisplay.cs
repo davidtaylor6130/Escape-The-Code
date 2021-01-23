@@ -233,7 +233,11 @@ public class TextDisplay : MonoBehaviour
                     playerChoiceController.CarmaAmount -= (Convert.ToInt32(as_FunctionInput[functionInputCount]));
                     functionInputCount++;
                     break;
-                
+
+                case "COMPLEATED":
+                    DayNightController.DayFinished();
+                    break;
+
                 default:
                     Debug.LogError("COMMAND NOT FOUND PLEASE ADD IT TO PerformTaskQueued() or Remove The Use of []");
                     break;

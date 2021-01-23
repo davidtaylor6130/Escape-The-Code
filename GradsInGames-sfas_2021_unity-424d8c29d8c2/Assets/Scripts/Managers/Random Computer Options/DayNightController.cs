@@ -67,7 +67,6 @@ public class DayNightController : MonoBehaviour
         //- Get Refrances to Camera To Texture Components -//
         GetCameraToTextureInfo();
 
-        //- Calculate Days Computer's and events -//
         RefreshComputers();
     }
 
@@ -268,6 +267,8 @@ public class DayNightController : MonoBehaviour
     public void DayFinished()
     {
         loadingScreen.StartLoadingScreen(2.0f);
+        ResetDay();
+        loadingScreen.StopLoadingScreen();
     }
 
     int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)
