@@ -301,6 +301,7 @@ public class DayNightController : MonoBehaviour
             
             RefreshComputers();
 
+            InitalCamToTex.OnScreenText.text = "";
             InitalCamToTex.StoryManager.changeStory(DailyStoryAssets[CurrentDay]);
 
             loadingScreen.StopLoadingScreen();
