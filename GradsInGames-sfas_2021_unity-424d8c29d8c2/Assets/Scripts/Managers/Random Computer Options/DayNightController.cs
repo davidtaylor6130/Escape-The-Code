@@ -55,6 +55,9 @@ public class DayNightController : MonoBehaviour
     public RenderTexture[] RenderTextures;
     private TextureRenderers[] CamToTex;
 
+    public TextureRenderers InitalCamToTex;
+    [SerializeField] private StoryData[] DailyStoryAssets;
+
     [Header("Final Output")]
     public ActiveComputerInfo[] FormattedComputers;
 
@@ -295,7 +298,11 @@ public class DayNightController : MonoBehaviour
         else
         {
             loadingScreen.StartLoadingScreen(2.0f);
+            
             RefreshComputers();
+
+            InitalCamToTex.StoryManager.changeStory(DailyStoryAssets[CurrentDay]);
+
             loadingScreen.StopLoadingScreen();
         }
     }

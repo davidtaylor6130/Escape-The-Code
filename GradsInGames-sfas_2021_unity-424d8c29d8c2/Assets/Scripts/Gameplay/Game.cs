@@ -27,6 +27,12 @@ public class Game : MonoBehaviour
         _output.ResetDay();
     }
 
+    public void changeStory(StoryData data)
+    {
+        _data = data;
+        ResetDay();
+    }
+
     private void Update()
     {
         if(_output.IsIdle && IsCurrenlyActive == true)

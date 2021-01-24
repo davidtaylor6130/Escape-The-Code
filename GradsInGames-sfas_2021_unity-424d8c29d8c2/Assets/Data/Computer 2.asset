@@ -31,9 +31,7 @@ MonoBehaviour:
   - _choices: []
     _text: '[Email(1,2,1)]'
     _id: 2
-  - _choices:
-    - _text: 
-      _beatId: 4
+  - _choices: []
     _text: '[Email(1,2,2)]'
     _id: 3
   - _choices: []
