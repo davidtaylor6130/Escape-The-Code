@@ -16,10 +16,10 @@ MonoBehaviour:
   - _choices:
     - _text: Hide Till Tomorow 4
       _beatId: 2
-    _text: First Story Beat
+    _text: First Story Beat 4
     _id: 1
   - _choices: []
-    _text: 'See You Tommorow
+    _text: 'See You Tommorow 4
 
       [COMPLEATED]'
     _id: 2
