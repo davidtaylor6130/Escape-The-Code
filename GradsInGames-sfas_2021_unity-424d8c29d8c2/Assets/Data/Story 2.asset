@@ -16,7 +16,7 @@ MonoBehaviour:
   - _choices:
     - _text: Hide until tomorrow
       _beatId: 2
-    _text: 'Day 2/5:'
+    _text: 'Day 3/5:'
     _id: 1
   - _choices: []
     _text: '[COMPLEATED]'
