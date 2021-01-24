@@ -58,6 +58,9 @@ public class DayNightController : MonoBehaviour
     [Header("Final Output")]
     public ActiveComputerInfo[] FormattedComputers;
 
+    [Header("Current Day Count")]
+    public int CurrentDay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -283,9 +286,18 @@ public class DayNightController : MonoBehaviour
 
     public void DayFinished()
     {
-        loadingScreen.StartLoadingScreen(2.0f);
-        RefreshComputers();
-        loadingScreen.StopLoadingScreen();
+        CurrentDay++;
+
+        if (CurrentDay == 5)
+        {
+            PlayerChoiceTracker.CompleatedTheWeek();
+        }
+        else
+        {
+            loadingScreen.StartLoadingScreen(2.0f);
+            RefreshComputers();
+            loadingScreen.StopLoadingScreen();
+        }
     }
 
     int[] ProcessIntInput(string unformattedInput, int length, char stopCharacter)

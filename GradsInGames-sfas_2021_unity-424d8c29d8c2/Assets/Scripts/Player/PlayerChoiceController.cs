@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerChoiceController : MonoBehaviour
 {
+    public WinLossState winLoss;
+
     public float BitCoin;
 
     public float CarmaAmount = 0;
@@ -33,5 +35,21 @@ public class PlayerChoiceController : MonoBehaviour
         CarmaAmount = 0;
         NoticableNess = 0;
         NoticeablenessChange(0);
+    }
+
+    public void CompleatedTheWeek()
+    {
+        if (globalCarmaAmount > 0)
+        {
+            winLoss.SetWinLossCondition(WinLossStates.Good);
+        }
+        else if (globalCarmaAmount == 0 )
+        {
+            winLoss.SetWinLossCondition(WinLossStates.Neurtal);
+        }
+        else if (globalCarmaAmount < 0)
+        {
+            winLoss.SetWinLossCondition(WinLossStates.Bad);
+        }
     }
 }
