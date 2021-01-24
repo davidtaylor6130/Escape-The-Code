@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beats:
   - _choices:
-    - _text: Hide Till Tomorow
+    - _text: Hide Till Tomorow 1
       _beatId: 2
     _text: First Story Beat
     _id: 1
