@@ -149,7 +149,7 @@ public class EmailGenerator : MonoBehaviour
     public void AddCompleatedEvent(int PcIndex, int EventIndex)
     {
         //- Can do a max of -//
-        RecorededActions[(PcIndex - 1), (EventIndex - 1)] = new EventActivationInformation(PcIndex, EventIndex);
+        RecorededActions[(PcIndex - 1), (EventIndex)] = new EventActivationInformation(PcIndex, EventIndex);
     }
 
     public int GetRandomFillerEmail()

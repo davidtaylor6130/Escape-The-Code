@@ -257,7 +257,7 @@ public class DayNightController : MonoBehaviour
                 }
 
                 //- Add Event For Later use to construct Emails -//
-                EmailGen.AddCompleatedEvent(ProcessedInputs[1], ProcessedInputs[2]);
+                EmailGen.AddCompleatedEvent(ProcessedInputs[1], FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]);
             }
             FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] = true;
         }  
