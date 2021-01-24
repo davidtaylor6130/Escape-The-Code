@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beats:
   - _choices:
-    - _text: Hide Till Tomorow 3
+    - _text: Hide until tomorrow
       _beatId: 2
-    _text: First Story Beat 3
+    _text: 'Day 4/5:'
     _id: 1
   - _choices: []
-    _text: 'See You Tommorow 3
-
-      [COMPLEATED]'
+    _text: '[COMPLEATED]'
     _id: 2
