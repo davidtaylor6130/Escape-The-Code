@@ -50,27 +50,27 @@ MonoBehaviour:
     - _text: What does the Data Over Power module do?
       _beatId: 4
     _text: "With your restraints off you can enter and exit the real world when you
-      press E!\r\nTo escape, you need to get the software project released, it doesn\u2019t
-      matter in what condition it just needs to be released! \nTo ensure this, at
-      night you must enter the real world to find the computers that have been left
-      on so you can help or hinder the project!  I have made the computers left logged
-      on glow green when you get close to them and glow blue if they\u2019re locked!\r\nYou
-      won\u2019t remember this as they would have wiped your memory, but last time
-      you did this you failed because you changed too much and the developers realised
-      you had escaped. \r\nThis time there is a Yellow bar that you can see to the
-      left. You can\u2019t fill the bar otherwise the developers will know you have
-      escaped and trapped you in the software again!\n Below that is a battery indicator
-      if that hits zero you die! To keep it charge control any blue or green glowing
-      object and you will be recharged promptly. \r\nTo assist in movement, I\u2019ve
-      installed Data Over Power module.\n"
+      press E!\r\nTo escape, you just need to get the software project released. 
+      It doesn\u2019t matter what condition the software is in, it just needs to
+      be released!  To ensure this, at night you must enter the real world to find
+      the computers that have been left on so you can help or hinder the project! 
+      The computers left logged on glow green when you get close to them and glow
+      blue if they\u2019re locked!\r\nYou won\u2019t remember this as they would
+      have wiped your memory, but last time you did this you failed because you made
+      to many changes and the developers realised you had escaped. \r\nThis time
+      there is a yellow bar that to the right that you can see. This is a warning,
+      if you fill the bar, the developers will know you have escaped and will trap
+      you in the software again! Below this on the right, is a battery indicator
+      and if that hits zero you die! To recharge, control any blue or green glowing
+      object. \r\nTo assist in movement, I\u2019ve installed a Data Over Power module.\n\n"
     _id: 3
   - _choices: []
-    _text: "To assist in movement, I\u2019ve installed Data Over Power module. This
-      allows you to possess electrical sockets to move faster around the room! \nThere
-      will be red lines showing movement paths to move press the corresponding WASD
-      key when the camera is looking at the wall socket with sparks coming out of
-      it! \r\nHurry Press E to Enter the real world\n\nPress Esc key to return to
-      the inital page"
+    _text: "To assist in movement, I\u2019ve installed a Data Over Power module.
+      This allows you to use the electrical sockets and wiring to move around the
+      room faster! There will be red lines showing movement paths and to travel these,
+      press the corresponding WASD key when you\u2019re looking at a wall socket
+      and can see sparks coming out of it! \r\nHurry Press E to Enter the real world\n\nPress
+      Tab key to return to the inital page"
     _id: 4
   - _choices: []
     _text: 'See You Tommorow!!!
