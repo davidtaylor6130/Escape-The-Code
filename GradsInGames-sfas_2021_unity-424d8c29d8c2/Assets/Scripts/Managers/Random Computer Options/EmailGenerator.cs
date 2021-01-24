@@ -142,7 +142,7 @@ public class EmailGenerator : MonoBehaviour
                             "> Subject: " + template.Subject + "\n" +
                             "> Content: " + template.Content + "\n" +
                             "> Attachments: " + template.Attachments + "\n" +
-                            "\n" + "Press Esc To Return To Menu";
+                            "\n" + "Press Tab To Return To The First Page";
         return Temp;
     }
 
