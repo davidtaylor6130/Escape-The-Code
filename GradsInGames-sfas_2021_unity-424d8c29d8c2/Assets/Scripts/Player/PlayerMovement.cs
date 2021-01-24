@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Game State")]
     [Tooltip("Game State Controller")] public GameStates GameState;
     [Tooltip("Day Night Controller")] public DayNightController DayNightController;
+    public WinLossState WinLoss;
 
     [Space(10)]
 
@@ -58,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Charge Loss Speed")] public float PlayerChargeLossSpeed = 0.5f;
     [Tooltip("Charge Refil Speed")] public float PlayerChargeRechargeSpeed = 0.5f;
     public Slider BatteryGui;
-    public Slider NoticeableGuiElement; 
 
     [Space(10)]
 
@@ -342,6 +342,11 @@ public class PlayerMovement : MonoBehaviour
         PlayerCharge = PlayerChargetemp;
 
         BatteryGui.value -= (Time.deltaTime * (ChargeChange / 100));
+
+        if (BatteryGui.value <= 0)
+        {
+            WinLoss.SetWinLossCondition(WinLossStates.BatteryDeath);
+        }
     }
 
     private void FadeToTransparant(float ChargeChange)

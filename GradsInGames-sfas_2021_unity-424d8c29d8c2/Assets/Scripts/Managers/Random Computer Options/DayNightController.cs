@@ -36,6 +36,7 @@ public class DayNightController : MonoBehaviour
     [Header("Misc Refrances")]
     public PlayerChoiceController PlayerChoiceTracker;
     public SmallLoadingScreen loadingScreen;
+    public WinLossState WinLoss;
 
     [Header("Settings")]
     public int AmountOfComputersActive;
@@ -262,7 +263,7 @@ public class DayNightController : MonoBehaviour
                 //- noticeable ness death state -//
                 if (PlayerChoiceTracker.NoticableNess >= 100)
                 {
-                    Debug.LogError("YOUR DEAD");
+                    WinLoss.SetWinLossCondition(WinLossStates.FoundDeath);
                 }
 
                 //- Add Event For Later use to construct Emails -//

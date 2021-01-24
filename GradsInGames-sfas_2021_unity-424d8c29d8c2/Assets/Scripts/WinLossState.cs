@@ -27,6 +27,8 @@ public class WinLossState : MonoBehaviour
 
     public void SetWinLossCondition(WinLossStates state)
     {
+        Time.timeScale = 0;
+
         //- turn off all possible win loss texts -//
         foreach (GameObject StateOption in WinlossCondition)
         {
