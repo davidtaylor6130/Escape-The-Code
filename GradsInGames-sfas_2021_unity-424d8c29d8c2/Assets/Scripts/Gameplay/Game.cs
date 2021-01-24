@@ -19,6 +19,14 @@ public class Game : MonoBehaviour
         _wait = new WaitForSeconds(0.5f);
     }
 
+    public void ResetDay()
+    {
+        _output = GetComponentInChildren<TextDisplay>();
+        _currentBeat = null;
+        _wait = new WaitForSeconds(0.5f);
+        _output.ResetDay();
+    }
+
     private void Update()
     {
         if(_output.IsIdle && IsCurrenlyActive == true)

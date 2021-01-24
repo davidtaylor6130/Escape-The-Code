@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public struct EventActivationInformation
 {
-    public EventActivationInformation(int Action, int NameAndPc)
+    public EventActivationInformation(int NameAndPc, int Action)
     {
         ActionIndex = Action;
         NameAndPcIndex = NameAndPc;
@@ -102,7 +102,7 @@ public class EmailGenerator : MonoBehaviour
                         Email tempEmail = new Email();
 
                         //- Select Randomly what email template to use for this action -//
-                        int EmailVersionIndex = Random.Range(0, 3);
+                        int EmailVersionIndex = GetRandomGenEmail();
 
                         //- Get Email Name and Output -//
                         tempEmail = EmailTemplateToEmail(emailTemplateForAutoGeneration[RecorededActions[i, j].ActionIndex].EmailTemplates[EmailVersionIndex], i);
@@ -146,10 +146,10 @@ public class EmailGenerator : MonoBehaviour
         return Temp;
     }
 
-    public void AddCompleatedEvent(int PcIndex, int EventIndex)
+    public void AddCompleatedEvent(int PcIndex, int ComputerActionSlotIndex, int EventIndex)
     {
         //- Can do a max of -//
-        RecorededActions[(PcIndex - 1), (EventIndex)] = new EventActivationInformation(PcIndex, EventIndex);
+        RecorededActions[(PcIndex - 1), (ComputerActionSlotIndex - 1)] = new EventActivationInformation(PcIndex, EventIndex);
     }
 
     public int GetRandomFillerEmail()
@@ -161,6 +161,19 @@ public class EmailGenerator : MonoBehaviour
         }
         while (ActiveFillerEmails.Contains(randomSelection));
         ActiveFillerEmails.Add(randomSelection);
+
+        return randomSelection;
+    }
+
+    public int GetRandomGenEmail()
+    {
+        int randomSelection = 0;
+        do
+        {
+            randomSelection = Random.Range(0, 3);
+        }
+        while (ActiveGeneratedEmails.Contains(randomSelection));
+        ActiveGeneratedEmails.Add(randomSelection);
 
         return randomSelection;
     }

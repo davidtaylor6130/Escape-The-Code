@@ -39,6 +39,20 @@ public class TextDisplay : MonoBehaviour
         _state = State.Idle;
     }
 
+    public void ResetDay()
+    {
+        StartCoroutine(DoClearText());
+
+        m_DebugInput = new List<string>();
+        m_FunctionInput = new List<string>();
+        _displayText = GetComponent<TMP_Text>();
+        _shortWait = new WaitForSeconds(0.05f);
+        _longWait = new WaitForSeconds(0.4f);
+
+        _displayText.text = string.Empty;
+        _state = State.Idle;
+    }
+
     private IEnumerator DoShowText(string text)
     {
         string tempText = text;
@@ -134,7 +148,7 @@ public class TextDisplay : MonoBehaviour
         }
     }
 
-    private IEnumerator DoClearText()
+    public IEnumerator DoClearText()
     {
         int currentLetter = 0;
         char[] charArray = _displayText.text.ToCharArray();

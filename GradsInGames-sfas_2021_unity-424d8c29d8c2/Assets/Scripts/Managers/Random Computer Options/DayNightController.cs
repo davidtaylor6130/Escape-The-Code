@@ -90,6 +90,15 @@ public class DayNightController : MonoBehaviour
     [ContextMenu("Refresh Computers")]
     void RefreshComputers()
     {
+        //- Reset CamToText Systems -//
+        for (int i = 0; i < CamToTex.Length; i++)
+        {
+            //- Reset TMPro text to blank to get rid of last nights text -//
+            CamToTex[i].OnScreenText.text = "";
+            //- Reset Game and TextDisplay To Brand new Instances -//
+            CamToTex[i].StoryManager.ResetDay();
+        }
+
         //- Clears All Info About What is selected -//
         ResetDay();
 
@@ -257,7 +266,8 @@ public class DayNightController : MonoBehaviour
                 }
 
                 //- Add Event For Later use to construct Emails -//
-                EmailGen.AddCompleatedEvent(ProcessedInputs[1], FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]);
+                //- First Two data used for array input last one is what is saved-//
+                EmailGen.AddCompleatedEvent(ProcessedInputs[1], ProcessedInputs[2],  FormattedComputers[ProcessedInputs[1] - 1].EventIndex[ProcessedInputs[2] - 1]);
             }
             FormattedComputers[ProcessedInputs[1] - 1].EventCompleated[ProcessedInputs[2] - 1] = true;
         }  
